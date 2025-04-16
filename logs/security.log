@@ -16560,3 +16560,128 @@ g
 2025-04-16 11:24:42,859 WARNING  * Debugger is active!
 2025-04-16 11:24:42,869 INFO  * Debugger PIN: 555-876-948
 2025-04-16 11:24:42,872 INFO  * Debugger PIN: 555-876-948
+2025-04-16 12:17:51,333 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.7.26.152:5000
+2025-04-16 12:17:51,333 INFO [33mPress CTRL+C to quit[0m
+2025-04-16 12:17:51,374 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 12:17:52,821 WARNING  * Debugger is active!
+2025-04-16 12:17:52,836 INFO  * Debugger PIN: 555-876-948
+2025-04-16 12:18:40,314 INFO 127.0.0.1 - - [16/Apr/2025 12:18:40] "GET / HTTP/1.1" 200 -
+2025-04-16 12:18:40,867 INFO 127.0.0.1 - - [16/Apr/2025 12:18:40] "GET /dashboard HTTP/1.1" 200 -
+2025-04-16 12:18:41,582 INFO 127.0.0.1 - - [16/Apr/2025 12:18:41] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-16 12:18:41,590 INFO 127.0.0.1 - - [16/Apr/2025 12:18:41] "GET /static/js/auth.js HTTP/1.1" 200 -
+2025-04-16 12:18:41,594 INFO 127.0.0.1 - - [16/Apr/2025 12:18:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-16 12:18:42,034 INFO 127.0.0.1 - - [16/Apr/2025 12:18:42] "GET /portfolio/members?session_token=ccbfa9ca-4be4-43db-a20e-420f4544b9c5&session_token=ccbfa9ca-4be4-43db-a20e-420f4544b9c5&session_token=ccbfa9ca-4be4-43db-a20e-420f4544b9c5 HTTP/1.1" 200 -
+2025-04-16 12:18:42,324 INFO 127.0.0.1 - - [16/Apr/2025 12:18:42] "GET /api/dashboard/products/by-category?session_token=ccbfa9ca-4be4-43db-a20e-420f4544b9c5&session_token=ccbfa9ca-4be4-43db-a20e-420f4544b9c5&session_token=ccbfa9ca-4be4-43db-a20e-420f4544b9c5 HTTP/1.1" 200 -
+2025-04-16 12:18:42,403 INFO 127.0.0.1 - - [16/Apr/2025 12:18:42] "GET /api/dashboard/shops/count?session_token=ccbfa9ca-4be4-43db-a20e-420f4544b9c5&session_token=ccbfa9ca-4be4-43db-a20e-420f4544b9c5&session_token=ccbfa9ca-4be4-43db-a20e-420f4544b9c5 HTTP/1.1" 200 -
+2025-04-16 12:18:43,176 INFO 127.0.0.1 - - [16/Apr/2025 12:18:43] "GET /api/dashboard/products/count?session_token=ccbfa9ca-4be4-43db-a20e-420f4544b9c5&session_token=ccbfa9ca-4be4-43db-a20e-420f4544b9c5&session_token=ccbfa9ca-4be4-43db-a20e-420f4544b9c5 HTTP/1.1" 200 -
+2025-04-16 12:18:43,418 INFO 127.0.0.1 - - [16/Apr/2025 12:18:43] "GET /api/dashboard/customers/count?session_token=ccbfa9ca-4be4-43db-a20e-420f4544b9c5&session_token=ccbfa9ca-4be4-43db-a20e-420f4544b9c5&session_token=ccbfa9ca-4be4-43db-a20e-420f4544b9c5 HTTP/1.1" 200 -
+2025-04-16 12:18:43,531 INFO 127.0.0.1 - - [16/Apr/2025 12:18:43] "GET /api/dashboard/orders/recent?session_token=ccbfa9ca-4be4-43db-a20e-420f4544b9c5&session_token=ccbfa9ca-4be4-43db-a20e-420f4544b9c5&session_token=ccbfa9ca-4be4-43db-a20e-420f4544b9c5 HTTP/1.1" 200 -
+2025-04-16 12:18:43,769 INFO 127.0.0.1 - - [16/Apr/2025 12:18:43] "GET /api/dashboard/loyalty/recent?session_token=ccbfa9ca-4be4-43db-a20e-420f4544b9c5&session_token=ccbfa9ca-4be4-43db-a20e-420f4544b9c5&session_token=ccbfa9ca-4be4-43db-a20e-420f4544b9c5 HTTP/1.1" 200 -
+2025-04-16 12:18:43,882 INFO 127.0.0.1 - - [16/Apr/2025 12:18:43] "GET /api/dashboard/sales/by-shop?session_token=ccbfa9ca-4be4-43db-a20e-420f4544b9c5&session_token=ccbfa9ca-4be4-43db-a20e-420f4544b9c5&session_token=ccbfa9ca-4be4-43db-a20e-420f4544b9c5 HTTP/1.1" 200 -
+2025-04-16 12:19:09,075 INFO 127.0.0.1 - - [16/Apr/2025 12:19:09] "GET /members HTTP/1.1" 200 -
+2025-04-16 12:19:09,713 INFO 127.0.0.1 - - [16/Apr/2025 12:19:09] "[36mGET /static/js/auth.js HTTP/1.1[0m" 304 -
+2025-04-16 12:19:09,713 INFO 127.0.0.1 - - [16/Apr/2025 12:19:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-16 12:19:09,713 INFO 127.0.0.1 - - [16/Apr/2025 12:19:09] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-16 12:19:10,007 INFO 127.0.0.1 - - [16/Apr/2025 12:19:10] "GET /portfolio/members?session_token=ccbfa9ca-4be4-43db-a20e-420f4544b9c5&session_token=ccbfa9ca-4be4-43db-a20e-420f4544b9c5&session_token=ccbfa9ca-4be4-43db-a20e-420f4544b9c5 HTTP/1.1" 200 -
+2025-04-16 12:19:20,060 WARNING {'timestamp': '2025-04-16T12:19:20.060931', 'endpoint': 'delete_member', 'method': 'POST', 'ip': '127.0.0.1', 'user_agent': 'Unknown', 'message': 'Unauthenticated user attempted admin action'}
+2025-04-16 12:19:20,062 INFO 127.0.0.1 - - [16/Apr/2025 12:19:20] "[31m[1mPOST /shopstop/members/delete?session_token=ccbfa9ca-4be4-43db-a20e-420f4544b9c5&session_token=ccbfa9ca-4be4-43db-a20e-420f4544b9c5 HTTP/1.1[0m" 401 -
+2025-04-16 12:19:20,457 INFO 127.0.0.1 - - [16/Apr/2025 12:19:20] "GET /login HTTP/1.1" 200 -
+2025-04-16 12:19:20,802 INFO 127.0.0.1 - - [16/Apr/2025 12:19:20] "[36mGET /static/js/auth.js HTTP/1.1[0m" 304 -
+2025-04-16 12:20:42,279 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\customers.py', reloading
+2025-04-16 12:20:42,281 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\customers.py', reloading
+2025-04-16 12:20:42,281 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\customers.py', reloading
+2025-04-16 12:20:42,281 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\customers.py', reloading
+2025-04-16 12:20:42,281 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\customers.py', reloading
+2025-04-16 12:20:42,597 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 12:20:42,604 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 12:20:42,604 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 12:20:43,101 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 12:20:43,123 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 12:20:43,544 WARNING  * Debugger is active!
+2025-04-16 12:20:43,559 INFO  * Debugger PIN: 555-876-948
+2025-04-16 12:20:43,563 WARNING  * Debugger is active!
+2025-04-16 12:20:43,563 WARNING  * Debugger is active!
+2025-04-16 12:20:43,571 INFO  * Debugger PIN: 555-876-948
+2025-04-16 12:20:43,579 INFO  * Debugger PIN: 555-876-948
+2025-04-16 12:20:43,977 WARNING  * Debugger is active!
+2025-04-16 12:20:43,977 WARNING  * Debugger is active!
+2025-04-16 12:20:43,995 INFO  * Debugger PIN: 555-876-948
+2025-04-16 12:20:43,997 INFO  * Debugger PIN: 555-876-948
+2025-04-16 12:23:33,673 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\addUser.py', reloading
+2025-04-16 12:23:33,673 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\addUser.py', reloading
+2025-04-16 12:23:33,673 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\addUser.py', reloading
+2025-04-16 12:23:33,673 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\addUser.py', reloading
+2025-04-16 12:23:33,673 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\app-sql.py', reloading
+2025-04-16 12:23:33,676 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\app-sql.py', reloading
+2025-04-16 12:23:33,676 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\app-sql.py', reloading
+2025-04-16 12:23:33,676 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\app-sql.py', reloading
+2025-04-16 12:23:33,677 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\attendance.py', reloading
+2025-04-16 12:23:33,677 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\attendance.py', reloading
+2025-04-16 12:23:33,677 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\attendance.py', reloading
+2025-04-16 12:23:33,677 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\attendance.py', reloading
+2025-04-16 12:23:33,678 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\attendance.py', reloading
+2025-04-16 12:23:33,678 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\createUser.py', reloading
+2025-04-16 12:23:33,678 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\createUser.py', reloading
+2025-04-16 12:23:33,679 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\createUser.py', reloading
+2025-04-16 12:23:33,679 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\createUser.py', reloading
+2025-04-16 12:23:33,679 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\Customer.py', reloading
+2025-04-16 12:23:33,679 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\Customer.py', reloading
+2025-04-16 12:23:33,679 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\Customer.py', reloading
+2025-04-16 12:23:33,681 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\Customer.py', reloading
+2025-04-16 12:23:33,682 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\dashboard_api.py', reloading
+2025-04-16 12:23:33,682 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\dashboard_api.py', reloading
+2025-04-16 12:23:33,683 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\dashboard_api.py', reloading
+2025-04-16 12:23:33,683 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\data_display.py', reloading
+2025-04-16 12:23:33,683 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\data_display.py', reloading
+2025-04-16 12:23:33,683 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\deleteUser.py', reloading
+2025-04-16 12:23:33,687 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\deleteUser.py', reloading
+2025-04-16 12:23:33,687 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\deleteUser.py', reloading
+2025-04-16 12:23:33,687 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\download_images.py', reloading
+2025-04-16 12:23:33,687 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\deleteUser.py', reloading
+2025-04-16 12:23:33,687 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\deleteUser.py', reloading
+2025-04-16 12:23:33,690 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\download_images.py', reloading
+2025-04-16 12:23:33,690 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\download_images.py', reloading
+2025-04-16 12:23:33,690 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\download_images.py', reloading
+2025-04-16 12:23:33,690 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\download_member_images.py', reloading
+2025-04-16 12:23:33,690 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\download_images.py', reloading
+2025-04-16 12:23:33,692 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\download_member_images.py', reloading
+2025-04-16 12:23:33,692 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\download_member_images.py', reloading
+2025-04-16 12:23:33,692 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\download_member_images.py', reloading
+2025-04-16 12:23:33,692 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\employee.py', reloading
+2025-04-16 12:23:33,692 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\download_member_images.py', reloading
+2025-04-16 12:23:33,692 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\employee.py', reloading
+2025-04-16 12:23:33,694 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\employee.py', reloading
+2025-04-16 12:23:33,694 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\employee.py', reloading
+2025-04-16 12:23:33,694 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\flask_app.py', reloading
+2025-04-16 12:23:33,694 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\flask_app.py', reloading
+2025-04-16 12:23:33,695 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\flask_app.py', reloading
+2025-04-16 12:23:33,695 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\flask_app.py', reloading
+2025-04-16 12:23:33,695 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\loyalty.py', reloading
+2025-04-16 12:23:33,695 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\loyalty.py', reloading
+2025-04-16 12:23:33,697 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\loyalty.py', reloading
+2025-04-16 12:23:33,697 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\loyalty.py', reloading
+2025-04-16 12:23:33,697 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\order.py', reloading
+2025-04-16 12:23:33,697 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\order.py', reloading
+2025-04-16 12:23:33,697 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\order.py', reloading
+2025-04-16 12:23:33,700 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\portfolio.py', reloading
+2025-04-16 12:23:33,700 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\portfolio.py', reloading
+2025-04-16 12:23:33,700 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\portfolio.py', reloading
+2025-04-16 12:23:33,703 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\products.py', reloading
+2025-04-16 12:23:33,704 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\products.py', reloading
+2025-04-16 12:23:33,704 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\products.py', reloading
+2025-04-16 12:23:33,705 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\products.py', reloading
+2025-04-16 12:23:33,711 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\shops.py', reloading
+2025-04-16 12:23:33,711 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\shops.py', reloading
+2025-04-16 12:23:33,711 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\shops.py', reloading
+2025-04-16 12:23:33,711 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\supplier.py', reloading
+2025-04-16 12:23:33,711 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\supplier.py', reloading
+2025-04-16 12:23:33,711 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\supplier.py', reloading
+2025-04-16 12:23:33,711 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\supplier.py', reloading
+2025-04-16 12:23:34,591 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 12:23:34,605 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 12:23:34,606 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 12:23:34,612 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 12:23:34,773 INFO  * Restarting with watchdog (windowsapi)

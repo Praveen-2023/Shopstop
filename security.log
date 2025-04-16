@@ -1,0 +1,223 @@
+2025-04-14 23:38:55,840 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.7.62.90:5000
+2025-04-14 23:38:55,840 INFO [33mPress CTRL+C to quit[0m
+2025-04-14 23:38:55,841 INFO  * Restarting with stat
+2025-04-14 23:38:56,178 WARNING  * Debugger is active!
+2025-04-14 23:38:56,187 INFO  * Debugger PIN: 121-679-520
+2025-04-14 23:39:49,068 INFO  * Detected change in 'c:\\Users\\Dell\\OneDrive\\Desktop\\DB_A3\\api_server.py', reloading
+2025-04-14 23:39:49,135 INFO  * Restarting with stat
+2025-04-14 23:41:52,896 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.7.62.90:5000
+2025-04-14 23:41:52,896 INFO [33mPress CTRL+C to quit[0m
+2025-04-14 23:41:52,898 INFO  * Restarting with stat
+2025-04-14 23:41:53,284 WARNING  * Debugger is active!
+2025-04-14 23:41:53,286 INFO  * Debugger PIN: 121-679-520
+2025-04-15 02:12:01,815 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.240.13.69:5000
+2025-04-15 02:12:01,816 INFO [33mPress CTRL+C to quit[0m
+2025-04-15 02:12:01,819 INFO  * Restarting with stat
+2025-04-15 02:12:02,302 WARNING  * Debugger is active!
+2025-04-15 02:12:02,315 INFO  * Debugger PIN: 121-679-520
+2025-04-15 02:24:34,299 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.240.13.69:5000
+2025-04-15 02:24:34,299 INFO [33mPress CTRL+C to quit[0m
+2025-04-15 02:24:34,301 INFO  * Restarting with stat
+2025-04-15 02:24:34,663 WARNING  * Debugger is active!
+2025-04-15 02:24:34,665 INFO  * Debugger PIN: 121-679-520
+2025-04-15 02:25:31,294 INFO  * Detected change in 'c:\\Users\\Dell\\OneDrive\\Desktop\\DB_A3\\api_server.py', reloading
+2025-04-15 02:25:31,346 INFO  * Restarting with stat
+2025-04-15 02:25:31,710 WARNING  * Debugger is active!
+2025-04-15 02:25:31,712 INFO  * Debugger PIN: 121-679-520
+2025-04-15 02:27:45,628 INFO  * Detected change in 'c:\\Users\\Dell\\OneDrive\\Desktop\\DB_A3\\api_server.py', reloading
+2025-04-15 02:27:45,678 INFO  * Restarting with stat
+2025-04-15 02:27:46,046 WARNING  * Debugger is active!
+2025-04-15 02:27:46,048 INFO  * Debugger PIN: 121-679-520
+2025-04-15 02:28:01,013 INFO  * Detected change in 'c:\\Users\\Dell\\OneDrive\\Desktop\\DB_A3\\api_server.py', reloading
+2025-04-15 02:28:01,073 INFO  * Restarting with stat
+2025-04-15 02:28:01,757 WARNING  * Debugger is active!
+2025-04-15 02:28:01,760 INFO  * Debugger PIN: 121-679-520
+2025-04-15 02:28:44,183 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.240.13.69:5000
+2025-04-15 02:28:44,183 INFO [33mPress CTRL+C to quit[0m
+2025-04-15 02:28:44,184 INFO  * Restarting with stat
+2025-04-15 02:28:44,515 WARNING  * Debugger is active!
+2025-04-15 02:28:44,516 INFO  * Debugger PIN: 121-679-520
+2025-04-15 02:43:33,807 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.240.13.69:5000
+2025-04-15 02:43:33,807 INFO [33mPress CTRL+C to quit[0m
+2025-04-15 02:43:33,809 INFO  * Restarting with stat
+2025-04-15 02:43:34,160 WARNING  * Debugger is active!
+2025-04-15 02:43:34,174 INFO  * Debugger PIN: 136-057-036
+2025-04-15 02:44:11,019 INFO 127.0.0.1 - - [15/Apr/2025 02:44:11] "[31m[1mGET /shops HTTP/1.1[0m" 405 -
+2025-04-15 11:51:59,568 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.240.13.69:5000
+2025-04-15 11:51:59,571 INFO [33mPress CTRL+C to quit[0m
+2025-04-15 11:51:59,573 INFO  * Restarting with stat
+2025-04-15 11:52:00,070 WARNING  * Debugger is active!
+2025-04-15 11:52:00,090 INFO  * Debugger PIN: 136-057-036
+2025-04-15 11:53:17,651 INFO  * Detected change in 'c:\\Users\\Dell\\OneDrive\\Desktop\\DB_A3\\api_server.py', reloading
+2025-04-15 11:53:17,736 INFO  * Restarting with stat
+2025-04-15 11:53:18,223 WARNING  * Debugger is active!
+2025-04-15 11:53:18,226 INFO  * Debugger PIN: 136-057-036
+2025-04-15 11:53:21,319 INFO  * Detected change in 'c:\\Users\\Dell\\OneDrive\\Desktop\\DB_A3\\api_server.py', reloading
+2025-04-15 11:53:21,400 INFO  * Restarting with stat
+2025-04-15 11:53:21,927 WARNING  * Debugger is active!
+2025-04-15 11:53:21,930 INFO  * Debugger PIN: 136-057-036
+2025-04-15 11:53:26,105 INFO  * Detected change in 'c:\\Users\\Dell\\OneDrive\\Desktop\\DB_A3\\api_server.py', reloading
+2025-04-15 11:53:26,155 INFO  * Restarting with stat
+2025-04-15 11:53:26,631 WARNING  * Debugger is active!
+2025-04-15 11:53:26,634 INFO  * Debugger PIN: 136-057-036
+2025-04-15 11:53:28,720 INFO  * Detected change in 'c:\\Users\\Dell\\OneDrive\\Desktop\\DB_A3\\api_server.py', reloading
+2025-04-15 11:53:28,802 INFO  * Restarting with stat
+2025-04-15 11:53:29,316 WARNING  * Debugger is active!
+2025-04-15 11:53:29,319 INFO  * Debugger PIN: 136-057-036
+2025-04-15 11:53:30,375 INFO  * Detected change in 'c:\\Users\\Dell\\OneDrive\\Desktop\\DB_A3\\api_server.py', reloading
+2025-04-15 11:53:30,445 INFO  * Restarting with stat
+2025-04-15 11:53:30,935 WARNING  * Debugger is active!
+2025-04-15 11:53:30,938 INFO  * Debugger PIN: 136-057-036
+2025-04-15 11:53:31,996 INFO  * Detected change in 'c:\\Users\\Dell\\OneDrive\\Desktop\\DB_A3\\api_server.py', reloading
+2025-04-15 11:53:32,050 INFO  * Restarting with stat
+2025-04-15 11:53:32,599 WARNING  * Debugger is active!
+2025-04-15 11:53:32,601 INFO  * Debugger PIN: 136-057-036
+2025-04-15 11:53:34,688 INFO  * Detected change in 'c:\\Users\\Dell\\OneDrive\\Desktop\\DB_A3\\api_server.py', reloading
+2025-04-15 11:53:34,735 INFO  * Restarting with stat
+2025-04-15 11:53:35,234 WARNING  * Debugger is active!
+2025-04-15 11:53:35,236 INFO  * Debugger PIN: 136-057-036
+2025-04-15 11:53:39,385 INFO  * Detected change in 'c:\\Users\\Dell\\OneDrive\\Desktop\\DB_A3\\api_server.py', reloading
+2025-04-15 11:53:39,465 INFO  * Restarting with stat
+2025-04-15 11:53:40,007 WARNING  * Debugger is active!
+2025-04-15 11:53:40,011 INFO  * Debugger PIN: 136-057-036
+2025-04-15 11:53:41,067 INFO  * Detected change in 'c:\\Users\\Dell\\OneDrive\\Desktop\\DB_A3\\api_server.py', reloading
+2025-04-15 11:53:41,132 INFO  * Restarting with stat
+2025-04-15 11:54:28,060 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.240.13.69:5000
+2025-04-15 11:54:28,061 INFO [33mPress CTRL+C to quit[0m
+2025-04-15 11:54:28,065 INFO  * Restarting with stat
+2025-04-15 11:54:28,524 WARNING  * Debugger is active!
+2025-04-15 11:54:28,526 INFO  * Debugger PIN: 136-057-036
+2025-04-15 11:54:41,929 INFO 127.0.0.1 - - [15/Apr/2025 11:54:41] "[33mGET /get-info HTTP/1.1[0m" 404 -
+2025-04-15 11:54:43,745 INFO 127.0.0.1 - - [15/Apr/2025 11:54:43] "GET / HTTP/1.1" 200 -
+2025-04-15 11:54:44,863 INFO 127.0.0.1 - - [15/Apr/2025 11:54:44] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-15 12:06:03,917 INFO  * Detected change in 'c:\\Users\\Dell\\OneDrive\\Desktop\\DB_A3\\main.py', reloading
+2025-04-15 12:06:04,006 INFO  * Restarting with stat
+2025-04-15 12:06:04,654 WARNING  * Debugger is active!
+2025-04-15 12:06:04,659 INFO  * Debugger PIN: 136-057-036
+2025-04-15 12:29:26,050 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.240.13.69:5000
+2025-04-15 12:29:26,051 INFO [33mPress CTRL+C to quit[0m
+2025-04-15 12:29:26,053 INFO  * Restarting with stat
+2025-04-15 12:29:26,520 WARNING  * Debugger is active!
+2025-04-15 12:29:26,523 INFO  * Debugger PIN: 136-057-036
+2025-04-15 12:31:32,056 INFO 127.0.0.1 - - [15/Apr/2025 12:31:32] "[33mPOST /shopstop/authUser HTTP/1.1[0m" 404 -
+2025-04-15 12:38:08,217 INFO 127.0.0.1 - - [15/Apr/2025 12:38:08] "[35m[1mPOST /shops HTTP/1.1[0m" 500 -
+2025-04-15 12:40:11,359 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.240.13.69:5000
+2025-04-15 12:40:11,360 INFO [33mPress CTRL+C to quit[0m
+2025-04-15 12:40:11,363 INFO  * Restarting with stat
+2025-04-15 12:40:11,817 WARNING  * Debugger is active!
+2025-04-15 12:40:11,820 INFO  * Debugger PIN: 136-057-036
+2025-04-15 12:41:16,186 INFO  * Detected change in 'c:\\Users\\Dell\\OneDrive\\Desktop\\DB_A3\\api_server.py', reloading
+2025-04-15 12:41:16,273 INFO  * Restarting with stat
+2025-04-15 12:41:16,813 WARNING  * Debugger is active!
+2025-04-15 12:41:16,815 INFO  * Debugger PIN: 136-057-036
+2025-04-15 12:41:47,299 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.240.13.69:5000
+2025-04-15 12:41:47,300 INFO [33mPress CTRL+C to quit[0m
+2025-04-15 12:41:47,302 INFO  * Restarting with stat
+2025-04-15 12:41:47,854 WARNING  * Debugger is active!
+2025-04-15 12:41:47,860 INFO  * Debugger PIN: 136-057-036
+2025-04-15 12:41:53,140 INFO 127.0.0.1 - - [15/Apr/2025 12:41:53] "[33mGET /isAuth HTTP/1.1[0m" 404 -
+2025-04-15 12:41:53,143 WARNING {'timestamp': '2025-04-15T12:41:53.143543', 'endpoint': 'create_shop', 'method': 'POST', 'ip': '127.0.0.1', 'user_agent': 'PostmanRuntime/7.37.3', 'message': 'Unauthorized access attempt'}
+2025-04-15 12:41:53,144 INFO 127.0.0.1 - - [15/Apr/2025 12:41:53] "[31m[1mPOST /shops HTTP/1.1[0m" 401 -
+2025-04-15 12:43:38,919 INFO  * Detected change in 'c:\\Users\\Dell\\OneDrive\\Desktop\\DB_A3\\api_server.py', reloading
+2025-04-15 12:43:39,006 INFO  * Restarting with stat
+2025-04-15 12:43:39,511 WARNING  * Debugger is active!
+2025-04-15 12:43:39,513 INFO  * Debugger PIN: 136-057-036
+2025-04-15 12:44:07,095 INFO 127.0.0.1 - - [15/Apr/2025 12:44:07] "[33mGET /isAuth HTTP/1.1[0m" 404 -
+2025-04-15 12:44:07,098 WARNING {'timestamp': '2025-04-15T12:44:07.098093', 'endpoint': 'create_shop', 'method': 'POST', 'ip': '127.0.0.1', 'user_agent': 'PostmanRuntime/7.37.3', 'message': 'Unauthorized access attempt'}
+2025-04-15 12:44:07,099 INFO 127.0.0.1 - - [15/Apr/2025 12:44:07] "[31m[1mPOST /shops HTTP/1.1[0m" 401 -
+2025-04-15 12:44:50,908 INFO 127.0.0.1 - - [15/Apr/2025 12:44:50] "[33mGET /isAuth HTTP/1.1[0m" 404 -
+2025-04-15 12:44:50,912 WARNING {'timestamp': '2025-04-15T12:44:50.912795', 'endpoint': 'create_shop', 'method': 'POST', 'ip': '127.0.0.1', 'user_agent': 'PostmanRuntime/7.37.3', 'message': 'Unauthorized access attempt'}
+2025-04-15 12:44:50,913 INFO 127.0.0.1 - - [15/Apr/2025 12:44:50] "[31m[1mPOST /shops HTTP/1.1[0m" 401 -
+2025-04-15 12:45:03,656 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.240.13.69:5000
+2025-04-15 12:45:03,656 INFO [33mPress CTRL+C to quit[0m
+2025-04-15 12:45:03,659 INFO  * Restarting with stat
+2025-04-15 12:45:04,132 WARNING  * Debugger is active!
+2025-04-15 12:45:04,134 INFO  * Debugger PIN: 136-057-036
+2025-04-15 12:48:04,215 INFO  * Detected change in 'c:\\Users\\Dell\\OneDrive\\Desktop\\DB_A3\\api_server.py', reloading
+2025-04-15 12:48:04,304 INFO  * Restarting with stat
+2025-04-15 12:48:04,830 WARNING  * Debugger is active!
+2025-04-15 12:48:04,834 INFO  * Debugger PIN: 136-057-036
+2025-04-15 12:48:09,057 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.240.13.69:5000
+2025-04-15 12:48:09,057 INFO [33mPress CTRL+C to quit[0m
+2025-04-15 12:48:09,059 INFO  * Restarting with stat
+2025-04-15 12:48:09,497 WARNING  * Debugger is active!
+2025-04-15 12:48:09,499 INFO  * Debugger PIN: 136-057-036
+2025-04-15 12:48:17,364 INFO 127.0.0.1 - - [15/Apr/2025 12:48:17] "[33mGET /isAuth HTTP/1.1[0m" 404 -
+2025-04-15 12:48:17,367 WARNING {'timestamp': '2025-04-15T12:48:17.367304', 'endpoint': 'create_shop', 'method': 'POST', 'ip': '127.0.0.1', 'user_agent': 'PostmanRuntime/7.37.3', 'message': 'Unauthorized access attempt'}
+2025-04-15 12:48:17,368 INFO 127.0.0.1 - - [15/Apr/2025 12:48:17] "[31m[1mPOST /shops HTTP/1.1[0m" 401 -
+2025-04-15 12:48:27,013 INFO  * Detected change in 'c:\\Users\\Dell\\OneDrive\\Desktop\\DB_A3\\api_server.py', reloading
+2025-04-15 12:48:27,064 INFO  * Restarting with stat
+2025-04-15 12:48:27,684 WARNING  * Debugger is active!
+2025-04-15 12:48:27,690 INFO  * Debugger PIN: 136-057-036
+2025-04-15 12:48:40,139 INFO  * Detected change in 'c:\\Users\\Dell\\OneDrive\\Desktop\\DB_A3\\api_server.py', reloading
+2025-04-15 12:48:40,203 INFO  * Restarting with stat
+2025-04-15 12:48:40,695 WARNING  * Debugger is active!
+2025-04-15 12:48:40,697 INFO  * Debugger PIN: 136-057-036
+2025-04-15 12:49:38,618 INFO  * Detected change in 'c:\\Users\\Dell\\OneDrive\\Desktop\\DB_A3\\api_server.py', reloading
+2025-04-15 12:49:38,709 INFO  * Restarting with stat
+2025-04-15 12:49:39,263 WARNING  * Debugger is active!
+2025-04-15 12:49:39,267 INFO  * Debugger PIN: 136-057-036
+2025-04-15 12:50:48,891 INFO  * Detected change in 'c:\\Users\\Dell\\OneDrive\\Desktop\\DB_A3\\api_server.py', reloading
+2025-04-15 12:50:48,964 INFO  * Restarting with stat
+2025-04-15 12:50:49,486 WARNING  * Debugger is active!
+2025-04-15 12:50:49,489 INFO  * Debugger PIN: 136-057-036
+2025-04-15 12:52:06,207 INFO  * Detected change in 'c:\\Users\\Dell\\OneDrive\\Desktop\\DB_A3\\api_server.py', reloading
+2025-04-15 12:52:06,282 INFO  * Restarting with stat
+2025-04-15 12:52:26,160 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.240.13.69:5000
+2025-04-15 12:52:26,160 INFO [33mPress CTRL+C to quit[0m
+2025-04-15 12:52:26,163 INFO  * Restarting with stat
+2025-04-15 12:52:26,582 WARNING  * Debugger is active!
+2025-04-15 12:52:26,584 INFO  * Debugger PIN: 136-057-036
+2025-04-15 12:57:27,584 INFO 127.0.0.1 - - [15/Apr/2025 12:57:27] "[33mGET /isAuth HTTP/1.1[0m" 404 -
+2025-04-15 12:57:27,587 WARNING {'timestamp': '2025-04-15T12:57:27.587914', 'endpoint': 'create_shop', 'method': 'POST', 'ip': '127.0.0.1', 'user_agent': 'PostmanRuntime/7.37.3', 'message': 'Unauthorized access attempt'}
+2025-04-15 12:57:27,588 INFO 127.0.0.1 - - [15/Apr/2025 12:57:27] "[31m[1mPOST /shops HTTP/1.1[0m" 401 -
+2025-04-15 12:58:00,768 INFO  * Detected change in 'c:\\Users\\Dell\\OneDrive\\Desktop\\DB_A3\\api_server.py', reloading
+2025-04-15 12:58:00,882 INFO  * Restarting with stat
+2025-04-15 12:58:01,989 WARNING  * Debugger is active!
+2025-04-15 12:58:01,994 INFO  * Debugger PIN: 136-057-036
+2025-04-15 13:10:41,046 INFO  * Detected change in 'c:\\Users\\Dell\\OneDrive\\Desktop\\DB_A3\\shops.py', reloading
+2025-04-15 13:10:41,213 INFO  * Restarting with stat
+2025-04-15 13:10:41,833 WARNING  * Debugger is active!
+2025-04-15 13:10:41,836 INFO  * Debugger PIN: 136-057-036

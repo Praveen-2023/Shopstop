@@ -1,0 +1,458 @@
+{% extends "base.html" %}
+
+{% block title %}Portfolio - ShopStop{% endblock %}
+
+{% block page_title %}Member Portfolio{% endblock %}
+
+{% block content %}
+<div class="row mb-4">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="card-title mb-0">Member Details</h5>
+                <button id="edit-portfolio-btn" class="btn btn-warning">
+                    <i class="bi bi-pencil me-2"></i>Edit Portfolio
+                </button>
+            </div>
+            <div class="card-body">
+                <div class="row" id="portfolio-view">
+                    <div class="col-md-4">
+                        <div class="text-center mb-4">
+                            <div class="avatar-placeholder mb-3" id="member-avatar">
+                                <img src="/static/images/members/placeholder.jpg" alt="Profile Image" class="img-fluid rounded-circle" style="width: 150px; height: 150px; object-fit: cover;">
+                            </div>
+                            <h4 id="member-username">Loading...</h4>
+                            <span id="member-role" class="badge bg-primary">User</span>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Member ID</label>
+                            <p id="member-id">Loading...</p>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Email</label>
+                            <p id="member-email">Loading...</p>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Date of Birth</label>
+                            <p id="member-dob">Loading...</p>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <h5 class="border-bottom pb-2 mb-3">Shops</h5>
+                        <div id="shops-container">
+                            <p>Loading shops...</p>
+                        </div>
+
+                        <h5 class="border-bottom pb-2 mb-3 mt-4">Statistics</h5>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="card bg-light mb-3">
+                                    <div class="card-body d-flex align-items-center">
+                                        <div class="flex-shrink-0 me-3 text-primary">
+                                            <i class="bi bi-shop" style="font-size: 2.5rem;"></i>
+                                        </div>
+                                        <div>
+                                            <h5 class="card-title">Total Shops</h5>
+                                            <p class="card-text fs-4 mb-0" id="total-shops">0</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card bg-light mb-3">
+                                    <div class="card-body d-flex align-items-center">
+                                        <div class="flex-shrink-0 me-3 text-primary">
+                                            <i class="bi bi-box-seam" style="font-size: 2.5rem;"></i>
+                                        </div>
+                                        <div>
+                                            <h5 class="card-title">Total Products</h5>
+                                            <p class="card-text fs-4 mb-0" id="total-products">0</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <!-- Edit Form (Hidden by default) -->
+                <div class="row d-none" id="portfolio-edit">
+                    <div class="col-md-6 offset-md-3">
+                        <form id="portfolio-form">
+                            <div class="mb-3">
+                                <label for="edit-username" class="form-label">Username</label>
+                                <input type="text" class="form-control" id="edit-username" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="edit-email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="edit-email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="edit-dob" class="form-label">Date of Birth</label>
+                                <input type="date" class="form-control" id="edit-dob" required>
+                            </div>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                <button type="button" class="btn btn-secondary" id="cancel-edit-btn">Cancel</button>
+                                <button type="button" class="btn btn-primary" id="save-portfolio-btn">Save Changes</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    let currentMemberId = null;
+
+    document.addEventListener('DOMContentLoaded', function() {
+        // Check authentication
+        checkAuth();
+
+        // Get member ID from URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const memberId = urlParams.get('id');
+
+        if (memberId) {
+            currentMemberId = memberId;
+            loadMemberPortfolio(memberId);
+        } else {
+            // If no ID provided, load the current user's portfolio
+            const sessionToken = localStorage.getItem('sessionToken');
+
+            // In a real app, you would have an endpoint to get the current user's ID
+            // For this demo, we'll redirect to the members page
+            window.location.href = '/members';
+        }
+
+        // Event listeners
+        document.getElementById('edit-portfolio-btn').addEventListener('click', toggleEditMode);
+        document.getElementById('cancel-edit-btn').addEventListener('click', toggleEditMode);
+        document.getElementById('save-portfolio-btn').addEventListener('click', savePortfolio);
+    });
+
+    function loadMemberPortfolio(memberId) {
+        const sessionToken = localStorage.getItem('sessionToken');
+
+        // Show loading indicators
+        document.getElementById('member-username').innerHTML = '<span class="text-muted"><i class="bi bi-hourglass-split me-1"></i>Loading...</span>';
+        document.getElementById('member-id').innerHTML = '<span class="text-muted"><i class="bi bi-hourglass-split me-1"></i>Loading...</span>';
+        document.getElementById('member-email').innerHTML = '<span class="text-muted"><i class="bi bi-hourglass-split me-1"></i>Loading...</span>';
+        document.getElementById('member-dob').innerHTML = '<span class="text-muted"><i class="bi bi-hourglass-split me-1"></i>Loading...</span>';
+        document.getElementById('shops-container').innerHTML = '<div class="text-center"><div class="spinner-border text-primary" role="status"><span class="visually-hidden">Loading...</span></div><p class="mt-2">Loading shops...</p></div>';
+
+        fetch(`/portfolio/member-details/${memberId}`, {
+            headers: {
+                'Authorization': sessionToken
+            }
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log('Portfolio data:', data); // Debug log
+            if (data.status === 'success') {
+                const portfolio = data.data;
+
+                // Update member details
+                document.getElementById('member-username').textContent = portfolio.username;
+                document.getElementById('member-id').textContent = portfolio.member_id;
+                document.getElementById('member-email').textContent = portfolio.email;
+                document.getElementById('member-dob').textContent = portfolio.date_of_birth || 'Not available';
+
+                // Update profile image if available
+                if (portfolio.profile_image) {
+                    // Fetch the profile image from the member endpoint
+                    fetch(`/portfolio/member/${portfolio.member_id}`, {
+                        headers: {
+                            'Authorization': sessionToken
+                        }
+                    })
+                    .then(response => response.json())
+                    .then(memberData => {
+                        if (memberData.status === 'success' && memberData.data && memberData.data.profile_image) {
+                            const avatarContainer = document.getElementById('member-avatar');
+                            const img = avatarContainer.querySelector('img');
+                            if (img) {
+                                img.src = memberData.data.profile_image;
+                                img.alt = portfolio.username;
+                                img.title = `${portfolio.username} (${memberData.data.gender || 'unknown'})`;
+                            }
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error loading profile image:', error);
+                    });
+                }
+
+                // Update role badge
+                const roleBadge = document.getElementById('member-role');
+                roleBadge.textContent = portfolio.role;
+                roleBadge.className = portfolio.role.toLowerCase() === 'admin' ? 'badge bg-danger' : 'badge bg-primary';
+
+                // Update edit form
+                document.getElementById('edit-username').value = portfolio.username;
+                document.getElementById('edit-email').value = portfolio.email;
+
+                // Format date for input (YYYY-MM-DD)
+                try {
+                    if (portfolio.date_of_birth) {
+                        const dob = new Date(portfolio.date_of_birth);
+                        const formattedDob = dob.toISOString().split('T')[0];
+                        document.getElementById('edit-dob').value = formattedDob;
+                    } else {
+                        // Set to current date if not available
+                        document.getElementById('edit-dob').value = new Date().toISOString().split('T')[0];
+                    }
+                } catch (e) {
+                    console.error('Error formatting date for input:', e);
+                    // Set to current date if there's an error
+                    document.getElementById('edit-dob').value = new Date().toISOString().split('T')[0];
+                }
+
+                // Update shops
+                const shopsContainer = document.getElementById('shops-container');
+
+                if (portfolio.shops && portfolio.shops.length > 0) {
+                    shopsContainer.innerHTML = '';
+
+                    // Create a row for the shop cards
+                    const shopRow = document.createElement('div');
+                    shopRow.className = 'row';
+                    shopsContainer.appendChild(shopRow);
+
+                    portfolio.shops.forEach(shop => {
+                        // Fetch products for this shop
+                        fetch(`/api/products?shop_id=${shop.shop_id}`, {
+                            headers: {
+                                'Authorization': sessionToken
+                            }
+                        })
+                        .then(response => response.json())
+                        .then(productsData => {
+                            const products = productsData.status === 'success' ? productsData.data : [];
+                            const productCount = products.length;
+
+                            // Create a column for each shop card
+                            const shopCol = document.createElement('div');
+                            shopCol.className = 'col-md-6 mb-3';
+
+                            // Create the shop card
+                            const shopCard = document.createElement('div');
+                            shopCard.className = 'card h-100';
+
+                            // Create the card header with shop name and badge
+                            const cardHeader = document.createElement('div');
+                            cardHeader.className = 'card-header d-flex justify-content-between align-items-center';
+                            cardHeader.innerHTML = `
+                                <h5 class="card-title mb-0">${shop.name}</h5>
+                                <span class="badge bg-${productCount > 0 ? 'success' : 'secondary'} rounded-pill">${productCount} Product${productCount !== 1 ? 's' : ''}</span>
+                            `;
+
+                            // Create the card body with shop details
+                            const cardBody = document.createElement('div');
+                            cardBody.className = 'card-body';
+                            cardBody.innerHTML = `
+                                <h6 class="card-subtitle mb-2 text-muted">ID: ${shop.shop_id}</h6>
+                                <p class="card-text">
+                                    <i class="bi bi-geo-alt-fill text-primary me-1"></i> <strong>Address:</strong> ${shop.address || 'No address'}<br>
+                                    <i class="bi bi-telephone-fill text-primary me-1"></i> <strong>Contact:</strong> ${shop.contact || 'No contact'}
+                                </p>
+                            `;
+
+                            // If we have products, show a list of top products
+                            if (productCount > 0) {
+                                const topProducts = products.slice(0, 3); // Show top 3 products
+
+                                const productsList = document.createElement('div');
+                                productsList.className = 'mt-3';
+                                productsList.innerHTML = `<h6 class="border-bottom pb-2">Products (${productCount} total)</h6>`;
+
+                                const productUl = document.createElement('ul');
+                                productUl.className = 'list-group list-group-flush';
+
+                                topProducts.forEach(product => {
+                                    const productLi = document.createElement('li');
+                                    productLi.className = 'list-group-item px-0 py-2 d-flex justify-content-between align-items-center';
+                                    productLi.innerHTML = `
+                                        <span>
+                                            <strong>${product.name}</strong><br>
+                                            <small class="text-muted">${product.category || 'No category'}</small>
+                                        </span>
+                                        <span class="badge bg-primary rounded-pill">₹${parseFloat(product.price).toFixed(2)}</span>
+                                    `;
+                                    productUl.appendChild(productLi);
+                                });
+
+                                productsList.appendChild(productUl);
+                                cardBody.appendChild(productsList);
+                            }
+
+                            // Create the card footer with action buttons
+                            const cardFooter = document.createElement('div');
+                            cardFooter.className = 'card-footer bg-transparent';
+                            cardFooter.innerHTML = `
+                                <a href="/shops" class="btn btn-sm btn-primary">
+                                    <i class="bi bi-shop me-1"></i> View Shop
+                                </a>
+                                <a href="/products?shop=${shop.shop_id}" class="btn btn-sm btn-outline-primary ms-2">
+                                    <i class="bi bi-box me-1"></i> View Products
+                                </a>
+                            `;
+
+                            // Assemble the card
+                            shopCard.appendChild(cardHeader);
+                            shopCard.appendChild(cardBody);
+                            shopCard.appendChild(cardFooter);
+                            shopCol.appendChild(shopCard);
+                            shopRow.appendChild(shopCol);
+                        })
+                        .catch(error => {
+                            console.error('Error loading products for shop:', error);
+
+                            // Create a simpler card if products can't be loaded
+                            const shopCol = document.createElement('div');
+                            shopCol.className = 'col-md-6 mb-3';
+
+                            const shopCard = document.createElement('div');
+                            shopCard.className = 'card';
+                            shopCard.innerHTML = `
+                                <div class="card-body">
+                                    <h5 class="card-title">${shop.name}</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">ID: ${shop.shop_id}</h6>
+                                    <p class="card-text">
+                                        <strong>Address:</strong> ${shop.address || 'No address'}<br>
+                                        <strong>Contact:</strong> ${shop.contact || 'No contact'}
+                                    </p>
+                                    <a href="/shops" class="btn btn-sm btn-primary">View Shop</a>
+                                </div>
+                            `;
+
+                            shopCol.appendChild(shopCard);
+                            shopRow.appendChild(shopCol);
+                        });
+                    });
+
+                    // Update statistics
+                    document.getElementById('total-shops').textContent = portfolio.shops.length;
+                } else {
+                    shopsContainer.innerHTML = `
+                        <div class="alert alert-info">
+                            <i class="bi bi-info-circle me-2"></i>
+                            No shops found for this member.
+                        </div>
+                    `;
+                    document.getElementById('total-shops').textContent = '0';
+                }
+
+                // Update total products
+                document.getElementById('total-products').textContent = portfolio.total_products;
+
+
+
+                // Check if current user can edit this portfolio
+                const currentUserId = localStorage.getItem('userId');
+                const userRole = localStorage.getItem('userRole');
+
+                // Only show edit button if user is admin or it's their own profile
+                const editBtn = document.getElementById('edit-portfolio-btn');
+                if (userRole && (userRole.toLowerCase() === 'admin' || currentUserId === portfolio.member_id.toString())) {
+                    editBtn.classList.remove('d-none');
+                } else {
+                    editBtn.classList.add('d-none');
+                }
+            } else {
+                showMessage('Error', data.error || 'Failed to load portfolio');
+            }
+        })
+        .catch(error => {
+            console.error('Error loading portfolio:', error);
+
+            // Show detailed error message
+            document.getElementById('member-username').textContent = 'Error loading profile';
+            document.getElementById('member-id').textContent = 'N/A';
+            document.getElementById('member-email').textContent = 'N/A';
+            document.getElementById('member-dob').textContent = 'N/A';
+
+            // Update shops container with error message
+            document.getElementById('shops-container').innerHTML = `
+                <div class="alert alert-danger">
+                    <i class="bi bi-exclamation-triangle-fill me-2"></i>
+                    <strong>Error:</strong> Failed to load portfolio. ${error.message || ''}
+                    <hr>
+                    <p class="mb-0">Please try again or contact support if the problem persists.</p>
+                </div>
+            `;
+
+            // Update statistics
+            document.getElementById('total-shops').textContent = '0';
+            document.getElementById('total-products').textContent = '0';
+
+            // Show error message
+            showMessage('Error', `Failed to load portfolio: ${error.message || 'Unknown error'}`);
+        });
+    }
+
+    function toggleEditMode() {
+        const viewSection = document.getElementById('portfolio-view');
+        const editSection = document.getElementById('portfolio-edit');
+
+        if (viewSection.classList.contains('d-none')) {
+            // Switch to view mode
+            viewSection.classList.remove('d-none');
+            editSection.classList.add('d-none');
+            document.getElementById('edit-portfolio-btn').textContent = 'Edit Portfolio';
+        } else {
+            // Switch to edit mode
+            viewSection.classList.add('d-none');
+            editSection.classList.remove('d-none');
+            document.getElementById('edit-portfolio-btn').textContent = 'Cancel';
+        }
+    }
+
+    function savePortfolio() {
+        const sessionToken = localStorage.getItem('sessionToken');
+
+        const portfolioData = {
+            username: document.getElementById('edit-username').value,
+            email: document.getElementById('edit-email').value,
+            dob: document.getElementById('edit-dob').value
+        };
+
+        fetch(`/portfolio/member-details/${currentMemberId}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': sessionToken
+            },
+            body: JSON.stringify(portfolioData)
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.status === 'success') {
+                // Switch back to view mode
+                toggleEditMode();
+
+                // Reload portfolio data
+                loadMemberPortfolio(currentMemberId);
+
+                showMessage('Success', 'Portfolio updated successfully');
+            } else {
+                showMessage('Error', data.error || 'Failed to update portfolio');
+            }
+        })
+        .catch(error => {
+            console.error('Error updating portfolio:', error);
+            showMessage('Error', 'Failed to update portfolio. Please try again.');
+        });
+    }
+</script>
+{% endblock %}

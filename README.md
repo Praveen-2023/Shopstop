@@ -2,6 +2,9 @@
 
 This project implements a secure API system that connects project-specific databases to a central database (CIMS - Central Information Management System) with role-based access control and comprehensive logging.
 
+Report Link: https://docs.google.com/document/d/1t40plxkaOHK39pTuUhpY898tS0KCPiZvaRNvGcQEfwg/edit?tab=t.0
+
+
 ## Project Structure
 
 - `main.py`: Main application file that initializes the Flask app and registers all routes

@@ -16695,3 +16695,117 @@ g
 2025-04-16 12:23:35,633 INFO  * Debugger PIN: 555-876-948
 2025-04-16 12:23:35,821 WARNING  * Debugger is active!
 2025-04-16 12:23:35,829 INFO  * Debugger PIN: 555-876-948
+2025-04-17 01:42:14,291 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.7.26.152:5000
+2025-04-17 01:42:14,422 INFO [33mPress CTRL+C to quit[0m
+2025-04-17 01:42:14,564 INFO  * Restarting with watchdog (windowsapi)
+2025-04-17 01:42:15,478 WARNING  * Debugger is active!
+2025-04-17 01:42:15,486 INFO  * Debugger PIN: 555-876-948
+2025-04-17 01:42:28,784 INFO 127.0.0.1 - - [17/Apr/2025 01:42:28] "GET / HTTP/1.1" 200 -
+2025-04-17 01:42:29,209 INFO 127.0.0.1 - - [17/Apr/2025 01:42:29] "GET /dashboard HTTP/1.1" 200 -
+2025-04-17 01:42:29,775 INFO 127.0.0.1 - - [17/Apr/2025 01:42:29] "GET /static/js/common.js HTTP/1.1" 200 -
+2025-04-17 01:42:29,817 INFO 127.0.0.1 - - [17/Apr/2025 01:42:29] "GET /static/js/auth.js HTTP/1.1" 200 -
+2025-04-17 01:42:29,827 INFO 127.0.0.1 - - [17/Apr/2025 01:42:29] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-04-17 01:42:29,936 INFO 127.0.0.1 - - [17/Apr/2025 01:42:29] "GET /portfolio/members?session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100 HTTP/1.1" 200 -
+2025-04-17 01:42:30,320 INFO 127.0.0.1 - - [17/Apr/2025 01:42:30] "GET /api/dashboard/products/by-category?session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100 HTTP/1.1" 200 -
+2025-04-17 01:42:30,352 INFO 127.0.0.1 - - [17/Apr/2025 01:42:30] "GET /api/dashboard/shops/count?session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100 HTTP/1.1" 200 -
+2025-04-17 01:42:30,763 INFO 127.0.0.1 - - [17/Apr/2025 01:42:30] "GET /api/dashboard/products/count?session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100 HTTP/1.1" 200 -
+2025-04-17 01:42:31,210 INFO 127.0.0.1 - - [17/Apr/2025 01:42:31] "GET /api/dashboard/customers/count?session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100 HTTP/1.1" 200 -
+2025-04-17 01:42:31,469 INFO 127.0.0.1 - - [17/Apr/2025 01:42:31] "GET /api/dashboard/orders/recent?session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100 HTTP/1.1" 200 -
+2025-04-17 01:42:31,715 INFO 127.0.0.1 - - [17/Apr/2025 01:42:31] "GET /api/dashboard/loyalty/recent?session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100 HTTP/1.1" 200 -
+2025-04-17 01:42:31,822 INFO 127.0.0.1 - - [17/Apr/2025 01:42:31] "GET /api/dashboard/sales/by-shop?session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100 HTTP/1.1" 200 -
+2025-04-17 01:42:40,355 INFO 127.0.0.1 - - [17/Apr/2025 01:42:40] "GET / HTTP/1.1" 200 -
+2025-04-17 01:42:41,800 INFO 127.0.0.1 - - [17/Apr/2025 01:42:41] "GET /dashboard HTTP/1.1" 200 -
+2025-04-17 01:42:42,251 INFO 127.0.0.1 - - [17/Apr/2025 01:42:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-17 01:42:42,251 INFO 127.0.0.1 - - [17/Apr/2025 01:42:42] "[36mGET /static/js/auth.js HTTP/1.1[0m" 304 -
+2025-04-17 01:42:42,251 INFO 127.0.0.1 - - [17/Apr/2025 01:42:42] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-17 01:42:42,506 INFO 127.0.0.1 - - [17/Apr/2025 01:42:42] "GET /portfolio/members?session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100 HTTP/1.1" 200 -
+2025-04-17 01:42:42,704 INFO 127.0.0.1 - - [17/Apr/2025 01:42:42] "GET /api/dashboard/products/by-category?session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100 HTTP/1.1" 200 -
+2025-04-17 01:42:42,732 INFO 127.0.0.1 - - [17/Apr/2025 01:42:42] "GET /api/dashboard/shops/count?session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100 HTTP/1.1" 200 -
+2025-04-17 01:42:42,889 INFO 127.0.0.1 - - [17/Apr/2025 01:42:42] "GET /api/dashboard/products/count?session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100 HTTP/1.1" 200 -
+2025-04-17 01:42:43,180 INFO 127.0.0.1 - - [17/Apr/2025 01:42:43] "GET /api/dashboard/customers/count?session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100 HTTP/1.1" 200 -
+2025-04-17 01:42:43,281 INFO 127.0.0.1 - - [17/Apr/2025 01:42:43] "GET /api/dashboard/orders/recent?session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100 HTTP/1.1" 200 -
+2025-04-17 01:42:43,632 INFO 127.0.0.1 - - [17/Apr/2025 01:42:43] "GET /api/dashboard/loyalty/recent?session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100 HTTP/1.1" 200 -
+2025-04-17 01:42:43,889 INFO 127.0.0.1 - - [17/Apr/2025 01:42:43] "GET /api/dashboard/sales/by-shop?session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100 HTTP/1.1" 200 -
+2025-04-17 01:42:47,841 INFO 127.0.0.1 - - [17/Apr/2025 01:42:47] "GET /members HTTP/1.1" 200 -
+2025-04-17 01:42:48,430 INFO 127.0.0.1 - - [17/Apr/2025 01:42:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-17 01:42:48,430 INFO 127.0.0.1 - - [17/Apr/2025 01:42:48] "[36mGET /static/js/auth.js HTTP/1.1[0m" 304 -
+2025-04-17 01:42:48,430 INFO 127.0.0.1 - - [17/Apr/2025 01:42:48] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-17 01:42:49,336 INFO 127.0.0.1 - - [17/Apr/2025 01:42:49] "GET /portfolio/members?session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100 HTTP/1.1" 200 -
+2025-04-17 01:42:50,263 INFO 127.0.0.1 - - [17/Apr/2025 01:42:50] "GET /shops HTTP/1.1" 200 -
+2025-04-17 01:42:50,761 INFO 127.0.0.1 - - [17/Apr/2025 01:42:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-17 01:42:50,780 INFO 127.0.0.1 - - [17/Apr/2025 01:42:50] "[36mGET /static/images/members/placeholder.jpg HTTP/1.1[0m" 304 -
+2025-04-17 01:42:50,781 INFO 127.0.0.1 - - [17/Apr/2025 01:42:50] "[36mGET /static/js/auth.js HTTP/1.1[0m" 304 -
+2025-04-17 01:42:50,783 INFO 127.0.0.1 - - [17/Apr/2025 01:42:50] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-17 01:42:51,205 INFO 127.0.0.1 - - [17/Apr/2025 01:42:51] "[33mGET /check-role?session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100 HTTP/1.1[0m" 404 -
+2025-04-17 01:42:52,006 INFO 127.0.0.1 - - [17/Apr/2025 01:42:52] "GET /api/shops?session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100 HTTP/1.1" 200 -
+2025-04-17 01:42:52,008 INFO 127.0.0.1 - - [17/Apr/2025 01:42:52] "GET /portfolio/members?session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100 HTTP/1.1" 200 -
+2025-04-17 01:42:52,433 INFO 127.0.0.1 - - [17/Apr/2025 01:42:52] "[36mGET /static/images/members/placeholder.jpg HTTP/1.1[0m" 304 -
+2025-04-17 01:43:03,409 INFO 127.0.0.1 - - [17/Apr/2025 01:43:03] "GET /products HTTP/1.1" 200 -
+2025-04-17 01:43:03,952 INFO 127.0.0.1 - - [17/Apr/2025 01:43:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-17 01:43:03,954 INFO 127.0.0.1 - - [17/Apr/2025 01:43:03] "[36mGET /static/js/auth.js HTTP/1.1[0m" 304 -
+2025-04-17 01:43:03,960 INFO 127.0.0.1 - - [17/Apr/2025 01:43:03] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-17 01:43:04,205 INFO 127.0.0.1 - - [17/Apr/2025 01:43:04] "GET /shops?session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100 HTTP/1.1" 200 -
+2025-04-17 01:43:04,369 INFO 127.0.0.1 - - [17/Apr/2025 01:43:04] "GET /api/products?session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100 HTTP/1.1" 200 -
+2025-04-17 01:43:07,183 INFO 127.0.0.1 - - [17/Apr/2025 01:43:07] "GET /portfolio HTTP/1.1" 200 -
+2025-04-17 01:43:07,716 INFO 127.0.0.1 - - [17/Apr/2025 01:43:07] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-17 01:43:07,758 INFO 127.0.0.1 - - [17/Apr/2025 01:43:07] "[36mGET /static/images/members/placeholder.jpg HTTP/1.1[0m" 304 -
+2025-04-17 01:43:07,758 INFO 127.0.0.1 - - [17/Apr/2025 01:43:07] "[36mGET /static/js/auth.js HTTP/1.1[0m" 304 -
+2025-04-17 01:43:07,758 INFO 127.0.0.1 - - [17/Apr/2025 01:43:07] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-17 01:43:07,963 INFO 127.0.0.1 - - [17/Apr/2025 01:43:07] "GET /members HTTP/1.1" 200 -
+2025-04-17 01:43:08,300 INFO 127.0.0.1 - - [17/Apr/2025 01:43:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-17 01:43:08,607 INFO 127.0.0.1 - - [17/Apr/2025 01:43:08] "[36mGET /static/js/auth.js HTTP/1.1[0m" 304 -
+2025-04-17 01:43:08,609 INFO 127.0.0.1 - - [17/Apr/2025 01:43:08] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-17 01:43:08,983 INFO 127.0.0.1 - - [17/Apr/2025 01:43:08] "GET /portfolio/members?session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100 HTTP/1.1" 200 -
+2025-04-17 01:43:11,566 INFO 127.0.0.1 - - [17/Apr/2025 01:43:11] "GET /portfolio?id=2080 HTTP/1.1" 200 -
+2025-04-17 01:43:12,115 INFO 127.0.0.1 - - [17/Apr/2025 01:43:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-17 01:43:12,121 INFO 127.0.0.1 - - [17/Apr/2025 01:43:12] "[36mGET /static/images/members/placeholder.jpg HTTP/1.1[0m" 304 -
+2025-04-17 01:43:12,121 INFO 127.0.0.1 - - [17/Apr/2025 01:43:12] "[36mGET /static/js/auth.js HTTP/1.1[0m" 304 -
+2025-04-17 01:43:12,121 INFO 127.0.0.1 - - [17/Apr/2025 01:43:12] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-17 01:43:12,395 INFO {'timestamp': '2025-04-17T01:43:12.395003', 'action': 'VIEW', 'table': 'portfolio', 'data': {'member_id': 2080}, 'user_id': 'test_user'}
+2025-04-17 01:43:12,403 INFO 127.0.0.1 - - [17/Apr/2025 01:43:12] "GET /portfolio/member-details/2080?session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100 HTTP/1.1" 200 -
+2025-04-17 01:43:12,814 INFO 127.0.0.1 - - [17/Apr/2025 01:43:12] "GET /portfolio/member/2080?session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100 HTTP/1.1" 200 -
+2025-04-17 01:43:13,055 INFO 127.0.0.1 - - [17/Apr/2025 01:43:13] "[33mGET /static/images/members/f5.jpg HTTP/1.1[0m" 404 -
+2025-04-17 01:43:38,878 INFO 127.0.0.1 - - [17/Apr/2025 01:43:38] "GET /shop-display HTTP/1.1" 200 -
+2025-04-17 01:43:39,432 INFO 127.0.0.1 - - [17/Apr/2025 01:43:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-17 01:43:39,439 INFO 127.0.0.1 - - [17/Apr/2025 01:43:39] "[36mGET /static/js/auth.js HTTP/1.1[0m" 304 -
+2025-04-17 01:43:39,439 INFO 127.0.0.1 - - [17/Apr/2025 01:43:39] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-17 01:43:39,697 INFO 127.0.0.1 - - [17/Apr/2025 01:43:39] "GET /api/shops?session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100 HTTP/1.1" 200 -
+2025-04-17 01:43:39,838 INFO 127.0.0.1 - - [17/Apr/2025 01:43:39] "GET /api/products?session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100 HTTP/1.1" 200 -
+2025-04-17 01:43:39,846 INFO 127.0.0.1 - - [17/Apr/2025 01:43:39] "GET /api/cs432g17/suppliers?session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100 HTTP/1.1" 200 -
+2025-04-17 01:43:41,249 INFO 127.0.0.1 - - [17/Apr/2025 01:43:41] "GET /employee-display HTTP/1.1" 200 -
+2025-04-17 01:43:41,772 INFO 127.0.0.1 - - [17/Apr/2025 01:43:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-17 01:43:41,772 INFO 127.0.0.1 - - [17/Apr/2025 01:43:41] "[36mGET /static/js/auth.js HTTP/1.1[0m" 304 -
+2025-04-17 01:43:41,782 INFO 127.0.0.1 - - [17/Apr/2025 01:43:41] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-17 01:43:42,124 INFO 127.0.0.1 - - [17/Apr/2025 01:43:42] "GET /api/cs432g17/employees?session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100 HTTP/1.1" 200 -
+2025-04-17 01:43:42,429 INFO 127.0.0.1 - - [17/Apr/2025 01:43:42] "GET /api/shops?session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100 HTTP/1.1" 200 -
+2025-04-17 01:43:44,095 INFO 127.0.0.1 - - [17/Apr/2025 01:43:44] "GET /order-display HTTP/1.1" 200 -
+2025-04-17 01:43:44,339 INFO 127.0.0.1 - - [17/Apr/2025 01:43:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-17 01:43:44,594 INFO 127.0.0.1 - - [17/Apr/2025 01:43:44] "[36mGET /static/js/auth.js HTTP/1.1[0m" 304 -
+2025-04-17 01:43:44,596 INFO 127.0.0.1 - - [17/Apr/2025 01:43:44] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-17 01:43:44,639 INFO 127.0.0.1 - - [17/Apr/2025 01:43:44] "GET /api/cs432g17/orders?session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100 HTTP/1.1" 200 -
+2025-04-17 01:43:44,945 INFO 127.0.0.1 - - [17/Apr/2025 01:43:44] "GET /api/shops?session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100 HTTP/1.1" 200 -
+2025-04-17 01:43:44,947 INFO 127.0.0.1 - - [17/Apr/2025 01:43:44] "GET /api/cs432g17/loyalty?session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100 HTTP/1.1" 200 -
+2025-04-17 01:43:46,913 INFO 127.0.0.1 - - [17/Apr/2025 01:43:46] "GET /dashboard HTTP/1.1" 200 -
+2025-04-17 01:43:47,166 INFO 127.0.0.1 - - [17/Apr/2025 01:43:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-17 01:43:47,423 INFO 127.0.0.1 - - [17/Apr/2025 01:43:47] "[36mGET /static/js/auth.js HTTP/1.1[0m" 304 -
+2025-04-17 01:43:47,432 INFO 127.0.0.1 - - [17/Apr/2025 01:43:47] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-17 01:43:47,486 INFO 127.0.0.1 - - [17/Apr/2025 01:43:47] "GET /portfolio/members?session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100 HTTP/1.1" 200 -
+2025-04-17 01:43:47,793 INFO 127.0.0.1 - - [17/Apr/2025 01:43:47] "GET /api/dashboard/products/by-category?session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100 HTTP/1.1" 200 -
+2025-04-17 01:43:47,818 INFO 127.0.0.1 - - [17/Apr/2025 01:43:47] "GET /api/dashboard/shops/count?session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100 HTTP/1.1" 200 -
+2025-04-17 01:43:48,192 INFO 127.0.0.1 - - [17/Apr/2025 01:43:48] "GET /api/dashboard/products/count?session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100 HTTP/1.1" 200 -
+2025-04-17 01:43:48,448 INFO 127.0.0.1 - - [17/Apr/2025 01:43:48] "GET /api/dashboard/customers/count?session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100 HTTP/1.1" 200 -
+2025-04-17 01:43:48,555 INFO 127.0.0.1 - - [17/Apr/2025 01:43:48] "GET /api/dashboard/orders/recent?session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100 HTTP/1.1" 200 -
+2025-04-17 01:43:48,778 INFO 127.0.0.1 - - [17/Apr/2025 01:43:48] "GET /api/dashboard/loyalty/recent?session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100 HTTP/1.1" 200 -
+2025-04-17 01:43:48,885 INFO 127.0.0.1 - - [17/Apr/2025 01:43:48] "GET /api/dashboard/sales/by-shop?session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100 HTTP/1.1" 200 -
+2025-04-17 01:43:52,550 INFO 127.0.0.1 - - [17/Apr/2025 01:43:52] "GET /shops HTTP/1.1" 200 -
+2025-04-17 01:43:53,078 INFO 127.0.0.1 - - [17/Apr/2025 01:43:53] "[36mGET /static/js/auth.js HTTP/1.1[0m" 304 -
+2025-04-17 01:43:53,079 INFO 127.0.0.1 - - [17/Apr/2025 01:43:53] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-17 01:43:53,081 INFO 127.0.0.1 - - [17/Apr/2025 01:43:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-17 01:43:53,083 INFO 127.0.0.1 - - [17/Apr/2025 01:43:53] "[36mGET /static/images/members/placeholder.jpg HTTP/1.1[0m" 304 -
+2025-04-17 01:43:53,335 INFO 127.0.0.1 - - [17/Apr/2025 01:43:53] "[33mGET /check-role?session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100 HTTP/1.1[0m" 404 -
+2025-04-17 01:43:53,522 INFO 127.0.0.1 - - [17/Apr/2025 01:43:53] "GET /api/shops?session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100 HTTP/1.1" 200 -
+2025-04-17 01:43:53,719 INFO 127.0.0.1 - - [17/Apr/2025 01:43:53] "[36mGET /static/images/members/placeholder.jpg HTTP/1.1[0m" 304 -
+2025-04-17 01:43:53,736 INFO 127.0.0.1 - - [17/Apr/2025 01:43:53] "GET /portfolio/members?session_token=3137bea9-8598-42c9-ba2d-203560e64100&session_token=3137bea9-8598-42c9-ba2d-203560e64100 HTTP/1.1" 200 -

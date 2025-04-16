@@ -16685,3 +16685,13 @@ g
 2025-04-16 12:23:34,606 INFO  * Restarting with watchdog (windowsapi)
 2025-04-16 12:23:34,612 INFO  * Restarting with watchdog (windowsapi)
 2025-04-16 12:23:34,773 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 12:23:35,609 WARNING  * Debugger is active!
+2025-04-16 12:23:35,609 WARNING  * Debugger is active!
+2025-04-16 12:23:35,621 INFO  * Debugger PIN: 555-876-948
+2025-04-16 12:23:35,621 WARNING  * Debugger is active!
+2025-04-16 12:23:35,623 INFO  * Debugger PIN: 555-876-948
+2025-04-16 12:23:35,625 WARNING  * Debugger is active!
+2025-04-16 12:23:35,633 INFO  * Debugger PIN: 555-876-948
+2025-04-16 12:23:35,633 INFO  * Debugger PIN: 555-876-948
+2025-04-16 12:23:35,821 WARNING  * Debugger is active!
+2025-04-16 12:23:35,829 INFO  * Debugger PIN: 555-876-948

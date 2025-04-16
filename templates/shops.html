@@ -263,15 +263,10 @@
         // Check authentication
         if (checkAuth()) {
             // Check if user is admin
-            const userRole = localStorage.getItem('userRole');
-            console.log('User role from localStorage:', userRole);
+            checkAdminRole();
 
-            // For testing purposes, consider all users as admins
-            const isAdmin = true; // userRole && userRole.toLowerCase() === 'admin';
-            console.log('Admin access granted:', isAdmin);
-
-            // Show add shop button for everyone during testing
-            document.getElementById('add-shop-btn').style.display = 'block';
+            // Hide admin buttons by default
+            document.getElementById('add-shop-btn').style.display = 'none';
 
             // Load shops
             loadShops();
@@ -568,11 +563,11 @@
                 gridView.appendChild(shopCard);
 
                 // Fetch owner name
-                if (shop.member_id) {
-                    fetchOwnerName(shop.member_id, shop.shop_id);
-                } else {
+                // if (shop.member_id) {
+                //     fetchOwnerName(shop.member_id, shop.shop_id);
+                // } else {
                     document.querySelector(`.owner-placeholder-${shop.shop_id}`).textContent = 'No owner';
-                }
+                // }
             });
 
             // Add event listeners to buttons
@@ -630,7 +625,7 @@
                 viewBtn.className = 'btn btn-sm btn-info me-1';
                 viewBtn.innerHTML = '<i class="bi bi-eye"></i>';
                 viewBtn.title = 'View Shop';
-                viewBtn.addEventListener('click', () => viewShop(shop.shop_id));
+                // viewBtn.addEventListener('click', () => viewShop(shop.shop_id));
 
                 // Edit button
                 const editBtn = document.createElement('button');
@@ -646,15 +641,15 @@
                 deleteBtn.title = 'Delete Shop';
                 deleteBtn.addEventListener('click', () => showDeleteModal(shop.shop_id));
 
-                // Only show edit/delete buttons for admins
+                // Always show view button
                 actionsCell.appendChild(viewBtn);
 
-                // For testing purposes, show admin controls for everyone
-                actionsCell.appendChild(editBtn);
-                actionsCell.appendChild(deleteBtn);
-
-                // Debug log
-                console.log('Admin controls shown in list view');
+                // Only show edit/delete buttons for admins
+                const userRole = localStorage.getItem('userRole');
+                if (userRole && userRole.toLowerCase() === 'admin') {
+                    actionsCell.appendChild(editBtn);
+                    actionsCell.appendChild(deleteBtn);
+                }
 
                 row.appendChild(idCell);
                 row.appendChild(nameCell);
@@ -666,11 +661,11 @@
                 tableBody.appendChild(row);
 
                 // Fetch owner name for list view
-                if (shop.member_id) {
-                    fetchOwnerNameForList(shop.member_id, shop.shop_id);
-                } else {
+                // if (shop.member_id) {
+                //     fetchOwnerNameForList(shop.member_id, shop.shop_id);
+                // } else {
                     document.querySelector(`.list-owner-placeholder-${shop.shop_id}`).textContent = 'No owner';
-                }
+                // }
             });
         }
 
@@ -754,12 +749,53 @@ Email: ${data.data.email || 'N/A'}`;
         if (ownerPlaceholder) {
             ownerPlaceholder.innerHTML = `<span class="text-muted"><i class="bi bi-hourglass-split me-1"></i>Loading...</span>`;
         }
+    }
 
-        fetch(`/portfolio/member-details/${memberId}`, {
-            headers: {
-                'Authorization': sessionToken
+    function checkAdminRole() {
+        const sessionToken = localStorage.getItem('sessionToken');
+
+        fetch('/check-role')
+        .then(response => response.json())
+        .then(data => {
+            if (data.status === 'success') {
+                // Store role in localStorage for future use
+                localStorage.setItem('userRole', data.role);
+
+                // Show/hide admin-only elements based on role
+                const isAdmin = data.is_admin;
+                const addShopBtn = document.getElementById('add-shop-btn');
+
+                if (isAdmin) {
+                    // Show admin-only elements
+                    addShopBtn.style.display = 'block';
+
+                    // Update UI to show admin controls
+                    document.querySelectorAll('.edit-shop-btn, .delete-shop-btn').forEach(btn => {
+                        btn.style.display = 'inline-block';
+                    });
+                } else {
+                    // Hide admin-only elements
+                    addShopBtn.style.display = 'none';
+
+                    // Update UI to hide admin controls
+                    document.querySelectorAll('.edit-shop-btn, .delete-shop-btn').forEach(btn => {
+                        btn.style.display = 'none';
+                    });
+                }
             }
         })
+        .catch(error => {
+            console.error('Error checking role:', error);
+        });
+    }
+
+    function fetchOwnerDetailsForList(memberId, shopId) {
+        const sessionToken = localStorage.getItem('sessionToken');
+        const ownerPlaceholder = document.querySelector(`.list-owner-placeholder-${shopId}`);
+
+        if (!ownerPlaceholder) return;
+
+        fetch(`/portfolio/member-details/${memberId}`)
         .then(response => {
             if (!response.ok) {
                 throw new Error(`HTTP error! Status: ${response.status}`);
@@ -922,12 +958,17 @@ Email: ${data.data.email || 'N/A'}`;
         fetch(url, {
             method: method,
             headers: {
-                'Content-Type': 'application/json',
-                'Authorization': sessionToken
+                'Content-Type': 'application/json'
+                // Session token will be added by the fetch interceptor
             },
             body: JSON.stringify(shopData)
         })
-        .then(response => response.json())
+        .then(response => {
+            if (response.status === 403) {
+                throw new Error('Admin access required');
+            }
+            return response.json();
+        })
         .then(data => {
             if (data.error) {
                 showMessage('Error', data.error);
@@ -944,18 +985,14 @@ Email: ${data.data.email || 'N/A'}`;
         })
         .catch(error => {
             console.error('Error saving shop:', error);
-            showMessage('Error', 'Failed to save shop. Please try again.');
+            showMessage('Error', error.message || 'Failed to save shop. Please try again.');
         });
     }
 
     function viewShop(shopId) {
         const sessionToken = localStorage.getItem('sessionToken');
 
-        fetch(`/api/shops/${shopId}`, {
-            headers: {
-                'Authorization': sessionToken
-            }
-        })
+        fetch(`/api/shops/${shopId}`)
         .then(response => response.json())
         .then(data => {
             if (data.status === 'success') {
@@ -984,11 +1021,7 @@ Email: ${data.data.email || 'N/A'}`;
                         ownerImage.alt = 'Loading...';
                     }
 
-                    fetch(`/portfolio/member-details/${shop.member_id}`, {
-                        headers: {
-                            'Authorization': sessionToken
-                        }
-                    })
+                    fetch(`/portfolio/member-details/${shop.member_id}`)
                     .then(response => {
                         if (!response.ok) {
                             throw new Error(`HTTP error! Status: ${response.status}`);
@@ -1072,17 +1105,19 @@ Email: ${data.data.email || 'N/A'}`;
                 // Setup edit button in view modal
                 const editFromViewBtn = document.getElementById('edit-shop-from-view-btn');
                 if (editFromViewBtn) {
-                    // Show for everyone during testing
-                    editFromViewBtn.style.display = 'block';
-                    editFromViewBtn.onclick = () => {
-                        // Close view modal
-                        bootstrap.Modal.getInstance(document.getElementById('viewShopModal')).hide();
-                        // Open edit modal
-                        setTimeout(() => editShop(shop), 500);
-                    };
-
-                    // Debug log
-                    console.log('Edit button shown in view modal');
+                    // Only show edit button for admins
+                    const userRole = localStorage.getItem('userRole');
+                    if (userRole && userRole.toLowerCase() === 'admin') {
+                        editFromViewBtn.style.display = 'block';
+                        editFromViewBtn.onclick = () => {
+                            // Close view modal
+                            bootstrap.Modal.getInstance(document.getElementById('viewShopModal')).hide();
+                            // Open edit modal
+                            setTimeout(() => editShop(shop), 500);
+                        };
+                    } else {
+                        editFromViewBtn.style.display = 'none';
+                    }
                 }
 
                 // Load products for this shop
@@ -1175,6 +1210,13 @@ Email: ${data.data.email || 'N/A'}`;
     }
 
     function editShop(shop) {
+        // Check if user is admin
+        const userRole = localStorage.getItem('userRole');
+        if (userRole && userRole.toLowerCase() !== 'admin') {
+            showMessage('Error', 'Admin access required to edit shops');
+            return;
+        }
+
         // Set form values
         document.getElementById('shop-id').value = shop.shop_id;
         document.getElementById('shop-name').value = shop.name;
@@ -1191,6 +1233,13 @@ Email: ${data.data.email || 'N/A'}`;
     }
 
     function showDeleteModal(shopId) {
+        // Check if user is admin
+        const userRole = localStorage.getItem('userRole');
+        if (userRole && userRole.toLowerCase() !== 'admin') {
+            showMessage('Error', 'Admin access required to delete shops');
+            return;
+        }
+
         document.getElementById('delete-shop-id').value = shopId;
         const modal = new bootstrap.Modal(document.getElementById('deleteModal'));
         modal.show();
@@ -1201,12 +1250,15 @@ Email: ${data.data.email || 'N/A'}`;
         const shopId = document.getElementById('delete-shop-id').value;
 
         fetch(`/api/shops/${shopId}`, {
-            method: 'DELETE',
-            headers: {
-                'Authorization': sessionToken
-            }
+            method: 'DELETE'
+            // Session token will be added by the fetch interceptor
         })
-        .then(response => response.json())
+        .then(response => {
+            if (response.status === 403) {
+                throw new Error('Admin access required');
+            }
+            return response.json();
+        })
         .then(data => {
             // Close modal
             const modal = bootstrap.Modal.getInstance(document.getElementById('deleteModal'));
@@ -1223,7 +1275,7 @@ Email: ${data.data.email || 'N/A'}`;
         })
         .catch(error => {
             console.error('Error deleting shop:', error);
-            showMessage('Error', 'Failed to delete shop. Please try again.');
+            showMessage('Error', error.message || 'Failed to delete shop. Please try again.');
         });
     }
 </script>

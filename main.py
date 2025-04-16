@@ -47,27 +47,38 @@ def validate_session(f):
         is_api_request = request.path.startswith('/api/') or request.headers.get('Content-Type') == 'application/json'
 
         # Try to get session token from different sources
-        session_token = request.headers.get('Authorization')
-        print(f"Request headers: {request.headers}")
+        session_token = None
 
-        # For browser requests, also check cookies and query parameters
-        if not session_token and not is_api_request:
-            # Try to get from query parameter
+        # First try query parameter (highest priority)
+        if 'session_token' in request.args:
             session_token = request.args.get('session_token')
+            print(f"Found session token in query params: {session_token}")
 
-            # If still no token, try to get from cookies
-            if not session_token:
-                session_token = request.cookies.get('session_token')
+        # Then try Authorization header
+        if not session_token and 'Authorization' in request.headers:
+            session_token = request.headers.get('Authorization')
+            print(f"Found Authorization header: {session_token}")
+            # Clean the token (remove quotes if present)
+            if session_token and (session_token.startswith('"') and session_token.endswith('"')):
+                session_token = session_token[1:-1]
+                print(f"Cleaned token from quotes: {session_token}")
 
-            # If still no token and it's a GET request to a template, redirect to login
-            if not session_token and request.method == 'GET':
+        # Finally try cookies
+        if not session_token and 'session_token' in request.cookies:
+            session_token = request.cookies.get('session_token')
+            print(f"Found session token in cookies: {session_token}")
+
+        print(f"Request path: {request.path}, method: {request.method}, token: {session_token}")
+
+        # If no token found and it's a GET request to a template, redirect to login
+        if not session_token:
+            if request.method == 'GET' and not is_api_request:
                 print(f"No session token found for {request.path}, redirecting to login")
                 return redirect('/login')
-
-        # For API requests, require session token
-        if not session_token and (is_api_request or request.method != 'GET'):
-            log_unauthorized_access(request, "Missing session token")
-            return jsonify({"error": "Session token required"}), 401
+            else:
+                # For API requests, return 401
+                log_unauthorized_access(request, "Missing session token")
+                return jsonify({"error": "Session token required"}), 401
 
         # Check if session is valid by querying the Login table in CIMS database
         try:
@@ -78,36 +89,61 @@ def validate_session(f):
 
             print(f"Validating session token: {session_token}, current time: {current_time}")
 
-            # Query the CIMS database Login table directly
+            # For testing purposes, always try without expiry check first
             cur.execute(
                 f"""SELECT MemberID, Role FROM {CIMS_DB}.Login
-                   WHERE Session = %s AND Expiry > %s""",
-                (session_token, current_time)
+                   WHERE Session = %s""",
+                (session_token,)
             )
 
             user_data = cur.fetchone()
 
-            # If no user data found, try again without expiry check (for testing)
-            if not user_data:
-                print("Session not found with expiry check, trying without expiry")
+            if user_data:
+                print(f"Found session for user: {user_data['MemberID']}, role: {user_data['Role']}")
+                # Update the expiry time
+                new_expiry = int((datetime.now() + timedelta(hours=24)).timestamp())
                 cur.execute(
-                    f"""SELECT MemberID, Role FROM {CIMS_DB}.Login
+                    f"""UPDATE {CIMS_DB}.Login
+                       SET Expiry = %s
                        WHERE Session = %s""",
-                    (session_token,)
+                    (new_expiry, session_token)
                 )
-                user_data = cur.fetchone()
+                mysql.connection.commit()
+            else:
+                # Try with different token formats
+                possible_tokens = [
+                    session_token,
+                    session_token.strip() if session_token else None,
+                    session_token.strip('"') if session_token else None,
+                    session_token.strip("'") if session_token else None,
+                    session_token.strip('"\' ') if session_token else None
+                ]
 
-                if user_data:
-                    print("Found session without expiry check, updating expiry")
-                    # Update the expiry time
-                    new_expiry = int((datetime.now() + timedelta(hours=24)).timestamp())
+                for token in possible_tokens:
+                    if not token or token == session_token:
+                        continue
+
+                    print(f"Trying with alternative token format: {token}")
                     cur.execute(
-                        f"""UPDATE {CIMS_DB}.Login
-                           SET Expiry = %s
+                        f"""SELECT MemberID, Role FROM {CIMS_DB}.Login
                            WHERE Session = %s""",
-                        (new_expiry, session_token)
+                        (token,)
                     )
-                    mysql.connection.commit()
+                    user_data = cur.fetchone()
+
+                    if user_data:
+                        print(f"Found session with alternative token format for user: {user_data['MemberID']}")
+                        session_token = token  # Use this token from now on
+                        # Update the expiry time
+                        new_expiry = int((datetime.now() + timedelta(hours=24)).timestamp())
+                        cur.execute(
+                            f"""UPDATE {CIMS_DB}.Login
+                               SET Expiry = %s
+                               WHERE Session = %s""",
+                            (new_expiry, session_token)
+                        )
+                        mysql.connection.commit()
+                        break
 
             cur.close()
 
@@ -145,12 +181,16 @@ def admin_required(f):
         # Print debug information
         print(f"Admin check for user: {g.user_data['MemberID']}, Role: {g.user_data['Role']}")
 
-        # Temporarily disabled for testing
+        # TEMPORARILY DISABLED FOR TESTING - Allow all authenticated users to perform admin actions
+        # Comment this out and uncomment the next block for production
+        print(f"ADMIN CHECK BYPASSED FOR TESTING - Allowing user {g.user_data['MemberID']} to perform admin action")
+        return f(*args, **kwargs)
+
+        # Check if user has admin role - UNCOMMENT THIS FOR PRODUCTION
         # if g.user_data['Role'].lower() != 'admin':
         #     log_unauthorized_access(request, "Non-admin attempted admin action")
         #     return jsonify({"error": "Admin access required"}), 403
-
-        return f(*args, **kwargs)
+        # return f(*args, **kwargs)
     return decorated_function
 
 # Logging function for unauthorized access
@@ -184,7 +224,7 @@ from addUser import add_user_routes
 from deleteUser import add_delete_routes
 from shops import add_shop_routes
 from products import add_product_routes
-from Customer import add_customer_routes
+from customers import add_customer_routes
 from portfolio import add_portfolio_routes
 from supplier import add_supplier_routes
 from employee import add_employee_routes
@@ -293,24 +333,65 @@ def health_check():
 
 # Debug route to check user role
 @app.route('/check-role')
-@validate_session
 def check_role():
     try:
-        # Get the session token from the request
-        session_token = request.headers.get('Authorization')
-        if not session_token:
+        # Get the session token from different sources
+        session_token = None
+
+        # First try query parameter (highest priority)
+        if 'session_token' in request.args:
             session_token = request.args.get('session_token')
-            if not session_token:
-                session_token = request.cookies.get('session_token')
+            print(f"Found session token in query params: {session_token}")
+
+        # Then try Authorization header
+        if not session_token and 'Authorization' in request.headers:
+            session_token = request.headers.get('Authorization')
+            print(f"Found Authorization header: {session_token}")
+            # Clean the token (remove quotes if present)
+            if session_token and (session_token.startswith('"') and session_token.endswith('"')):
+                session_token = session_token[1:-1]
+                print(f"Cleaned token from quotes: {session_token}")
+
+        # Finally try cookies
+        if not session_token and 'session_token' in request.cookies:
+            session_token = request.cookies.get('session_token')
+            print(f"Found session token in cookies: {session_token}")
+
+        print(f"Check-role using token: {session_token}")
+
+        if not session_token:
+            return jsonify({"error": "No session token provided"}), 401
 
         # Get user data from the database
         cur = mysql.connection.cursor()
-        cur.execute(
-            f"""SELECT MemberID, Role FROM {CIMS_DB}.Login
-               WHERE Session = %s""",
-            (session_token,)
-        )
-        user_data = cur.fetchone()
+
+        # Try with different token formats
+        possible_tokens = [
+            session_token,
+            session_token.strip() if session_token else None,
+            session_token.strip('"') if session_token else None,
+            session_token.strip("'") if session_token else None,
+            session_token.strip('"\' ') if session_token else None
+        ]
+
+        user_data = None
+        for token in possible_tokens:
+            if not token:
+                continue
+
+            print(f"Trying check-role with token: {token}")
+            cur.execute(
+                f"""SELECT MemberID, Role FROM {CIMS_DB}.Login
+                   WHERE Session = %s""",
+                (token,)
+            )
+            user_data = cur.fetchone()
+
+            if user_data:
+                print(f"Found user in check-role: {user_data['MemberID']}, role: {user_data['Role']}")
+                session_token = token  # Use this token from now on
+                break
+
         cur.close()
 
         if not user_data:
@@ -325,6 +406,7 @@ def check_role():
             "session_token": session_token
         })
     except Exception as e:
+        print(f"Error in check-role: {str(e)}")
         return jsonify({"error": str(e)}), 500
 
 if __name__ == '__main__':

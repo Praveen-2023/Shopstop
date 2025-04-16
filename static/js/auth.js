@@ -65,6 +65,29 @@ function checkAuth() {
     // Set session token as a cookie as well (for backend validation)
     document.cookie = `session_token=${sessionToken}; path=/; max-age=${60*60*24}`;
 
+    // Add a global fetch interceptor to add the session token to all requests
+    const originalFetch = window.fetch;
+    window.fetch = function(url, options = {}) {
+        // Create a new options object to avoid modifying the original
+        const newOptions = {...options};
+        newOptions.headers = {...(options.headers || {})};
+
+        // Always add the session token to the Authorization header
+        newOptions.headers.Authorization = sessionToken;
+
+        // Add session token as a query parameter for GET requests
+        if (!url.includes('?')) {
+            url = `${url}?session_token=${sessionToken}`;
+        } else {
+            url = `${url}&session_token=${sessionToken}`;
+        }
+
+        // Log the request for debugging
+        console.log(`Sending request to ${url} with session token in headers and query params`);
+
+        return originalFetch(url, newOptions);
+    };
+
     return true;
 }
 

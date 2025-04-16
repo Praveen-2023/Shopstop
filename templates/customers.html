@@ -10,7 +10,7 @@
         <div class="card">
             <div class="card-header d-flex justify-content-between align-items-center">
                 <h5 class="card-title mb-0">Customers List</h5>
-                <button id="add-customer-btn" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#customerModal">
+                <button id="add-customer-btn" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#customerModal" style="display: none;">
                     <i class="bi bi-plus-circle me-2"></i>Add Customer
                 </button>
             </div>
@@ -155,9 +155,70 @@
 
 {% block extra_js %}
 <script>
+    // Toast message function
+    function showMessage(title, message, type = 'info') {
+        // Create toast container if it doesn't exist
+        let toastContainer = document.querySelector('.toast-container');
+        if (!toastContainer) {
+            toastContainer = document.createElement('div');
+            toastContainer.className = 'toast-container position-fixed bottom-0 end-0 p-3';
+            document.body.appendChild(toastContainer);
+        }
+
+        // Create toast element
+        const toastId = 'toast-' + Date.now();
+        const toast = document.createElement('div');
+        toast.className = 'toast';
+        toast.id = toastId;
+        toast.setAttribute('role', 'alert');
+        toast.setAttribute('aria-live', 'assertive');
+        toast.setAttribute('aria-atomic', 'true');
+
+        // Set toast color based on type
+        let bgClass = 'bg-info';
+        let icon = '<i class="bi bi-info-circle me-2"></i>';
+
+        if (type === 'success') {
+            bgClass = 'bg-success';
+            icon = '<i class="bi bi-check-circle me-2"></i>';
+        } else if (type === 'error') {
+            bgClass = 'bg-danger';
+            icon = '<i class="bi bi-exclamation-triangle me-2"></i>';
+        } else if (type === 'warning') {
+            bgClass = 'bg-warning';
+            icon = '<i class="bi bi-exclamation-circle me-2"></i>';
+        }
+
+        // Create toast content
+        toast.innerHTML = `
+            <div class="toast-header ${bgClass} text-white">
+                ${icon}
+                <strong class="me-auto">${title}</strong>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                ${message}
+            </div>
+        `;
+
+        // Add toast to container
+        toastContainer.appendChild(toast);
+
+        // Initialize and show toast
+        const bsToast = new bootstrap.Toast(toast, { delay: 5000 });
+        bsToast.show();
+
+        // Remove toast after it's hidden
+        toast.addEventListener('hidden.bs.toast', function() {
+            toast.remove();
+        });
+    }
     document.addEventListener('DOMContentLoaded', function() {
         // Check authentication
         checkAuth();
+
+        // Check if user is admin
+        checkAdminRole();
 
         // Load customers
         loadCustomers();
@@ -178,34 +239,40 @@
     function loadCustomers() {
         const sessionToken = localStorage.getItem('sessionToken');
 
-        // In a real app, you would have an endpoint to get all customers
-        // For this demo, we'll simulate it
+        // Get customers from the API
         const tableBody = document.getElementById('customers-table-body');
-        tableBody.innerHTML = '<tr><td colspan="5" class="text-center">Loading customers...</td></tr>';
+        tableBody.innerHTML = '<tr><td colspan="5" class="text-center"><div class="spinner-border spinner-border-sm text-primary me-2" role="status"></div>Loading customers...</td></tr>';
 
-        // Simulate API call delay
-        setTimeout(() => {
-            // Simulate customers data
-            const customers = [
-                { customer_id: 'CS0001', name: 'John Doe', email: 'john@example.com', contact: '555-1234' },
-                { customer_id: 'CS0002', name: 'Jane Smith', email: 'jane@example.com', contact: '555-5678' },
-                { customer_id: 'CS0003', name: 'Bob Johnson', email: 'bob@example.com', contact: '555-9012' },
-                { customer_id: 'CS0004', name: 'Alice Brown', email: 'alice@example.com', contact: '555-3456' },
-                { customer_id: 'CS0005', name: 'Charlie Wilson', email: 'charlie@example.com', contact: '555-7890' }
-            ];
-
+        // The session token will be added automatically by the fetch interceptor
+        fetch('/api/customers')
+        .then(response => {
+            console.log('Customer API response status:', response.status);
+            if (!response.ok) {
+                if (response.status === 401) {
+                    throw new Error('Authentication required. Please log in again.');
+                } else {
+                    throw new Error(`Server error: ${response.status}`);
+                }
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log('Customer API response data:', data);
             tableBody.innerHTML = '';
 
-            if (customers.length === 0) {
-                const row = document.createElement('tr');
-                const cell = document.createElement('td');
-                cell.colSpan = 5;
-                cell.textContent = 'No customers found';
-                cell.className = 'text-center';
-                row.appendChild(cell);
-                tableBody.appendChild(row);
-                return;
-            }
+            if (data.status === 'success') {
+                const customers = data.data;
+
+                if (customers.length === 0) {
+                    const row = document.createElement('tr');
+                    const cell = document.createElement('td');
+                    cell.colSpan = 5;
+                    cell.textContent = 'No customers found';
+                    cell.className = 'text-center';
+                    row.appendChild(cell);
+                    tableBody.appendChild(row);
+                    return;
+                }
 
             customers.forEach(customer => {
                 const row = document.createElement('tr');
@@ -220,7 +287,7 @@
                 emailCell.textContent = customer.email;
 
                 const contactCell = document.createElement('td');
-                contactCell.textContent = customer.contact;
+                contactCell.textContent = customer.phone || customer.contact || 'N/A';
 
                 const actionsCell = document.createElement('td');
 
@@ -262,7 +329,26 @@
 
                 tableBody.appendChild(row);
             });
-        }, 500);
+            }
+        })
+        .catch(error => {
+            console.error('Error loading customers:', error);
+            tableBody.innerHTML = `
+                <tr>
+                    <td colspan="5" class="text-center text-danger">
+                        <i class="bi bi-exclamation-triangle me-2"></i>
+                        ${error.message || 'Failed to load customers. Please try again.'}
+                    </td>
+                </tr>
+            `;
+
+            // If authentication error, redirect to login after a delay
+            if (error.message && error.message.includes('Authentication required')) {
+                setTimeout(() => {
+                    window.location.href = '/login';
+                }, 2000);
+            }
+        });
     }
 
     function viewCustomer(customer) {
@@ -270,28 +356,32 @@
         document.getElementById('view-customer-id').textContent = customer.customer_id;
         document.getElementById('view-customer-name').textContent = customer.name;
         document.getElementById('view-customer-email').textContent = customer.email;
-        document.getElementById('view-customer-contact').textContent = customer.contact;
+        document.getElementById('view-customer-contact').textContent = customer.phone || 'N/A';
 
         // Show the modal
         const modal = new bootstrap.Modal(document.getElementById('viewCustomerModal'));
         modal.show();
 
-        // Fetch customer loyalty and order information
+        // Fetch customer details from API
         const sessionToken = localStorage.getItem('sessionToken');
 
-        fetch(`/customers/loyalty/${customer.customer_id}`, {
-            headers: {
-                'Authorization': sessionToken
-            }
-        })
+        fetch(`/api/customers/${customer.customer_id}`)
         .then(response => response.json())
         .then(data => {
             if (data.status === 'success') {
-                // Display orders
-                displayOrders(data.data.orders);
+                // Update customer details with the latest data
+                const customerData = data.data;
+                document.getElementById('view-customer-id').textContent = customerData.customer_id;
+                document.getElementById('view-customer-name').textContent = customerData.name;
+                document.getElementById('view-customer-email').textContent = customerData.email;
+                document.getElementById('view-customer-contact').textContent = customerData.phone || 'N/A';
 
-                // Display loyalty points
-                displayLoyalty(data.data.loyalty_points, data.data.total_points);
+                // Display loyalty points if available
+                const loyaltyPoints = customerData.loyalty_points || 0;
+                displayLoyalty([], loyaltyPoints);
+
+                // For now, display empty orders (future enhancement)
+                displayOrders([]);
             } else {
                 // Show error message
                 document.getElementById('orders-container').innerHTML = `
@@ -401,20 +491,26 @@
     function displayLoyalty(loyaltyPoints, totalPoints) {
         const loyaltyContainer = document.getElementById('loyalty-container');
 
-        if (!loyaltyPoints || loyaltyPoints.length === 0) {
-            loyaltyContainer.innerHTML = '<p class="text-muted">No loyalty points available.</p>';
-            return;
-        }
-
-        // Create summary card
+        // Create summary card even if no loyalty points history
         const summaryCard = document.createElement('div');
         summaryCard.className = 'card mb-3';
         summaryCard.innerHTML = `
             <div class="card-body">
                 <h5 class="card-title">Total Loyalty Points</h5>
-                <h2 class="display-4 text-primary">${totalPoints}</h2>
+                <h2 class="display-4 text-primary">${totalPoints || 0}</h2>
             </div>
         `;
+
+        loyaltyContainer.innerHTML = '';
+        loyaltyContainer.appendChild(summaryCard);
+
+        if (!loyaltyPoints || loyaltyPoints.length === 0) {
+            loyaltyContainer.appendChild(document.createElement('p')).innerHTML =
+                '<p class="text-muted">No loyalty points history available.</p>';
+            return;
+        }
+
+        // We already created the summary card above
 
         // Create table for loyalty points history
         const table = document.createElement('table');
@@ -464,8 +560,7 @@
         table.appendChild(thead);
         table.appendChild(tbody);
 
-        loyaltyContainer.innerHTML = '';
-        loyaltyContainer.appendChild(summaryCard);
+        // We already cleared the container and added the summary card above
         loyaltyContainer.appendChild(table);
     }
 
@@ -473,23 +568,28 @@
         const sessionToken = localStorage.getItem('sessionToken');
         const customerId = document.getElementById('customer-id').value;
 
-        // Generate a unique customer ID if not editing
-        const uniqueCustomerId = customerId || 'CS' + Math.floor(Math.random() * 10000).toString().padStart(4, '0');
-
         const customerData = {
-            customer_id: uniqueCustomerId,
             name: document.getElementById('customer-name').value,
             email: document.getElementById('customer-email').value,
-            contact: document.getElementById('customer-contact').value
+            phone: document.getElementById('customer-contact').value,
+            address: '',  // Optional field
+            loyalty_points: 0  // Default value for new customers
         };
 
-        let url = '/customers/create';
+        let url = '/api/customers';
         let method = 'POST';
 
         if (customerId) {
             // This would be an update
             method = 'PUT';
-            url = `/customers/update/${customerId}`;
+            url = `/api/customers/${customerId}`;
+        }
+
+        // Add session token to URL as a query parameter
+        if (!url.includes('?')) {
+            url = `${url}?session_token=${sessionToken}`;
+        } else {
+            url = `${url}&session_token=${sessionToken}`;
         }
 
         fetch(url, {
@@ -500,7 +600,12 @@
             },
             body: JSON.stringify(customerData)
         })
-        .then(response => response.json())
+        .then(response => {
+            if (response.status === 403) {
+                throw new Error('Admin access required');
+            }
+            return response.json();
+        })
         .then(data => {
             if (data.error) {
                 showMessage('Error', data.error);
@@ -517,16 +622,23 @@
         })
         .catch(error => {
             console.error('Error saving customer:', error);
-            showMessage('Error', 'Failed to save customer. Please try again.');
+            showMessage('Error', error.message || 'Failed to save customer. Please try again.');
         });
     }
 
     function editCustomer(customer) {
+        // Check if user is admin
+        const userRole = localStorage.getItem('userRole');
+        if (userRole && userRole.toLowerCase() !== 'admin') {
+            showMessage('Error', 'Admin access required to edit customers');
+            return;
+        }
+
         // Set form values
         document.getElementById('customer-id').value = customer.customer_id;
         document.getElementById('customer-name').value = customer.name;
         document.getElementById('customer-email').value = customer.email;
-        document.getElementById('customer-contact').value = customer.contact;
+        document.getElementById('customer-contact').value = customer.contact || customer.phone || '';
 
         // Update modal title
         document.getElementById('customerModalLabel').textContent = 'Edit Customer';
@@ -537,6 +649,13 @@
     }
 
     function showDeleteModal(customerId) {
+        // Check if user is admin
+        const userRole = localStorage.getItem('userRole');
+        if (userRole && userRole.toLowerCase() !== 'admin') {
+            showMessage('Error', 'Admin access required to delete customers');
+            return;
+        }
+
         document.getElementById('delete-customer-id').value = customerId;
         const modal = new bootstrap.Modal(document.getElementById('deleteModal'));
         modal.show();
@@ -546,13 +665,21 @@
         const sessionToken = localStorage.getItem('sessionToken');
         const customerId = document.getElementById('delete-customer-id').value;
 
-        fetch(`/customers/delete/${customerId}`, {
+        // Add session token to URL as a query parameter
+        let url = `/api/customers/${customerId}?session_token=${sessionToken}`;
+
+        fetch(url, {
             method: 'DELETE',
             headers: {
                 'Authorization': sessionToken
             }
         })
-        .then(response => response.json())
+        .then(response => {
+            if (response.status === 403) {
+                throw new Error('Admin access required');
+            }
+            return response.json();
+        })
         .then(data => {
             // Close modal
             const modal = bootstrap.Modal.getInstance(document.getElementById('deleteModal'));
@@ -569,7 +696,55 @@
         })
         .catch(error => {
             console.error('Error deleting customer:', error);
-            showMessage('Error', 'Failed to delete customer. Please try again.');
+            showMessage('Error', error.message || 'Failed to delete customer. Please try again.');
+        });
+    }
+
+    function checkAdminRole() {
+        const sessionToken = localStorage.getItem('sessionToken');
+        console.log('Checking admin role with session token:', sessionToken);
+
+        fetch('/check-role')
+        .then(response => {
+            console.log('Check-role response status:', response.status);
+            if (!response.ok) {
+                if (response.status === 401) {
+                    throw new Error('Authentication required. Please log in again.');
+                } else {
+                    throw new Error(`Server error: ${response.status}`);
+                }
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log('Check-role response data:', data);
+            if (data.status === 'success') {
+                // Store role in localStorage for future use
+                localStorage.setItem('userRole', data.role);
+
+                // Show/hide admin-only elements based on role
+                const isAdmin = data.is_admin;
+                const addCustomerBtn = document.getElementById('add-customer-btn');
+
+                if (isAdmin) {
+                    // Show admin-only elements
+                    addCustomerBtn.style.display = 'block';
+                } else {
+                    // Hide admin-only elements
+                    addCustomerBtn.style.display = 'none';
+                }
+            }
+        })
+        .catch(error => {
+            console.error('Error checking role:', error);
+
+            // If authentication error, redirect to login after a delay
+            if (error.message && error.message.includes('Authentication required')) {
+                showMessage('Error', 'Your session has expired. Redirecting to login...');
+                setTimeout(() => {
+                    window.location.href = '/login';
+                }, 2000);
+            }
         });
     }
 </script>

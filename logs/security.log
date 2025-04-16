@@ -15233,3 +15233,1330 @@ g
 2025-04-16 09:37:07,614 INFO  * Restarting with watchdog (windowsapi)
 2025-04-16 09:37:07,695 INFO  * Restarting with watchdog (windowsapi)
 2025-04-16 09:37:07,714 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 09:37:10,213 WARNING  * Debugger is active!
+2025-04-16 09:37:10,224 INFO  * Debugger PIN: 555-876-948
+2025-04-16 09:37:10,427 WARNING  * Debugger is active!
+2025-04-16 09:37:10,437 INFO  * Debugger PIN: 555-876-948
+2025-04-16 09:37:10,470 WARNING  * Debugger is active!
+2025-04-16 09:37:10,496 INFO  * Debugger PIN: 555-876-948
+2025-04-16 09:37:10,504 WARNING  * Debugger is active!
+2025-04-16 09:37:10,516 INFO  * Debugger PIN: 555-876-948
+2025-04-16 09:37:10,731 WARNING  * Debugger is active!
+2025-04-16 09:37:10,743 INFO  * Debugger PIN: 555-876-948
+2025-04-16 09:37:10,748 WARNING  * Debugger is active!
+2025-04-16 09:37:10,793 INFO  * Debugger PIN: 555-876-948
+2025-04-16 09:37:10,845 WARNING  * Debugger is active!
+2025-04-16 09:37:10,857 INFO  * Debugger PIN: 555-876-948
+2025-04-16 09:37:10,899 WARNING  * Debugger is active!
+2025-04-16 09:37:10,916 INFO  * Debugger PIN: 555-876-948
+2025-04-16 09:37:10,953 INFO  * Debugger PIN: 555-876-948
+2025-04-16 09:37:10,971 WARNING  * Debugger is active!
+2025-04-16 09:37:10,983 INFO  * Debugger PIN: 555-876-948
+2025-04-16 09:37:11,046 WARNING  * Debugger is active!
+2025-04-16 09:37:11,056 INFO  * Debugger PIN: 555-876-948
+2025-04-16 09:37:11,070 WARNING  * Debugger is active!
+2025-04-16 09:37:11,078 WARNING  * Debugger is active!
+2025-04-16 09:37:11,081 INFO  * Debugger PIN: 555-876-948
+2025-04-16 09:37:11,087 INFO  * Debugger PIN: 555-876-948
+2025-04-16 09:37:11,091 WARNING  * Debugger is active!
+2025-04-16 09:37:11,102 INFO  * Debugger PIN: 555-876-948
+2025-04-16 09:37:11,143 WARNING  * Debugger is active!
+2025-04-16 09:37:11,152 INFO  * Debugger PIN: 555-876-948
+2025-04-16 09:37:11,267 WARNING  * Debugger is active!
+2025-04-16 09:37:11,276 INFO  * Debugger PIN: 555-876-948
+2025-04-16 09:37:11,294 WARNING  * Debugger is active!
+2025-04-16 09:37:11,303 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:00:56,273 INFO 127.0.0.1 - - [16/Apr/2025 10:00:56] "GET /members HTTP/1.1" 200 -
+2025-04-16 10:00:56,744 INFO 127.0.0.1 - - [16/Apr/2025 10:00:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-16 10:00:56,892 INFO 127.0.0.1 - - [16/Apr/2025 10:00:56] "[36mGET /static/js/auth.js HTTP/1.1[0m" 304 -
+2025-04-16 10:00:56,894 INFO 127.0.0.1 - - [16/Apr/2025 10:00:56] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-16 10:00:57,326 INFO 127.0.0.1 - - [16/Apr/2025 10:00:57] "GET /portfolio/members?session_token=ffaf491b-cc71-4e93-a039-3caceced748d HTTP/1.1" 200 -
+2025-04-16 10:00:59,186 INFO 127.0.0.1 - - [16/Apr/2025 10:00:59] "GET /shops HTTP/1.1" 200 -
+2025-04-16 10:00:59,758 INFO 127.0.0.1 - - [16/Apr/2025 10:00:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-16 10:00:59,758 INFO 127.0.0.1 - - [16/Apr/2025 10:00:59] "[36mGET /static/js/auth.js HTTP/1.1[0m" 304 -
+2025-04-16 10:00:59,758 INFO 127.0.0.1 - - [16/Apr/2025 10:00:59] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-16 10:00:59,766 INFO 127.0.0.1 - - [16/Apr/2025 10:00:59] "[36mGET /static/images/members/placeholder.jpg HTTP/1.1[0m" 304 -
+2025-04-16 10:01:00,035 INFO 127.0.0.1 - - [16/Apr/2025 10:01:00] "GET /api/shops HTTP/1.1" 200 -
+2025-04-16 10:01:00,237 INFO 127.0.0.1 - - [16/Apr/2025 10:01:00] "GET /portfolio/members HTTP/1.1" 200 -
+2025-04-16 10:01:00,376 INFO 127.0.0.1 - - [16/Apr/2025 10:01:00] "[33mGET /portfolio/member-details/11 HTTP/1.1[0m" 404 -
+2025-04-16 10:01:00,715 INFO 127.0.0.1 - - [16/Apr/2025 10:01:00] "[33mGET /portfolio/member-details/15 HTTP/1.1[0m" 404 -
+2025-04-16 10:01:00,715 INFO 127.0.0.1 - - [16/Apr/2025 10:01:00] "[33mGET /portfolio/member-details/14 HTTP/1.1[0m" 404 -
+2025-04-16 10:01:00,715 INFO 127.0.0.1 - - [16/Apr/2025 10:01:00] "[33mGET /portfolio/member-details/13 HTTP/1.1[0m" 404 -
+2025-04-16 10:01:00,715 INFO 127.0.0.1 - - [16/Apr/2025 10:01:00] "[33mGET /portfolio/member-details/16 HTTP/1.1[0m" 404 -
+2025-04-16 10:01:00,723 INFO {'timestamp': '2025-04-16T10:01:00.723461', 'action': 'VIEW', 'table': 'portfolio', 'data': {'member_id': 2080}, 'user_id': 'test_user'}
+2025-04-16 10:01:00,723 INFO 127.0.0.1 - - [16/Apr/2025 10:01:00] "GET /portfolio/member-details/2080 HTTP/1.1" 200 -
+2025-04-16 10:01:00,734 INFO 127.0.0.1 - - [16/Apr/2025 10:01:00] "[33mGET /portfolio/member-details/17 HTTP/1.1[0m" 404 -
+2025-04-16 10:01:01,101 INFO 127.0.0.1 - - [16/Apr/2025 10:01:01] "[33mGET /portfolio/member-details/11 HTTP/1.1[0m" 404 -
+2025-04-16 10:01:01,104 INFO 127.0.0.1 - - [16/Apr/2025 10:01:01] "[33mGET /portfolio/member-details/19 HTTP/1.1[0m" 404 -
+2025-04-16 10:01:01,111 INFO 127.0.0.1 - - [16/Apr/2025 10:01:01] "[33mGET /portfolio/member-details/13 HTTP/1.1[0m" 404 -
+2025-04-16 10:01:01,115 INFO 127.0.0.1 - - [16/Apr/2025 10:01:01] "[33mGET /portfolio/member-details/18 HTTP/1.1[0m" 404 -
+2025-04-16 10:01:01,118 INFO 127.0.0.1 - - [16/Apr/2025 10:01:01] "[33mGET /portfolio/member-details/15 HTTP/1.1[0m" 404 -
+2025-04-16 10:01:01,118 INFO 127.0.0.1 - - [16/Apr/2025 10:01:01] "[33mGET /portfolio/member-details/14 HTTP/1.1[0m" 404 -
+2025-04-16 10:01:01,519 INFO 127.0.0.1 - - [16/Apr/2025 10:01:01] "[33mGET /portfolio/member-details/16 HTTP/1.1[0m" 404 -
+2025-04-16 10:01:01,519 INFO 127.0.0.1 - - [16/Apr/2025 10:01:01] "[33mGET /portfolio/member-details/17 HTTP/1.1[0m" 404 -
+2025-04-16 10:01:01,529 INFO 127.0.0.1 - - [16/Apr/2025 10:01:01] "[33mGET /portfolio/member-details/18 HTTP/1.1[0m" 404 -
+2025-04-16 10:01:01,535 INFO 127.0.0.1 - - [16/Apr/2025 10:01:01] "[33mGET /portfolio/member-details/19 HTTP/1.1[0m" 404 -
+2025-04-16 10:01:01,551 INFO 127.0.0.1 - - [16/Apr/2025 10:01:01] "[36mGET /static/images/members/placeholder.jpg HTTP/1.1[0m" 304 -
+2025-04-16 10:01:01,555 INFO {'timestamp': '2025-04-16T10:01:01.551670', 'action': 'VIEW', 'table': 'portfolio', 'data': {'member_id': 2080}, 'user_id': 'test_user'}
+2025-04-16 10:01:01,555 INFO 127.0.0.1 - - [16/Apr/2025 10:01:01] "GET /portfolio/member-details/2080 HTTP/1.1" 200 -
+2025-04-16 10:01:01,878 INFO 127.0.0.1 - - [16/Apr/2025 10:01:01] "[33mGET /static/images/members/f5.jpg HTTP/1.1[0m" 404 -
+2025-04-16 10:01:09,820 INFO 127.0.0.1 - - [16/Apr/2025 10:01:09] "GET /portfolio?id=2080 HTTP/1.1" 200 -
+2025-04-16 10:01:10,081 INFO 127.0.0.1 - - [16/Apr/2025 10:01:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-16 10:01:10,348 INFO 127.0.0.1 - - [16/Apr/2025 10:01:10] "[36mGET /static/js/auth.js HTTP/1.1[0m" 304 -
+2025-04-16 10:01:10,350 INFO 127.0.0.1 - - [16/Apr/2025 10:01:10] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-16 10:01:10,353 INFO 127.0.0.1 - - [16/Apr/2025 10:01:10] "[36mGET /static/images/members/placeholder.jpg HTTP/1.1[0m" 304 -
+2025-04-16 10:01:10,417 INFO {'timestamp': '2025-04-16T10:01:10.417411', 'action': 'VIEW', 'table': 'portfolio', 'data': {'member_id': 2080}, 'user_id': 'test_user'}
+2025-04-16 10:01:10,419 INFO 127.0.0.1 - - [16/Apr/2025 10:01:10] "GET /portfolio/member-details/2080 HTTP/1.1" 200 -
+2025-04-16 10:01:10,817 INFO 127.0.0.1 - - [16/Apr/2025 10:01:10] "GET /api/products?shop_id=SH002 HTTP/1.1" 200 -
+2025-04-16 10:01:10,828 INFO 127.0.0.1 - - [16/Apr/2025 10:01:10] "GET /portfolio/member/2080 HTTP/1.1" 200 -
+2025-04-16 10:01:11,046 INFO 127.0.0.1 - - [16/Apr/2025 10:01:11] "[33mGET /static/images/members/f5.jpg HTTP/1.1[0m" 404 -
+2025-04-16 10:04:01,666 INFO 127.0.0.1 - - [16/Apr/2025 10:04:01] "GET /products HTTP/1.1" 200 -
+2025-04-16 10:04:01,965 INFO 127.0.0.1 - - [16/Apr/2025 10:04:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-16 10:04:02,276 INFO 127.0.0.1 - - [16/Apr/2025 10:04:02] "[36mGET /static/js/auth.js HTTP/1.1[0m" 304 -
+2025-04-16 10:04:02,278 INFO 127.0.0.1 - - [16/Apr/2025 10:04:02] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-16 10:04:02,628 INFO 127.0.0.1 - - [16/Apr/2025 10:04:02] "GET /shops HTTP/1.1" 200 -
+2025-04-16 10:04:02,671 INFO 127.0.0.1 - - [16/Apr/2025 10:04:02] "GET /api/products HTTP/1.1" 200 -
+2025-04-16 10:04:09,334 INFO 127.0.0.1 - - [16/Apr/2025 10:04:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-16 10:04:23,201 INFO 127.0.0.1 - - [16/Apr/2025 10:04:23] "GET /shops HTTP/1.1" 200 -
+2025-04-16 10:04:23,548 INFO 127.0.0.1 - - [16/Apr/2025 10:04:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-16 10:04:23,863 INFO 127.0.0.1 - - [16/Apr/2025 10:04:23] "[36mGET /static/js/auth.js HTTP/1.1[0m" 304 -
+2025-04-16 10:04:23,873 INFO 127.0.0.1 - - [16/Apr/2025 10:04:23] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-16 10:04:23,873 INFO 127.0.0.1 - - [16/Apr/2025 10:04:23] "[36mGET /static/images/members/placeholder.jpg HTTP/1.1[0m" 304 -
+2025-04-16 10:04:24,155 INFO 127.0.0.1 - - [16/Apr/2025 10:04:24] "GET /api/shops HTTP/1.1" 200 -
+2025-04-16 10:04:24,289 INFO 127.0.0.1 - - [16/Apr/2025 10:04:24] "GET /portfolio/members HTTP/1.1" 200 -
+2025-04-16 10:04:24,290 INFO 127.0.0.1 - - [16/Apr/2025 10:04:24] "[33mGET /portfolio/member-details/11 HTTP/1.1[0m" 404 -
+2025-04-16 10:04:24,545 INFO {'timestamp': '2025-04-16T10:04:24.544389', 'action': 'VIEW', 'table': 'portfolio', 'data': {'member_id': 2080}, 'user_id': 'test_user'}
+2025-04-16 10:04:24,547 INFO 127.0.0.1 - - [16/Apr/2025 10:04:24] "GET /portfolio/member-details/2080 HTTP/1.1" 200 -
+2025-04-16 10:04:24,572 INFO 127.0.0.1 - - [16/Apr/2025 10:04:24] "[33mGET /portfolio/member-details/14 HTTP/1.1[0m" 404 -
+2025-04-16 10:04:24,572 INFO 127.0.0.1 - - [16/Apr/2025 10:04:24] "[33mGET /portfolio/member-details/13 HTTP/1.1[0m" 404 -
+2025-04-16 10:04:24,574 INFO 127.0.0.1 - - [16/Apr/2025 10:04:24] "[33mGET /portfolio/member-details/15 HTTP/1.1[0m" 404 -
+2025-04-16 10:04:24,698 INFO 127.0.0.1 - - [16/Apr/2025 10:04:24] "[33mGET /portfolio/member-details/16 HTTP/1.1[0m" 404 -
+2025-04-16 10:04:24,710 INFO 127.0.0.1 - - [16/Apr/2025 10:04:24] "[33mGET /portfolio/member-details/17 HTTP/1.1[0m" 404 -
+2025-04-16 10:04:24,947 INFO 127.0.0.1 - - [16/Apr/2025 10:04:24] "[33mGET /portfolio/member-details/19 HTTP/1.1[0m" 404 -
+2025-04-16 10:04:24,947 INFO 127.0.0.1 - - [16/Apr/2025 10:04:24] "[33mGET /portfolio/member-details/11 HTTP/1.1[0m" 404 -
+2025-04-16 10:04:24,950 INFO 127.0.0.1 - - [16/Apr/2025 10:04:24] "[33mGET /portfolio/member-details/18 HTTP/1.1[0m" 404 -
+2025-04-16 10:04:24,966 INFO {'timestamp': '2025-04-16T10:04:24.966323', 'action': 'VIEW', 'table': 'portfolio', 'data': {'member_id': 2080}, 'user_id': 'test_user'}
+2025-04-16 10:04:24,969 INFO 127.0.0.1 - - [16/Apr/2025 10:04:24] "GET /portfolio/member-details/2080 HTTP/1.1" 200 -
+2025-04-16 10:04:25,234 INFO 127.0.0.1 - - [16/Apr/2025 10:04:25] "[33mGET /portfolio/member-details/14 HTTP/1.1[0m" 404 -
+2025-04-16 10:04:25,234 INFO 127.0.0.1 - - [16/Apr/2025 10:04:25] "[33mGET /portfolio/member-details/13 HTTP/1.1[0m" 404 -
+2025-04-16 10:04:25,520 INFO 127.0.0.1 - - [16/Apr/2025 10:04:25] "[33mGET /portfolio/member-details/16 HTTP/1.1[0m" 404 -
+2025-04-16 10:04:25,524 INFO 127.0.0.1 - - [16/Apr/2025 10:04:25] "[33mGET /portfolio/member-details/19 HTTP/1.1[0m" 404 -
+2025-04-16 10:04:25,529 INFO 127.0.0.1 - - [16/Apr/2025 10:04:25] "[33mGET /portfolio/member-details/17 HTTP/1.1[0m" 404 -
+2025-04-16 10:04:25,542 INFO 127.0.0.1 - - [16/Apr/2025 10:04:25] "[33mGET /portfolio/member-details/15 HTTP/1.1[0m" 404 -
+2025-04-16 10:04:25,654 INFO 127.0.0.1 - - [16/Apr/2025 10:04:25] "[33mGET /portfolio/member-details/18 HTTP/1.1[0m" 404 -
+2025-04-16 10:04:25,664 INFO 127.0.0.1 - - [16/Apr/2025 10:04:25] "[36mGET /static/images/members/placeholder.jpg HTTP/1.1[0m" 304 -
+2025-04-16 10:04:25,844 INFO 127.0.0.1 - - [16/Apr/2025 10:04:25] "[33mGET /static/images/members/f5.jpg HTTP/1.1[0m" 404 -
+2025-04-16 10:04:46,183 INFO 127.0.0.1 - - [16/Apr/2025 10:04:46] "GET /shops HTTP/1.1" 200 -
+2025-04-16 10:04:46,684 INFO 127.0.0.1 - - [16/Apr/2025 10:04:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-16 10:04:46,986 INFO 127.0.0.1 - - [16/Apr/2025 10:04:46] "[36mGET /static/js/auth.js HTTP/1.1[0m" 304 -
+2025-04-16 10:04:47,008 INFO 127.0.0.1 - - [16/Apr/2025 10:04:47] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-16 10:04:47,012 INFO 127.0.0.1 - - [16/Apr/2025 10:04:47] "[36mGET /static/images/members/placeholder.jpg HTTP/1.1[0m" 304 -
+2025-04-16 10:04:47,387 INFO 127.0.0.1 - - [16/Apr/2025 10:04:47] "GET /api/shops HTTP/1.1" 200 -
+2025-04-16 10:04:47,387 INFO 127.0.0.1 - - [16/Apr/2025 10:04:47] "GET /portfolio/members HTTP/1.1" 200 -
+2025-04-16 10:04:47,668 INFO 127.0.0.1 - - [16/Apr/2025 10:04:47] "[33mGET /portfolio/member-details/11 HTTP/1.1[0m" 404 -
+2025-04-16 10:04:47,853 INFO 127.0.0.1 - - [16/Apr/2025 10:04:47] "[33mGET /portfolio/member-details/13 HTTP/1.1[0m" 404 -
+2025-04-16 10:04:47,856 INFO 127.0.0.1 - - [16/Apr/2025 10:04:47] "[33mGET /portfolio/member-details/14 HTTP/1.1[0m" 404 -
+2025-04-16 10:04:47,858 INFO 127.0.0.1 - - [16/Apr/2025 10:04:47] "[33mGET /portfolio/member-details/15 HTTP/1.1[0m" 404 -
+2025-04-16 10:04:47,860 INFO 127.0.0.1 - - [16/Apr/2025 10:04:47] "[33mGET /portfolio/member-details/16 HTTP/1.1[0m" 404 -
+2025-04-16 10:04:47,865 INFO {'timestamp': '2025-04-16T10:04:47.863325', 'action': 'VIEW', 'table': 'portfolio', 'data': {'member_id': 2080}, 'user_id': 'test_user'}
+2025-04-16 10:04:47,865 INFO 127.0.0.1 - - [16/Apr/2025 10:04:47] "GET /portfolio/member-details/2080 HTTP/1.1" 200 -
+2025-04-16 10:04:48,016 INFO 127.0.0.1 - - [16/Apr/2025 10:04:48] "[33mGET /portfolio/member-details/17 HTTP/1.1[0m" 404 -
+2025-04-16 10:04:48,242 INFO 127.0.0.1 - - [16/Apr/2025 10:04:48] "[33mGET /portfolio/member-details/18 HTTP/1.1[0m" 404 -
+2025-04-16 10:04:48,252 INFO 127.0.0.1 - - [16/Apr/2025 10:04:48] "[33mGET /portfolio/member-details/11 HTTP/1.1[0m" 404 -
+2025-04-16 10:04:48,256 INFO 127.0.0.1 - - [16/Apr/2025 10:04:48] "[33mGET /portfolio/member-details/19 HTTP/1.1[0m" 404 -
+2025-04-16 10:04:48,258 INFO 127.0.0.1 - - [16/Apr/2025 10:04:48] "[33mGET /portfolio/member-details/13 HTTP/1.1[0m" 404 -
+2025-04-16 10:04:48,262 INFO 127.0.0.1 - - [16/Apr/2025 10:04:48] "[33mGET /portfolio/member-details/14 HTTP/1.1[0m" 404 -
+2025-04-16 10:04:48,444 INFO 127.0.0.1 - - [16/Apr/2025 10:04:48] "[33mGET /portfolio/member-details/15 HTTP/1.1[0m" 404 -
+2025-04-16 10:04:48,609 INFO 127.0.0.1 - - [16/Apr/2025 10:04:48] "[33mGET /portfolio/member-details/16 HTTP/1.1[0m" 404 -
+2025-04-16 10:04:48,615 INFO 127.0.0.1 - - [16/Apr/2025 10:04:48] "[33mGET /portfolio/member-details/17 HTTP/1.1[0m" 404 -
+2025-04-16 10:04:48,619 INFO 127.0.0.1 - - [16/Apr/2025 10:04:48] "[33mGET /portfolio/member-details/18 HTTP/1.1[0m" 404 -
+2025-04-16 10:04:48,626 INFO {'timestamp': '2025-04-16T10:04:48.626725', 'action': 'VIEW', 'table': 'portfolio', 'data': {'member_id': 2080}, 'user_id': 'test_user'}
+2025-04-16 10:04:48,628 INFO 127.0.0.1 - - [16/Apr/2025 10:04:48] "GET /portfolio/member-details/2080 HTTP/1.1" 200 -
+2025-04-16 10:04:48,640 INFO 127.0.0.1 - - [16/Apr/2025 10:04:48] "[33mGET /portfolio/member-details/19 HTTP/1.1[0m" 404 -
+2025-04-16 10:04:48,886 INFO 127.0.0.1 - - [16/Apr/2025 10:04:48] "[36mGET /static/images/members/placeholder.jpg HTTP/1.1[0m" 304 -
+2025-04-16 10:04:48,948 INFO 127.0.0.1 - - [16/Apr/2025 10:04:48] "[33mGET /static/images/members/f5.jpg HTTP/1.1[0m" 404 -
+2025-04-16 10:04:59,747 INFO  * Detected change in 'C:\\Program Files\\Python311\\Lib\\datetime.py', reloading
+2025-04-16 10:04:59,746 INFO  * Detected change in 'C:\\Program Files\\Python311\\Lib\\datetime.py', reloading
+2025-04-16 10:04:59,747 INFO  * Detected change in 'C:\\Program Files\\Python311\\Lib\\datetime.py', reloading
+2025-04-16 10:04:59,747 INFO  * Detected change in 'C:\\Program Files\\Python311\\Lib\\datetime.py', reloading
+2025-04-16 10:04:59,750 INFO  * Detected change in 'C:\\Program Files\\Python311\\Lib\\datetime.py', reloading
+2025-04-16 10:04:59,750 INFO  * Detected change in 'C:\\Program Files\\Python311\\Lib\\datetime.py', reloading
+2025-04-16 10:04:59,751 INFO  * Detected change in 'C:\\Program Files\\Python311\\Lib\\datetime.py', reloading
+2025-04-16 10:04:59,751 INFO  * Detected change in 'C:\\Program Files\\Python311\\Lib\\datetime.py', reloading
+2025-04-16 10:04:59,751 INFO  * Detected change in 'C:\\Program Files\\Python311\\Lib\\datetime.py', reloading
+2025-04-16 10:04:59,751 INFO  * Detected change in 'C:\\Program Files\\Python311\\Lib\\datetime.py', reloading
+2025-04-16 10:04:59,751 INFO  * Detected change in 'C:\\Program Files\\Python311\\Lib\\datetime.py', reloading
+2025-04-16 10:04:59,751 INFO  * Detected change in 'C:\\Program Files\\Python311\\Lib\\datetime.py', reloading
+2025-04-16 10:04:59,753 INFO  * Detected change in 'C:\\Program Files\\Python311\\Lib\\datetime.py', reloading
+2025-04-16 10:04:59,753 INFO  * Detected change in 'C:\\Program Files\\Python311\\Lib\\datetime.py', reloading
+2025-04-16 10:05:00,326 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:05:00,327 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:05:00,437 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 10:05:00,437 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 10:05:00,437 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 10:05:00,437 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 10:05:00,437 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 10:05:00,453 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:05:00,489 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:05:00,523 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:05:00,536 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:05:00,546 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:05:00,559 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:05:00,569 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:05:00,807 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:05:00,848 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:05:00,906 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:05:00,917 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:05:00,954 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:05:00,985 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:05:00,990 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:05:02,911 WARNING  * Debugger is active!
+2025-04-16 10:05:02,934 WARNING  * Debugger is active!
+2025-04-16 10:05:02,950 WARNING  * Debugger is active!
+2025-04-16 10:05:02,952 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:05:02,961 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:05:02,967 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:05:03,096 WARNING  * Debugger is active!
+2025-04-16 10:05:03,102 WARNING  * Debugger is active!
+2025-04-16 10:05:03,108 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:05:03,125 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:05:03,164 WARNING  * Debugger is active!
+2025-04-16 10:05:03,166 WARNING  * Debugger is active!
+2025-04-16 10:05:03,180 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:05:03,184 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:05:03,269 WARNING  * Debugger is active!
+2025-04-16 10:05:03,273 WARNING  * Debugger is active!
+2025-04-16 10:05:03,287 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:05:03,293 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:05:03,382 WARNING  * Debugger is active!
+2025-04-16 10:05:03,386 WARNING  * Debugger is active!
+2025-04-16 10:05:03,401 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:05:03,404 WARNING  * Debugger is active!
+2025-04-16 10:05:03,406 WARNING  * Debugger is active!
+2025-04-16 10:05:03,409 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:05:03,420 WARNING  * Debugger is active!
+2025-04-16 10:05:03,420 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:05:03,420 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:05:03,434 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:05:03,593 WARNING  * Debugger is active!
+2025-04-16 10:05:03,597 WARNING  * Debugger is active!
+2025-04-16 10:05:03,600 WARNING  * Debugger is active!
+2025-04-16 10:05:03,607 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:05:03,613 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:05:03,616 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:06:34,733 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\flask\\__init__.py', reloading
+2025-04-16 10:06:34,733 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\flask\\__init__.py', reloading
+2025-04-16 10:06:34,735 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\flask\\__init__.py', reloading
+2025-04-16 10:06:34,737 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\flask\\__init__.py', reloading
+2025-04-16 10:06:34,737 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\flask\\__init__.py', reloading
+2025-04-16 10:06:34,765 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\flask\\globals.py', reloading
+2025-04-16 10:06:34,765 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\flask\\globals.py', reloading
+2025-04-16 10:06:34,765 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\flask\\globals.py', reloading
+2025-04-16 10:06:34,765 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\flask\\globals.py', reloading
+2025-04-16 10:06:34,765 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\flask\\globals.py', reloading
+2025-04-16 10:06:34,765 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\flask\\globals.py', reloading
+2025-04-16 10:06:34,767 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\flask\\globals.py', reloading
+2025-04-16 10:06:34,767 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\flask\\globals.py', reloading
+2025-04-16 10:06:34,767 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\flask\\globals.py', reloading
+2025-04-16 10:06:34,767 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\flask\\globals.py', reloading
+2025-04-16 10:06:34,780 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\flask\\wrappers.py', reloading
+2025-04-16 10:06:34,780 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\flask\\wrappers.py', reloading
+2025-04-16 10:06:34,780 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\flask\\wrappers.py', reloading
+2025-04-16 10:06:34,780 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\flask\\wrappers.py', reloading
+2025-04-16 10:06:34,780 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\flask\\wrappers.py', reloading
+2025-04-16 10:06:34,780 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\flask\\wrappers.py', reloading
+2025-04-16 10:06:34,780 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\flask\\wrappers.py', reloading
+2025-04-16 10:06:34,784 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\flask\\wrappers.py', reloading
+2025-04-16 10:06:34,784 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\flask\\wrappers.py', reloading
+2025-04-16 10:06:34,784 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\flask\\wrappers.py', reloading
+2025-04-16 10:06:34,784 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\flask\\wrappers.py', reloading
+2025-04-16 10:06:34,784 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\flask\\wrappers.py', reloading
+2025-04-16 10:06:34,814 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\werkzeug\\wrappers\\__init__.py', reloading
+2025-04-16 10:06:34,814 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\werkzeug\\wrappers\\__init__.py', reloading
+2025-04-16 10:06:34,814 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\werkzeug\\wrappers\\__init__.py', reloading
+2025-04-16 10:06:34,814 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\werkzeug\\wrappers\\__init__.py', reloading
+2025-04-16 10:06:34,814 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\werkzeug\\wrappers\\__init__.py', reloading
+2025-04-16 10:06:34,814 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\werkzeug\\wrappers\\__init__.py', reloading
+2025-04-16 10:06:34,814 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\werkzeug\\wrappers\\__init__.py', reloading
+2025-04-16 10:06:34,814 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\werkzeug\\wrappers\\__init__.py', reloading
+2025-04-16 10:06:34,814 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\werkzeug\\wrappers\\__init__.py', reloading
+2025-04-16 10:06:34,814 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\werkzeug\\wrappers\\__init__.py', reloading
+2025-04-16 10:06:34,814 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\werkzeug\\wrappers\\__init__.py', reloading
+2025-04-16 10:06:34,814 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\werkzeug\\wrappers\\__init__.py', reloading
+2025-04-16 10:06:34,820 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\werkzeug\\wrappers\\__init__.py', reloading
+2025-04-16 10:06:34,820 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\werkzeug\\wrappers\\__init__.py', reloading
+2025-04-16 10:06:34,820 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\werkzeug\\wrappers\\__init__.py', reloading
+2025-04-16 10:06:34,823 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\werkzeug\\wrappers\\request.py', reloading
+2025-04-16 10:06:34,823 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\werkzeug\\wrappers\\request.py', reloading
+2025-04-16 10:06:34,823 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\werkzeug\\wrappers\\request.py', reloading
+2025-04-16 10:06:34,823 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\werkzeug\\wrappers\\request.py', reloading
+2025-04-16 10:06:34,825 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\werkzeug\\wrappers\\request.py', reloading
+2025-04-16 10:06:34,825 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\werkzeug\\wrappers\\request.py', reloading
+2025-04-16 10:06:34,825 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\werkzeug\\wrappers\\request.py', reloading
+2025-04-16 10:06:34,825 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\werkzeug\\wrappers\\request.py', reloading
+2025-04-16 10:06:34,825 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\werkzeug\\wrappers\\request.py', reloading
+2025-04-16 10:06:34,825 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\werkzeug\\wrappers\\request.py', reloading
+2025-04-16 10:06:34,825 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\werkzeug\\wrappers\\request.py', reloading
+2025-04-16 10:06:34,896 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\werkzeug\\sansio\\request.py', reloading
+2025-04-16 10:06:34,896 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\werkzeug\\sansio\\request.py', reloading
+2025-04-16 10:06:34,896 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\werkzeug\\sansio\\request.py', reloading
+2025-04-16 10:06:34,898 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\werkzeug\\sansio\\request.py', reloading
+2025-04-16 10:06:34,898 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\werkzeug\\sansio\\request.py', reloading
+2025-04-16 10:06:34,898 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\werkzeug\\sansio\\request.py', reloading
+2025-04-16 10:06:34,898 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\werkzeug\\sansio\\request.py', reloading
+2025-04-16 10:06:34,898 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\werkzeug\\sansio\\request.py', reloading
+2025-04-16 10:06:34,898 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\werkzeug\\sansio\\request.py', reloading
+2025-04-16 10:06:34,898 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\werkzeug\\sansio\\request.py', reloading
+2025-04-16 10:06:34,898 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\werkzeug\\sansio\\request.py', reloading
+2025-04-16 10:06:34,898 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\werkzeug\\sansio\\request.py', reloading
+2025-04-16 10:06:34,898 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\werkzeug\\sansio\\request.py', reloading
+2025-04-16 10:06:34,900 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\werkzeug\\sansio\\request.py', reloading
+2025-04-16 10:06:35,033 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\flask\\ctx.py', reloading
+2025-04-16 10:06:35,033 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\flask\\ctx.py', reloading
+2025-04-16 10:06:35,033 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\flask\\ctx.py', reloading
+2025-04-16 10:06:35,033 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\flask\\ctx.py', reloading
+2025-04-16 10:06:35,033 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\flask\\ctx.py', reloading
+2025-04-16 10:06:35,033 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\flask\\ctx.py', reloading
+2025-04-16 10:06:35,139 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:06:35,152 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:06:35,157 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:06:35,158 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:06:35,169 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:06:35,172 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:06:35,177 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:06:35,303 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:06:35,310 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:06:35,328 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:06:35,339 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:06:35,443 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:06:35,537 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:06:35,551 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:06:35,897 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:06:36,025 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:06:36,041 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:06:37,024 WARNING  * Debugger is active!
+2025-04-16 10:06:37,034 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:06:37,045 WARNING  * Debugger is active!
+2025-04-16 10:06:37,047 WARNING  * Debugger is active!
+2025-04-16 10:06:37,054 WARNING  * Debugger is active!
+2025-04-16 10:06:37,054 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:06:37,058 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:06:37,065 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:06:37,089 WARNING  * Debugger is active!
+2025-04-16 10:06:37,097 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:06:37,134 WARNING  * Debugger is active!
+2025-04-16 10:06:37,144 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:06:37,204 WARNING  * Debugger is active!
+2025-04-16 10:06:37,206 WARNING  * Debugger is active!
+2025-04-16 10:06:37,206 WARNING  * Debugger is active!
+2025-04-16 10:06:37,208 WARNING  * Debugger is active!
+2025-04-16 10:06:37,214 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:06:37,219 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:06:37,219 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:06:37,219 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:06:37,226 WARNING  * Debugger is active!
+2025-04-16 10:06:37,235 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:06:37,324 WARNING  * Debugger is active!
+2025-04-16 10:06:37,334 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:06:37,365 WARNING  * Debugger is active!
+2025-04-16 10:06:37,374 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:06:37,405 WARNING  * Debugger is active!
+2025-04-16 10:06:37,413 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:06:37,460 WARNING  * Debugger is active!
+2025-04-16 10:06:37,469 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:06:37,493 WARNING  * Debugger is active!
+2025-04-16 10:06:37,501 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:06:37,518 WARNING  * Debugger is active!
+2025-04-16 10:06:37,526 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:07:59,447 INFO 127.0.0.1 - - [16/Apr/2025 10:07:59] "GET /shops HTTP/1.1" 200 -
+2025-04-16 10:08:00,529 INFO 127.0.0.1 - - [16/Apr/2025 10:08:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-16 10:08:00,636 INFO 127.0.0.1 - - [16/Apr/2025 10:08:00] "[36mGET /static/js/auth.js HTTP/1.1[0m" 304 -
+2025-04-16 10:08:00,638 INFO 127.0.0.1 - - [16/Apr/2025 10:08:00] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-16 10:08:00,638 INFO 127.0.0.1 - - [16/Apr/2025 10:08:00] "[36mGET /static/images/members/placeholder.jpg HTTP/1.1[0m" 304 -
+2025-04-16 10:08:01,650 INFO 127.0.0.1 - - [16/Apr/2025 10:08:01] "GET /portfolio/members HTTP/1.1" 200 -
+2025-04-16 10:08:01,657 INFO 127.0.0.1 - - [16/Apr/2025 10:08:01] "GET /api/shops HTTP/1.1" 200 -
+2025-04-16 10:08:01,886 INFO 127.0.0.1 - - [16/Apr/2025 10:08:01] "[33mGET /portfolio/member-details/11 HTTP/1.1[0m" 404 -
+2025-04-16 10:08:02,094 INFO 127.0.0.1 - - [16/Apr/2025 10:08:02] "[33mGET /portfolio/member-details/13 HTTP/1.1[0m" 404 -
+2025-04-16 10:08:02,104 INFO 127.0.0.1 - - [16/Apr/2025 10:08:02] "[33mGET /portfolio/member-details/14 HTTP/1.1[0m" 404 -
+2025-04-16 10:08:02,106 INFO 127.0.0.1 - - [16/Apr/2025 10:08:02] "[33mGET /portfolio/member-details/15 HTTP/1.1[0m" 404 -
+2025-04-16 10:08:02,106 INFO {'timestamp': '2025-04-16T10:08:02.106256', 'action': 'VIEW', 'table': 'portfolio', 'data': {'member_id': 2080}, 'user_id': 'test_user'}
+2025-04-16 10:08:02,111 INFO 127.0.0.1 - - [16/Apr/2025 10:08:02] "GET /portfolio/member-details/2080 HTTP/1.1" 200 -
+2025-04-16 10:08:02,113 INFO 127.0.0.1 - - [16/Apr/2025 10:08:02] "[33mGET /portfolio/member-details/16 HTTP/1.1[0m" 404 -
+2025-04-16 10:08:02,240 INFO 127.0.0.1 - - [16/Apr/2025 10:08:02] "[33mGET /portfolio/member-details/17 HTTP/1.1[0m" 404 -
+2025-04-16 10:08:02,525 INFO 127.0.0.1 - - [16/Apr/2025 10:08:02] "[33mGET /portfolio/member-details/13 HTTP/1.1[0m" 404 -
+2025-04-16 10:08:02,527 INFO 127.0.0.1 - - [16/Apr/2025 10:08:02] "[33mGET /portfolio/member-details/11 HTTP/1.1[0m" 404 -
+2025-04-16 10:08:02,527 INFO 127.0.0.1 - - [16/Apr/2025 10:08:02] "[33mGET /portfolio/member-details/18 HTTP/1.1[0m" 404 -
+2025-04-16 10:08:02,533 INFO 127.0.0.1 - - [16/Apr/2025 10:08:02] "[33mGET /portfolio/member-details/14 HTTP/1.1[0m" 404 -
+2025-04-16 10:08:02,535 INFO 127.0.0.1 - - [16/Apr/2025 10:08:02] "[33mGET /portfolio/member-details/19 HTTP/1.1[0m" 404 -
+2025-04-16 10:08:02,691 INFO 127.0.0.1 - - [16/Apr/2025 10:08:02] "[33mGET /portfolio/member-details/15 HTTP/1.1[0m" 404 -
+2025-04-16 10:08:03,084 INFO 127.0.0.1 - - [16/Apr/2025 10:08:03] "[36mGET /static/images/members/placeholder.jpg HTTP/1.1[0m" 304 -
+2025-04-16 10:08:03,089 INFO 127.0.0.1 - - [16/Apr/2025 10:08:03] "[33mGET /portfolio/member-details/17 HTTP/1.1[0m" 404 -
+2025-04-16 10:08:03,094 INFO 127.0.0.1 - - [16/Apr/2025 10:08:03] "[33mGET /portfolio/member-details/18 HTTP/1.1[0m" 404 -
+2025-04-16 10:08:03,094 INFO 127.0.0.1 - - [16/Apr/2025 10:08:03] "[33mGET /portfolio/member-details/16 HTTP/1.1[0m" 404 -
+2025-04-16 10:08:03,099 INFO {'timestamp': '2025-04-16T10:08:03.098481', 'action': 'VIEW', 'table': 'portfolio', 'data': {'member_id': 2080}, 'user_id': 'test_user'}
+2025-04-16 10:08:03,099 INFO 127.0.0.1 - - [16/Apr/2025 10:08:03] "[33mGET /portfolio/member-details/19 HTTP/1.1[0m" 404 -
+2025-04-16 10:08:03,099 INFO 127.0.0.1 - - [16/Apr/2025 10:08:03] "GET /portfolio/member-details/2080 HTTP/1.1" 200 -
+2025-04-16 10:08:03,544 INFO 127.0.0.1 - - [16/Apr/2025 10:08:03] "[33mGET /static/images/members/f5.jpg HTTP/1.1[0m" 404 -
+2025-04-16 10:08:33,136 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\flask\\json\\__init__.py', reloading
+2025-04-16 10:08:33,136 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\flask\\json\\__init__.py', reloading
+2025-04-16 10:08:33,136 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\flask\\json\\__init__.py', reloading
+2025-04-16 10:08:33,138 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\flask\\json\\__init__.py', reloading
+2025-04-16 10:08:33,138 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\flask\\json\\__init__.py', reloading
+2025-04-16 10:08:33,138 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\flask\\json\\__init__.py', reloading
+2025-04-16 10:08:33,136 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\flask\\json\\__init__.py', reloading
+2025-04-16 10:08:33,140 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\flask\\json\\__init__.py', reloading
+2025-04-16 10:08:33,140 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\flask\\json\\__init__.py', reloading
+2025-04-16 10:08:33,140 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\flask\\json\\__init__.py', reloading
+2025-04-16 10:08:33,140 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\flask\\json\\__init__.py', reloading
+2025-04-16 10:08:33,140 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\flask\\json\\__init__.py', reloading
+2025-04-16 10:08:33,140 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\flask\\json\\__init__.py', reloading
+2025-04-16 10:08:33,147 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\werkzeug\\wrappers\\response.py', reloading
+2025-04-16 10:08:33,147 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\werkzeug\\wrappers\\response.py', reloading
+2025-04-16 10:08:33,147 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\werkzeug\\wrappers\\response.py', reloading
+2025-04-16 10:08:33,147 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\werkzeug\\wrappers\\response.py', reloading
+2025-04-16 10:08:33,147 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\werkzeug\\wrappers\\response.py', reloading
+2025-04-16 10:08:33,147 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\werkzeug\\wrappers\\response.py', reloading
+2025-04-16 10:08:33,147 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\werkzeug\\wrappers\\response.py', reloading
+2025-04-16 10:08:33,147 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\werkzeug\\wrappers\\response.py', reloading
+2025-04-16 10:08:33,147 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\werkzeug\\wrappers\\response.py', reloading
+2025-04-16 10:08:33,149 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\werkzeug\\wrappers\\response.py', reloading
+2025-04-16 10:08:33,149 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\werkzeug\\wrappers\\response.py', reloading
+2025-04-16 10:08:33,149 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\werkzeug\\wrappers\\response.py', reloading
+2025-04-16 10:08:33,149 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\werkzeug\\wrappers\\response.py', reloading
+2025-04-16 10:08:33,317 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:08:33,560 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:08:33,560 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:08:33,632 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:08:33,712 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:08:33,778 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:08:33,870 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:08:33,964 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:08:33,989 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:08:34,018 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:08:34,102 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:08:34,128 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:08:34,132 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:08:34,134 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:08:34,270 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:08:34,288 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:08:34,334 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:08:34,890 WARNING  * Debugger is active!
+2025-04-16 10:08:34,902 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:08:34,983 WARNING  * Debugger is active!
+2025-04-16 10:08:34,994 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:08:35,109 WARNING  * Debugger is active!
+2025-04-16 10:08:35,109 WARNING  * Debugger is active!
+2025-04-16 10:08:35,117 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:08:35,119 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:08:35,127 WARNING  * Debugger is active!
+2025-04-16 10:08:35,136 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:08:35,223 WARNING  * Debugger is active!
+2025-04-16 10:08:35,233 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:08:35,272 WARNING  * Debugger is active!
+2025-04-16 10:08:35,282 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:08:35,349 WARNING  * Debugger is active!
+2025-04-16 10:08:35,351 WARNING  * Debugger is active!
+2025-04-16 10:08:35,359 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:08:35,361 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:08:35,385 WARNING  * Debugger is active!
+2025-04-16 10:08:35,395 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:08:35,434 WARNING  * Debugger is active!
+2025-04-16 10:08:35,436 WARNING  * Debugger is active!
+2025-04-16 10:08:35,443 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:08:35,443 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:08:35,504 WARNING  * Debugger is active!
+2025-04-16 10:08:35,504 WARNING  * Debugger is active!
+2025-04-16 10:08:35,504 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:08:35,521 WARNING  * Debugger is active!
+2025-04-16 10:08:35,530 WARNING  * Debugger is active!
+2025-04-16 10:08:35,533 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:08:35,534 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:08:35,536 WARNING  * Debugger is active!
+2025-04-16 10:08:35,539 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:08:35,549 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:10:05,854 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\supplier.py', reloading
+2025-04-16 10:10:05,854 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\supplier.py', reloading
+2025-04-16 10:10:05,854 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\supplier.py', reloading
+2025-04-16 10:10:05,856 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\supplier.py', reloading
+2025-04-16 10:10:05,856 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\supplier.py', reloading
+2025-04-16 10:10:05,858 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\supplier.py', reloading
+2025-04-16 10:10:05,858 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\supplier.py', reloading
+2025-04-16 10:10:05,858 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\supplier.py', reloading
+2025-04-16 10:10:05,858 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\supplier.py', reloading
+2025-04-16 10:10:05,861 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\supplier.py', reloading
+2025-04-16 10:10:06,095 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:10:06,097 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:10:06,112 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:10:06,188 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:10:06,501 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:10:06,503 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:10:06,649 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:10:06,651 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:10:06,679 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:10:06,683 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:10:06,694 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:10:06,728 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:10:06,737 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:10:06,742 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:10:06,915 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:10:07,027 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:10:07,042 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:10:07,983 WARNING  * Debugger is active!
+2025-04-16 10:10:07,995 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:10:08,203 WARNING  * Debugger is active!
+2025-04-16 10:10:08,219 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:10:08,236 WARNING  * Debugger is active!
+2025-04-16 10:10:08,263 WARNING  * Debugger is active!
+2025-04-16 10:10:08,270 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:10:08,274 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:10:08,396 WARNING  * Debugger is active!
+2025-04-16 10:10:08,421 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:10:08,501 WARNING  * Debugger is active!
+2025-04-16 10:10:08,509 WARNING  * Debugger is active!
+2025-04-16 10:10:08,513 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:10:08,524 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:10:08,725 WARNING  * Debugger is active!
+2025-04-16 10:10:08,737 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:10:08,753 WARNING  * Debugger is active!
+2025-04-16 10:10:08,756 WARNING  * Debugger is active!
+2025-04-16 10:10:08,764 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:10:08,767 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:10:08,795 WARNING  * Debugger is active!
+2025-04-16 10:10:08,807 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:10:08,819 WARNING  * Debugger is active!
+2025-04-16 10:10:08,834 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:10:08,852 WARNING  * Debugger is active!
+2025-04-16 10:10:08,866 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:10:08,873 WARNING  * Debugger is active!
+2025-04-16 10:10:08,886 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:10:08,894 WARNING  * Debugger is active!
+2025-04-16 10:10:08,897 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:10:08,910 WARNING  * Debugger is active!
+2025-04-16 10:10:08,914 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:10:09,023 WARNING  * Debugger is active!
+2025-04-16 10:10:09,027 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:11:48,425 INFO 127.0.0.1 - - [16/Apr/2025 10:11:48] "GET /shops HTTP/1.1" 200 -
+2025-04-16 10:11:49,527 INFO 127.0.0.1 - - [16/Apr/2025 10:11:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-16 10:11:49,648 INFO 127.0.0.1 - - [16/Apr/2025 10:11:49] "[36mGET /static/js/auth.js HTTP/1.1[0m" 304 -
+2025-04-16 10:11:49,658 INFO 127.0.0.1 - - [16/Apr/2025 10:11:49] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-16 10:11:49,660 INFO 127.0.0.1 - - [16/Apr/2025 10:11:49] "[36mGET /static/images/members/placeholder.jpg HTTP/1.1[0m" 304 -
+2025-04-16 10:11:50,269 INFO 127.0.0.1 - - [16/Apr/2025 10:11:50] "GET /portfolio/members HTTP/1.1" 200 -
+2025-04-16 10:11:50,269 INFO 127.0.0.1 - - [16/Apr/2025 10:11:50] "GET /api/shops HTTP/1.1" 200 -
+2025-04-16 10:11:50,524 INFO 127.0.0.1 - - [16/Apr/2025 10:11:50] "[33mGET /portfolio/member-details/11 HTTP/1.1[0m" 404 -
+2025-04-16 10:11:50,864 INFO {'timestamp': '2025-04-16T10:11:50.864940', 'action': 'VIEW', 'table': 'portfolio', 'data': {'member_id': 2080}, 'user_id': 'test_user'}
+2025-04-16 10:11:50,864 INFO 127.0.0.1 - - [16/Apr/2025 10:11:50] "GET /portfolio/member-details/2080 HTTP/1.1" 200 -
+2025-04-16 10:11:50,871 INFO 127.0.0.1 - - [16/Apr/2025 10:11:50] "[33mGET /portfolio/member-details/16 HTTP/1.1[0m" 404 -
+2025-04-16 10:11:50,873 INFO 127.0.0.1 - - [16/Apr/2025 10:11:50] "[33mGET /portfolio/member-details/15 HTTP/1.1[0m" 404 -
+2025-04-16 10:11:50,873 INFO 127.0.0.1 - - [16/Apr/2025 10:11:50] "[33mGET /portfolio/member-details/14 HTTP/1.1[0m" 404 -
+2025-04-16 10:11:50,873 INFO 127.0.0.1 - - [16/Apr/2025 10:11:50] "[33mGET /portfolio/member-details/13 HTTP/1.1[0m" 404 -
+2025-04-16 10:11:50,881 INFO 127.0.0.1 - - [16/Apr/2025 10:11:50] "[33mGET /portfolio/member-details/17 HTTP/1.1[0m" 404 -
+2025-04-16 10:11:51,263 INFO 127.0.0.1 - - [16/Apr/2025 10:11:51] "[33mGET /portfolio/member-details/18 HTTP/1.1[0m" 404 -
+2025-04-16 10:11:51,265 INFO 127.0.0.1 - - [16/Apr/2025 10:11:51] "[33mGET /portfolio/member-details/19 HTTP/1.1[0m" 404 -
+2025-04-16 10:11:51,273 INFO 127.0.0.1 - - [16/Apr/2025 10:11:51] "[36mGET /static/images/members/placeholder.jpg HTTP/1.1[0m" 304 -
+2025-04-16 10:11:51,881 INFO 127.0.0.1 - - [16/Apr/2025 10:11:51] "[33mGET /static/images/members/f5.jpg HTTP/1.1[0m" 404 -
+2025-04-16 10:13:24,989 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.240.19.207:5000
+2025-04-16 10:13:24,997 INFO [33mPress CTRL+C to quit[0m
+2025-04-16 10:13:25,032 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:13:26,397 WARNING  * Debugger is active!
+2025-04-16 10:13:26,408 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:14:03,936 INFO 127.0.0.1 - - [16/Apr/2025 10:14:03] "GET / HTTP/1.1" 200 -
+2025-04-16 10:14:04,412 INFO 127.0.0.1 - - [16/Apr/2025 10:14:04] "GET /dashboard HTTP/1.1" 200 -
+2025-04-16 10:14:04,850 INFO 127.0.0.1 - - [16/Apr/2025 10:14:04] "[36mGET /static/js/auth.js HTTP/1.1[0m" 304 -
+2025-04-16 10:14:04,854 INFO 127.0.0.1 - - [16/Apr/2025 10:14:04] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-16 10:14:04,854 INFO 127.0.0.1 - - [16/Apr/2025 10:14:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-16 10:14:05,319 INFO 127.0.0.1 - - [16/Apr/2025 10:14:05] "GET /portfolio/members?session_token=ffaf491b-cc71-4e93-a039-3caceced748d HTTP/1.1" 200 -
+2025-04-16 10:14:05,615 INFO 127.0.0.1 - - [16/Apr/2025 10:14:05] "GET /api/dashboard/products/by-category?session_token=ffaf491b-cc71-4e93-a039-3caceced748d HTTP/1.1" 200 -
+2025-04-16 10:14:05,666 INFO 127.0.0.1 - - [16/Apr/2025 10:14:05] "GET /api/dashboard/shops/count?session_token=ffaf491b-cc71-4e93-a039-3caceced748d HTTP/1.1" 200 -
+2025-04-16 10:14:06,308 INFO 127.0.0.1 - - [16/Apr/2025 10:14:06] "GET /api/dashboard/products/count?session_token=ffaf491b-cc71-4e93-a039-3caceced748d HTTP/1.1" 200 -
+2025-04-16 10:14:06,570 INFO 127.0.0.1 - - [16/Apr/2025 10:14:06] "GET /api/dashboard/customers/count?session_token=ffaf491b-cc71-4e93-a039-3caceced748d HTTP/1.1" 200 -
+2025-04-16 10:14:06,664 INFO 127.0.0.1 - - [16/Apr/2025 10:14:06] "GET /api/dashboard/orders/recent?session_token=ffaf491b-cc71-4e93-a039-3caceced748d HTTP/1.1" 200 -
+2025-04-16 10:14:06,923 INFO 127.0.0.1 - - [16/Apr/2025 10:14:06] "GET /api/dashboard/loyalty/recent?session_token=ffaf491b-cc71-4e93-a039-3caceced748d HTTP/1.1" 200 -
+2025-04-16 10:14:07,037 INFO 127.0.0.1 - - [16/Apr/2025 10:14:07] "GET /api/dashboard/sales/by-shop?session_token=ffaf491b-cc71-4e93-a039-3caceced748d HTTP/1.1" 200 -
+2025-04-16 10:14:14,285 INFO 127.0.0.1 - - [16/Apr/2025 10:14:14] "GET /shop-display HTTP/1.1" 200 -
+2025-04-16 10:14:14,557 INFO 127.0.0.1 - - [16/Apr/2025 10:14:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-16 10:14:14,878 INFO 127.0.0.1 - - [16/Apr/2025 10:14:14] "[36mGET /static/js/auth.js HTTP/1.1[0m" 304 -
+2025-04-16 10:14:14,878 INFO 127.0.0.1 - - [16/Apr/2025 10:14:14] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-16 10:14:15,244 INFO 127.0.0.1 - - [16/Apr/2025 10:14:15] "GET /api/shops?session_token=ffaf491b-cc71-4e93-a039-3caceced748d HTTP/1.1" 200 -
+2025-04-16 10:14:15,248 INFO 127.0.0.1 - - [16/Apr/2025 10:14:15] "GET /api/cs432g17/suppliers?session_token=ffaf491b-cc71-4e93-a039-3caceced748d HTTP/1.1" 200 -
+2025-04-16 10:14:15,248 INFO 127.0.0.1 - - [16/Apr/2025 10:14:15] "GET /api/products?session_token=ffaf491b-cc71-4e93-a039-3caceced748d HTTP/1.1" 200 -
+2025-04-16 10:14:18,109 INFO 127.0.0.1 - - [16/Apr/2025 10:14:18] "GET /shops HTTP/1.1" 200 -
+2025-04-16 10:14:18,691 INFO 127.0.0.1 - - [16/Apr/2025 10:14:18] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-16 10:14:18,691 INFO 127.0.0.1 - - [16/Apr/2025 10:14:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-16 10:14:18,691 INFO 127.0.0.1 - - [16/Apr/2025 10:14:18] "[36mGET /static/js/auth.js HTTP/1.1[0m" 304 -
+2025-04-16 10:14:18,691 INFO 127.0.0.1 - - [16/Apr/2025 10:14:18] "[36mGET /static/images/members/placeholder.jpg HTTP/1.1[0m" 304 -
+2025-04-16 10:14:18,978 INFO 127.0.0.1 - - [16/Apr/2025 10:14:18] "GET /api/shops HTTP/1.1" 200 -
+2025-04-16 10:14:19,161 INFO 127.0.0.1 - - [16/Apr/2025 10:14:19] "[33mGET /portfolio/member-details/11 HTTP/1.1[0m" 404 -
+2025-04-16 10:14:19,161 INFO 127.0.0.1 - - [16/Apr/2025 10:14:19] "GET /portfolio/members HTTP/1.1" 200 -
+2025-04-16 10:14:19,358 INFO 127.0.0.1 - - [16/Apr/2025 10:14:19] "[33mGET /portfolio/member-details/14 HTTP/1.1[0m" 404 -
+2025-04-16 10:14:19,360 INFO 127.0.0.1 - - [16/Apr/2025 10:14:19] "[33mGET /portfolio/member-details/13 HTTP/1.1[0m" 404 -
+2025-04-16 10:14:19,369 INFO 127.0.0.1 - - [16/Apr/2025 10:14:19] "[33mGET /portfolio/member-details/15 HTTP/1.1[0m" 404 -
+2025-04-16 10:14:19,371 INFO {'timestamp': '2025-04-16T10:14:19.371449', 'action': 'VIEW', 'table': 'portfolio', 'data': {'member_id': 2080}, 'user_id': 'test_user'}
+2025-04-16 10:14:19,374 INFO 127.0.0.1 - - [16/Apr/2025 10:14:19] "GET /portfolio/member-details/2080 HTTP/1.1" 200 -
+2025-04-16 10:14:19,726 INFO 127.0.0.1 - - [16/Apr/2025 10:14:19] "[36mGET /static/images/members/placeholder.jpg HTTP/1.1[0m" 304 -
+2025-04-16 10:14:19,751 INFO 127.0.0.1 - - [16/Apr/2025 10:14:19] "[33mGET /portfolio/member-details/16 HTTP/1.1[0m" 404 -
+2025-04-16 10:14:19,751 INFO 127.0.0.1 - - [16/Apr/2025 10:14:19] "[33mGET /portfolio/member-details/17 HTTP/1.1[0m" 404 -
+2025-04-16 10:14:19,751 INFO 127.0.0.1 - - [16/Apr/2025 10:14:19] "[33mGET /portfolio/member-details/19 HTTP/1.1[0m" 404 -
+2025-04-16 10:14:19,756 INFO 127.0.0.1 - - [16/Apr/2025 10:14:19] "[33mGET /portfolio/member-details/18 HTTP/1.1[0m" 404 -
+2025-04-16 10:14:19,964 INFO 127.0.0.1 - - [16/Apr/2025 10:14:19] "[33mGET /static/images/members/f5.jpg HTTP/1.1[0m" 404 -
+2025-04-16 10:15:37,058 INFO 127.0.0.1 - - [16/Apr/2025 10:15:37] "GET /shops HTTP/1.1" 200 -
+2025-04-16 10:15:37,313 INFO 127.0.0.1 - - [16/Apr/2025 10:15:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-16 10:15:37,509 INFO 127.0.0.1 - - [16/Apr/2025 10:15:37] "[36mGET /static/js/auth.js HTTP/1.1[0m" 304 -
+2025-04-16 10:15:37,520 INFO 127.0.0.1 - - [16/Apr/2025 10:15:37] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-16 10:15:37,686 INFO 127.0.0.1 - - [16/Apr/2025 10:15:37] "GET /api/shops HTTP/1.1" 200 -
+2025-04-16 10:15:37,690 INFO 127.0.0.1 - - [16/Apr/2025 10:15:37] "GET /portfolio/members HTTP/1.1" 200 -
+2025-04-16 10:15:37,887 INFO 127.0.0.1 - - [16/Apr/2025 10:15:37] "[33mGET /portfolio/member-details/11 HTTP/1.1[0m" 404 -
+2025-04-16 10:15:37,892 INFO {'timestamp': '2025-04-16T10:15:37.892062', 'action': 'VIEW', 'table': 'portfolio', 'data': {'member_id': 2080}, 'user_id': 'test_user'}
+2025-04-16 10:15:37,901 INFO 127.0.0.1 - - [16/Apr/2025 10:15:37] "GET /portfolio/member-details/2080 HTTP/1.1" 200 -
+2025-04-16 10:15:38,058 INFO 127.0.0.1 - - [16/Apr/2025 10:15:38] "[33mGET /portfolio/member-details/13 HTTP/1.1[0m" 404 -
+2025-04-16 10:15:38,064 INFO 127.0.0.1 - - [16/Apr/2025 10:15:38] "[33mGET /portfolio/member-details/14 HTTP/1.1[0m" 404 -
+2025-04-16 10:15:38,095 INFO 127.0.0.1 - - [16/Apr/2025 10:15:38] "[33mGET /portfolio/member-details/15 HTTP/1.1[0m" 404 -
+2025-04-16 10:15:38,097 INFO 127.0.0.1 - - [16/Apr/2025 10:15:38] "[33mGET /portfolio/member-details/16 HTTP/1.1[0m" 404 -
+2025-04-16 10:15:38,235 INFO 127.0.0.1 - - [16/Apr/2025 10:15:38] "[33mGET /portfolio/member-details/17 HTTP/1.1[0m" 404 -
+2025-04-16 10:15:38,238 INFO 127.0.0.1 - - [16/Apr/2025 10:15:38] "[33mGET /portfolio/member-details/18 HTTP/1.1[0m" 404 -
+2025-04-16 10:15:38,401 INFO 127.0.0.1 - - [16/Apr/2025 10:15:38] "[36mGET /static/images/members/placeholder.jpg HTTP/1.1[0m" 304 -
+2025-04-16 10:15:38,425 INFO 127.0.0.1 - - [16/Apr/2025 10:15:38] "[33mGET /portfolio/member-details/19 HTTP/1.1[0m" 404 -
+2025-04-16 10:15:38,475 INFO 127.0.0.1 - - [16/Apr/2025 10:15:38] "[33mGET /static/images/members/f5.jpg HTTP/1.1[0m" 404 -
+2025-04-16 10:17:10,108 INFO 127.0.0.1 - - [16/Apr/2025 10:17:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-16 10:17:55,695 INFO 127.0.0.1 - - [16/Apr/2025 10:17:55] "GET /shops HTTP/1.1" 200 -
+2025-04-16 10:17:56,537 INFO 127.0.0.1 - - [16/Apr/2025 10:17:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-16 10:17:56,560 INFO 127.0.0.1 - - [16/Apr/2025 10:17:56] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-16 10:17:56,565 INFO 127.0.0.1 - - [16/Apr/2025 10:17:56] "[36mGET /static/js/auth.js HTTP/1.1[0m" 304 -
+2025-04-16 10:17:56,567 INFO 127.0.0.1 - - [16/Apr/2025 10:17:56] "[36mGET /static/images/members/placeholder.jpg HTTP/1.1[0m" 304 -
+2025-04-16 10:17:56,859 INFO 127.0.0.1 - - [16/Apr/2025 10:17:56] "GET /api/shops HTTP/1.1" 200 -
+2025-04-16 10:17:57,165 INFO 127.0.0.1 - - [16/Apr/2025 10:17:57] "GET /portfolio/members HTTP/1.1" 200 -
+2025-04-16 10:17:57,682 INFO 127.0.0.1 - - [16/Apr/2025 10:17:57] "[36mGET /static/images/members/placeholder.jpg HTTP/1.1[0m" 304 -
+2025-04-16 10:18:04,757 INFO 127.0.0.1 - - [16/Apr/2025 10:18:04] "GET /shops HTTP/1.1" 200 -
+2025-04-16 10:18:05,567 INFO 127.0.0.1 - - [16/Apr/2025 10:18:05] "[36mGET /static/js/auth.js HTTP/1.1[0m" 304 -
+2025-04-16 10:18:05,570 INFO 127.0.0.1 - - [16/Apr/2025 10:18:05] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-16 10:18:05,570 INFO 127.0.0.1 - - [16/Apr/2025 10:18:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-16 10:18:05,570 INFO 127.0.0.1 - - [16/Apr/2025 10:18:05] "[36mGET /static/images/members/placeholder.jpg HTTP/1.1[0m" 304 -
+2025-04-16 10:18:05,860 INFO 127.0.0.1 - - [16/Apr/2025 10:18:05] "GET /api/shops HTTP/1.1" 200 -
+2025-04-16 10:18:06,167 INFO 127.0.0.1 - - [16/Apr/2025 10:18:06] "GET /portfolio/members HTTP/1.1" 200 -
+2025-04-16 10:18:06,237 INFO 127.0.0.1 - - [16/Apr/2025 10:18:06] "[36mGET /static/images/members/placeholder.jpg HTTP/1.1[0m" 304 -
+2025-04-16 10:18:45,478 INFO 127.0.0.1 - - [16/Apr/2025 10:18:45] "GET /shops HTTP/1.1" 200 -
+2025-04-16 10:18:45,912 INFO 127.0.0.1 - - [16/Apr/2025 10:18:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-16 10:18:46,234 INFO 127.0.0.1 - - [16/Apr/2025 10:18:46] "[36mGET /static/js/auth.js HTTP/1.1[0m" 304 -
+2025-04-16 10:18:46,248 INFO 127.0.0.1 - - [16/Apr/2025 10:18:46] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-16 10:18:46,250 INFO 127.0.0.1 - - [16/Apr/2025 10:18:46] "[36mGET /static/images/members/placeholder.jpg HTTP/1.1[0m" 304 -
+2025-04-16 10:18:46,507 INFO 127.0.0.1 - - [16/Apr/2025 10:18:46] "GET /api/shops HTTP/1.1" 200 -
+2025-04-16 10:18:46,657 INFO 127.0.0.1 - - [16/Apr/2025 10:18:46] "GET /portfolio/members HTTP/1.1" 200 -
+2025-04-16 10:18:46,788 INFO 127.0.0.1 - - [16/Apr/2025 10:18:46] "[33mGET /portfolio/member-details/11 HTTP/1.1[0m" 404 -
+2025-04-16 10:18:47,135 INFO 127.0.0.1 - - [16/Apr/2025 10:18:47] "[33mGET /portfolio/member-details/16 HTTP/1.1[0m" 404 -
+2025-04-16 10:18:47,139 INFO 127.0.0.1 - - [16/Apr/2025 10:18:47] "[33mGET /portfolio/member-details/13 HTTP/1.1[0m" 404 -
+2025-04-16 10:18:47,139 INFO 127.0.0.1 - - [16/Apr/2025 10:18:47] "[33mGET /portfolio/member-details/15 HTTP/1.1[0m" 404 -
+2025-04-16 10:18:47,139 INFO 127.0.0.1 - - [16/Apr/2025 10:18:47] "[33mGET /portfolio/member-details/14 HTTP/1.1[0m" 404 -
+2025-04-16 10:18:47,142 INFO 127.0.0.1 - - [16/Apr/2025 10:18:47] "[33mGET /portfolio/member-details/17 HTTP/1.1[0m" 404 -
+2025-04-16 10:18:47,150 INFO {'timestamp': '2025-04-16T10:18:47.150016', 'action': 'VIEW', 'table': 'portfolio', 'data': {'member_id': 2080}, 'user_id': 'test_user'}
+2025-04-16 10:18:47,152 INFO 127.0.0.1 - - [16/Apr/2025 10:18:47] "GET /portfolio/member-details/2080 HTTP/1.1" 200 -
+2025-04-16 10:18:47,500 INFO 127.0.0.1 - - [16/Apr/2025 10:18:47] "[36mGET /static/images/members/placeholder.jpg HTTP/1.1[0m" 304 -
+2025-04-16 10:18:47,524 INFO 127.0.0.1 - - [16/Apr/2025 10:18:47] "[33mGET /portfolio/member-details/18 HTTP/1.1[0m" 404 -
+2025-04-16 10:18:47,536 INFO 127.0.0.1 - - [16/Apr/2025 10:18:47] "[33mGET /portfolio/member-details/19 HTTP/1.1[0m" 404 -
+2025-04-16 10:18:48,028 INFO 127.0.0.1 - - [16/Apr/2025 10:18:48] "[33mGET /static/images/members/f5.jpg HTTP/1.1[0m" 404 -
+2025-04-16 10:19:13,598 INFO 127.0.0.1 - - [16/Apr/2025 10:19:13] "GET /shops HTTP/1.1" 200 -
+2025-04-16 10:19:14,341 INFO 127.0.0.1 - - [16/Apr/2025 10:19:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-16 10:19:14,370 INFO 127.0.0.1 - - [16/Apr/2025 10:19:14] "[36mGET /static/js/auth.js HTTP/1.1[0m" 304 -
+2025-04-16 10:19:14,370 INFO 127.0.0.1 - - [16/Apr/2025 10:19:14] "[36mGET /static/images/members/placeholder.jpg HTTP/1.1[0m" 304 -
+2025-04-16 10:19:14,370 INFO 127.0.0.1 - - [16/Apr/2025 10:19:14] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-16 10:19:14,676 INFO 127.0.0.1 - - [16/Apr/2025 10:19:14] "GET /api/shops HTTP/1.1" 200 -
+2025-04-16 10:19:14,997 INFO 127.0.0.1 - - [16/Apr/2025 10:19:14] "GET /portfolio/members HTTP/1.1" 200 -
+2025-04-16 10:19:15,072 INFO 127.0.0.1 - - [16/Apr/2025 10:19:15] "[36mGET /static/images/members/placeholder.jpg HTTP/1.1[0m" 304 -
+2025-04-16 10:19:23,707 INFO 127.0.0.1 - - [16/Apr/2025 10:19:23] "[36mGET /static/images/members/placeholder.jpg HTTP/1.1[0m" 304 -
+2025-04-16 10:20:11,233 INFO 127.0.0.1 - - [16/Apr/2025 10:20:11] "GET /api/shops HTTP/1.1" 200 -
+2025-04-16 10:20:11,719 INFO 127.0.0.1 - - [16/Apr/2025 10:20:11] "[36mGET /static/images/members/placeholder.jpg HTTP/1.1[0m" 304 -
+2025-04-16 10:20:34,776 WARNING {'timestamp': '2025-04-16T10:20:34.773807', 'endpoint': 'create_shop', 'method': 'POST', 'ip': '127.0.0.1', 'user_agent': 'Unknown', 'message': 'Unauthenticated user attempted admin action'}
+2025-04-16 10:20:34,776 INFO 127.0.0.1 - - [16/Apr/2025 10:20:34] "[31m[1mPOST /api/shops HTTP/1.1[0m" 401 -
+2025-04-16 10:22:54,097 WARNING {'timestamp': '2025-04-16T10:22:54.097254', 'endpoint': 'create_shop', 'method': 'POST', 'ip': '127.0.0.1', 'user_agent': 'Unknown', 'message': 'Unauthenticated user attempted admin action'}
+2025-04-16 10:22:54,097 INFO 127.0.0.1 - - [16/Apr/2025 10:22:54] "[31m[1mPOST /api/shops HTTP/1.1[0m" 401 -
+2025-04-16 10:25:06,198 INFO 127.0.0.1 - - [16/Apr/2025 10:25:06] "GET /shops HTTP/1.1" 200 -
+2025-04-16 10:25:06,434 INFO 127.0.0.1 - - [16/Apr/2025 10:25:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-16 10:25:06,746 INFO 127.0.0.1 - - [16/Apr/2025 10:25:06] "[36mGET /static/js/auth.js HTTP/1.1[0m" 304 -
+2025-04-16 10:25:06,754 INFO 127.0.0.1 - - [16/Apr/2025 10:25:06] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-16 10:25:06,757 INFO 127.0.0.1 - - [16/Apr/2025 10:25:06] "[36mGET /static/images/members/placeholder.jpg HTTP/1.1[0m" 304 -
+2025-04-16 10:25:07,132 INFO 127.0.0.1 - - [16/Apr/2025 10:25:07] "GET /api/shops HTTP/1.1" 200 -
+2025-04-16 10:25:07,132 INFO 127.0.0.1 - - [16/Apr/2025 10:25:07] "GET /portfolio/members HTTP/1.1" 200 -
+2025-04-16 10:25:07,364 INFO 127.0.0.1 - - [16/Apr/2025 10:25:07] "[36mGET /static/images/members/placeholder.jpg HTTP/1.1[0m" 304 -
+2025-04-16 10:25:23,118 WARNING {'timestamp': '2025-04-16T10:25:23.118228', 'endpoint': 'create_shop', 'method': 'POST', 'ip': '127.0.0.1', 'user_agent': 'Unknown', 'message': 'Unauthenticated user attempted admin action'}
+2025-04-16 10:25:23,120 INFO 127.0.0.1 - - [16/Apr/2025 10:25:23] "[31m[1mPOST /api/shops HTTP/1.1[0m" 401 -
+2025-04-16 10:25:31,266 INFO 127.0.0.1 - - [16/Apr/2025 10:25:31] "GET /api/shops/SH002 HTTP/1.1" 200 -
+2025-04-16 10:25:31,556 INFO {'timestamp': '2025-04-16T10:25:31.556136', 'action': 'VIEW', 'table': 'portfolio', 'data': {'member_id': 2080}, 'user_id': 'test_user'}
+2025-04-16 10:25:31,556 INFO 127.0.0.1 - - [16/Apr/2025 10:25:31] "GET /portfolio/member-details/2080 HTTP/1.1" 200 -
+2025-04-16 10:25:31,598 INFO 127.0.0.1 - - [16/Apr/2025 10:25:31] "[36mGET /static/images/members/placeholder.jpg HTTP/1.1[0m" 304 -
+2025-04-16 10:25:31,630 INFO 127.0.0.1 - - [16/Apr/2025 10:25:31] "GET /api/products?shop_id=SH002 HTTP/1.1" 200 -
+2025-04-16 10:25:31,761 INFO 127.0.0.1 - - [16/Apr/2025 10:25:31] "[33mGET /static/images/members/f5.jpg HTTP/1.1[0m" 404 -
+2025-04-16 10:25:38,810 INFO 127.0.0.1 - - [16/Apr/2025 10:25:38] "GET /api/shops/SH002 HTTP/1.1" 200 -
+2025-04-16 10:25:39,101 INFO {'timestamp': '2025-04-16T10:25:39.099579', 'action': 'VIEW', 'table': 'portfolio', 'data': {'member_id': 2080}, 'user_id': 'test_user'}
+2025-04-16 10:25:39,105 INFO 127.0.0.1 - - [16/Apr/2025 10:25:39] "GET /portfolio/member-details/2080 HTTP/1.1" 200 -
+2025-04-16 10:25:39,149 INFO 127.0.0.1 - - [16/Apr/2025 10:25:39] "[36mGET /static/images/members/placeholder.jpg HTTP/1.1[0m" 304 -
+2025-04-16 10:25:39,180 INFO 127.0.0.1 - - [16/Apr/2025 10:25:39] "GET /api/products?shop_id=SH002 HTTP/1.1" 200 -
+2025-04-16 10:25:39,263 INFO 127.0.0.1 - - [16/Apr/2025 10:25:39] "[33mGET /static/images/members/f5.jpg HTTP/1.1[0m" 404 -
+2025-04-16 10:25:58,923 INFO 127.0.0.1 - - [16/Apr/2025 10:25:58] "GET /customers HTTP/1.1" 200 -
+2025-04-16 10:25:59,247 INFO 127.0.0.1 - - [16/Apr/2025 10:25:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-16 10:25:59,557 INFO 127.0.0.1 - - [16/Apr/2025 10:25:59] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-16 10:25:59,557 INFO 127.0.0.1 - - [16/Apr/2025 10:25:59] "[36mGET /static/js/auth.js HTTP/1.1[0m" 304 -
+2025-04-16 10:26:08,722 INFO 127.0.0.1 - - [16/Apr/2025 10:26:08] "[31m[1mPOST /customers/create HTTP/1.1[0m" 400 -
+2025-04-16 10:26:15,990 INFO 127.0.0.1 - - [16/Apr/2025 10:26:15] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-16 10:26:38,399 INFO 127.0.0.1 - - [16/Apr/2025 10:26:38] "GET /shops HTTP/1.1" 200 -
+2025-04-16 10:26:38,906 INFO 127.0.0.1 - - [16/Apr/2025 10:26:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-16 10:26:39,221 INFO 127.0.0.1 - - [16/Apr/2025 10:26:39] "[36mGET /static/js/auth.js HTTP/1.1[0m" 304 -
+2025-04-16 10:26:39,227 INFO 127.0.0.1 - - [16/Apr/2025 10:26:39] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-16 10:26:39,232 INFO 127.0.0.1 - - [16/Apr/2025 10:26:39] "[36mGET /static/images/members/placeholder.jpg HTTP/1.1[0m" 304 -
+2025-04-16 10:26:39,610 INFO 127.0.0.1 - - [16/Apr/2025 10:26:39] "GET /portfolio/members HTTP/1.1" 200 -
+2025-04-16 10:26:39,610 INFO 127.0.0.1 - - [16/Apr/2025 10:26:39] "GET /api/shops HTTP/1.1" 200 -
+2025-04-16 10:26:39,879 INFO 127.0.0.1 - - [16/Apr/2025 10:26:39] "[36mGET /static/images/members/placeholder.jpg HTTP/1.1[0m" 304 -
+2025-04-16 10:29:48,971 WARNING {'timestamp': '2025-04-16T10:29:48.971706', 'endpoint': 'create_shop', 'method': 'POST', 'ip': '127.0.0.1', 'user_agent': 'Unknown', 'message': 'Unauthenticated user attempted admin action'}
+2025-04-16 10:29:48,971 INFO 127.0.0.1 - - [16/Apr/2025 10:29:48] "[31m[1mPOST /api/shops HTTP/1.1[0m" 401 -
+2025-04-16 10:31:35,511 WARNING {'timestamp': '2025-04-16T10:31:35.511349', 'endpoint': 'create_shop', 'method': 'POST', 'ip': '127.0.0.1', 'user_agent': 'Unknown', 'message': 'Unauthenticated user attempted admin action'}
+2025-04-16 10:31:35,511 INFO 127.0.0.1 - - [16/Apr/2025 10:31:35] "[31m[1mPOST /api/shops HTTP/1.1[0m" 401 -
+2025-04-16 10:32:27,477 INFO 127.0.0.1 - - [16/Apr/2025 10:32:27] "[33mPOST /api/members/create HTTP/1.1[0m" 404 -
+2025-04-16 10:32:39,661 WARNING {'timestamp': '2025-04-16T10:32:39.661261', 'endpoint': 'create_shop', 'method': 'POST', 'ip': '127.0.0.1', 'user_agent': 'Unknown', 'message': 'Unauthenticated user attempted admin action'}
+2025-04-16 10:32:39,661 INFO 127.0.0.1 - - [16/Apr/2025 10:32:39] "[31m[1mPOST /api/shops HTTP/1.1[0m" 401 -
+2025-04-16 10:40:04,461 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.240.19.207:5000
+2025-04-16 10:40:04,461 INFO [33mPress CTRL+C to quit[0m
+2025-04-16 10:40:04,517 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:40:05,901 WARNING  * Debugger is active!
+2025-04-16 10:40:05,913 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:40:47,717 INFO 127.0.0.1 - - [16/Apr/2025 10:40:47] "GET / HTTP/1.1" 200 -
+2025-04-16 10:40:48,075 INFO 127.0.0.1 - - [16/Apr/2025 10:40:48] "GET /dashboard HTTP/1.1" 200 -
+2025-04-16 10:40:48,500 INFO 127.0.0.1 - - [16/Apr/2025 10:40:48] "[36mGET /static/js/auth.js HTTP/1.1[0m" 304 -
+2025-04-16 10:40:48,500 INFO 127.0.0.1 - - [16/Apr/2025 10:40:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-16 10:40:48,500 INFO 127.0.0.1 - - [16/Apr/2025 10:40:48] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-16 10:40:48,777 INFO 127.0.0.1 - - [16/Apr/2025 10:40:48] "GET /portfolio/members?session_token=60181987-08f2-43c2-acdc-a21357a1f869 HTTP/1.1" 200 -
+2025-04-16 10:40:49,029 INFO 127.0.0.1 - - [16/Apr/2025 10:40:49] "GET /api/dashboard/products/by-category?session_token=60181987-08f2-43c2-acdc-a21357a1f869 HTTP/1.1" 200 -
+2025-04-16 10:40:49,218 INFO 127.0.0.1 - - [16/Apr/2025 10:40:49] "GET /api/dashboard/shops/count?session_token=60181987-08f2-43c2-acdc-a21357a1f869 HTTP/1.1" 200 -
+2025-04-16 10:40:49,614 INFO 127.0.0.1 - - [16/Apr/2025 10:40:49] "GET /api/dashboard/products/count?session_token=60181987-08f2-43c2-acdc-a21357a1f869 HTTP/1.1" 200 -
+2025-04-16 10:40:49,857 INFO 127.0.0.1 - - [16/Apr/2025 10:40:49] "GET /api/dashboard/customers/count?session_token=60181987-08f2-43c2-acdc-a21357a1f869 HTTP/1.1" 200 -
+2025-04-16 10:40:50,308 INFO 127.0.0.1 - - [16/Apr/2025 10:40:50] "GET /api/dashboard/orders/recent?session_token=60181987-08f2-43c2-acdc-a21357a1f869 HTTP/1.1" 200 -
+2025-04-16 10:40:50,665 INFO 127.0.0.1 - - [16/Apr/2025 10:40:50] "GET /api/dashboard/loyalty/recent?session_token=60181987-08f2-43c2-acdc-a21357a1f869 HTTP/1.1" 200 -
+2025-04-16 10:40:50,925 INFO 127.0.0.1 - - [16/Apr/2025 10:40:50] "GET /api/dashboard/sales/by-shop?session_token=60181987-08f2-43c2-acdc-a21357a1f869 HTTP/1.1" 200 -
+2025-04-16 10:40:52,434 INFO 127.0.0.1 - - [16/Apr/2025 10:40:52] "GET /shops HTTP/1.1" 200 -
+2025-04-16 10:40:52,963 INFO 127.0.0.1 - - [16/Apr/2025 10:40:52] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-16 10:40:52,971 INFO 127.0.0.1 - - [16/Apr/2025 10:40:52] "[36mGET /static/js/auth.js HTTP/1.1[0m" 304 -
+2025-04-16 10:40:52,971 INFO 127.0.0.1 - - [16/Apr/2025 10:40:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-16 10:40:52,971 INFO 127.0.0.1 - - [16/Apr/2025 10:40:52] "GET /static/images/members/placeholder.jpg HTTP/1.1" 200 -
+2025-04-16 10:40:53,239 INFO 127.0.0.1 - - [16/Apr/2025 10:40:53] "GET /api/shops HTTP/1.1" 200 -
+2025-04-16 10:40:53,427 INFO 127.0.0.1 - - [16/Apr/2025 10:40:53] "[36mGET /static/images/members/placeholder.jpg HTTP/1.1[0m" 304 -
+2025-04-16 10:40:53,444 INFO 127.0.0.1 - - [16/Apr/2025 10:40:53] "GET /portfolio/members HTTP/1.1" 200 -
+2025-04-16 10:40:55,056 INFO 127.0.0.1 - - [16/Apr/2025 10:40:55] "GET /shops HTTP/1.1" 200 -
+2025-04-16 10:40:55,500 INFO 127.0.0.1 - - [16/Apr/2025 10:40:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-16 10:40:55,548 INFO 127.0.0.1 - - [16/Apr/2025 10:40:55] "[36mGET /static/js/auth.js HTTP/1.1[0m" 304 -
+2025-04-16 10:40:55,548 INFO 127.0.0.1 - - [16/Apr/2025 10:40:55] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-16 10:40:55,548 INFO 127.0.0.1 - - [16/Apr/2025 10:40:55] "[36mGET /static/images/members/placeholder.jpg HTTP/1.1[0m" 304 -
+2025-04-16 10:40:55,853 INFO 127.0.0.1 - - [16/Apr/2025 10:40:55] "GET /api/shops HTTP/1.1" 200 -
+2025-04-16 10:40:56,157 INFO 127.0.0.1 - - [16/Apr/2025 10:40:56] "GET /portfolio/members HTTP/1.1" 200 -
+2025-04-16 10:40:56,217 INFO 127.0.0.1 - - [16/Apr/2025 10:40:56] "[36mGET /static/images/members/placeholder.jpg HTTP/1.1[0m" 304 -
+2025-04-16 10:41:00,212 INFO 127.0.0.1 - - [16/Apr/2025 10:41:00] "GET /members HTTP/1.1" 200 -
+2025-04-16 10:41:00,456 INFO 127.0.0.1 - - [16/Apr/2025 10:41:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-16 10:41:00,706 INFO 127.0.0.1 - - [16/Apr/2025 10:41:00] "[36mGET /static/js/auth.js HTTP/1.1[0m" 304 -
+2025-04-16 10:41:00,708 INFO 127.0.0.1 - - [16/Apr/2025 10:41:00] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-16 10:41:00,768 INFO 127.0.0.1 - - [16/Apr/2025 10:41:00] "GET /portfolio/members?session_token=60181987-08f2-43c2-acdc-a21357a1f869 HTTP/1.1" 200 -
+2025-04-16 10:41:02,565 INFO 127.0.0.1 - - [16/Apr/2025 10:41:02] "GET /products HTTP/1.1" 200 -
+2025-04-16 10:41:02,794 INFO 127.0.0.1 - - [16/Apr/2025 10:41:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-16 10:41:03,092 INFO 127.0.0.1 - - [16/Apr/2025 10:41:03] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-16 10:41:03,096 INFO 127.0.0.1 - - [16/Apr/2025 10:41:03] "[36mGET /static/js/auth.js HTTP/1.1[0m" 304 -
+2025-04-16 10:41:03,139 INFO 127.0.0.1 - - [16/Apr/2025 10:41:03] "GET /shops HTTP/1.1" 200 -
+2025-04-16 10:41:03,508 INFO 127.0.0.1 - - [16/Apr/2025 10:41:03] "GET /api/products HTTP/1.1" 200 -
+2025-04-16 10:41:05,167 INFO 127.0.0.1 - - [16/Apr/2025 10:41:05] "GET /customers HTTP/1.1" 200 -
+2025-04-16 10:41:05,424 INFO 127.0.0.1 - - [16/Apr/2025 10:41:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-16 10:41:05,684 INFO 127.0.0.1 - - [16/Apr/2025 10:41:05] "[36mGET /static/js/auth.js HTTP/1.1[0m" 304 -
+2025-04-16 10:41:05,684 INFO 127.0.0.1 - - [16/Apr/2025 10:41:05] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-16 10:43:42,976 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\customers.py', reloading
+2025-04-16 10:43:42,976 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\customers.py', reloading
+2025-04-16 10:43:42,978 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\customers.py', reloading
+2025-04-16 10:43:42,978 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\customers.py', reloading
+2025-04-16 10:43:42,978 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\customers.py', reloading
+2025-04-16 10:43:42,976 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\customers.py', reloading
+2025-04-16 10:43:42,980 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\customers.py', reloading
+2025-04-16 10:43:42,978 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\customers.py', reloading
+2025-04-16 10:43:42,978 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\customers.py', reloading
+2025-04-16 10:43:42,978 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\customers.py', reloading
+2025-04-16 10:43:42,982 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\customers.py', reloading
+2025-04-16 10:43:42,982 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\customers.py', reloading
+2025-04-16 10:43:42,982 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\customers.py', reloading
+2025-04-16 10:43:42,987 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\customers.py', reloading
+2025-04-16 10:43:42,985 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\customers.py', reloading
+2025-04-16 10:43:42,985 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\customers.py', reloading
+2025-04-16 10:43:42,987 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\customers.py', reloading
+2025-04-16 10:43:42,987 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\customers.py', reloading
+2025-04-16 10:43:43,160 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:43:43,220 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:43:43,220 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:43:43,249 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:43:43,412 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:43:43,424 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:43:43,442 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:43:43,469 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:43:43,545 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:43:43,595 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:43:43,602 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:43:43,604 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:43:43,814 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:43:43,816 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:43:44,019 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:43:44,027 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:43:44,074 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:43:44,078 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:43:44,246 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:43:44,809 WARNING  * Debugger is active!
+2025-04-16 10:43:44,821 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:43:44,999 WARNING  * Debugger is active!
+2025-04-16 10:43:45,010 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:43:45,121 WARNING  * Debugger is active!
+2025-04-16 10:43:45,133 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:43:45,160 WARNING  * Debugger is active!
+2025-04-16 10:43:45,164 WARNING  * Debugger is active!
+2025-04-16 10:43:45,170 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:43:45,174 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:43:45,211 WARNING  * Debugger is active!
+2025-04-16 10:43:45,213 WARNING  * Debugger is active!
+2025-04-16 10:43:45,228 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:43:45,233 WARNING  * Debugger is active!
+2025-04-16 10:43:45,233 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:43:45,238 WARNING  * Debugger is active!
+2025-04-16 10:43:45,244 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:43:45,248 WARNING  * Debugger is active!
+2025-04-16 10:43:45,250 WARNING  * Debugger is active!
+2025-04-16 10:43:45,250 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:43:45,260 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:43:45,260 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:43:45,359 WARNING  * Debugger is active!
+2025-04-16 10:43:45,363 WARNING  * Debugger is active!
+2025-04-16 10:43:45,369 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:43:45,376 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:43:45,505 WARNING  * Debugger is active!
+2025-04-16 10:43:45,510 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:43:45,535 WARNING  * Debugger is active!
+2025-04-16 10:43:45,537 WARNING  * Debugger is active!
+2025-04-16 10:43:45,546 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:43:45,546 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:43:45,551 WARNING  * Debugger is active!
+2025-04-16 10:43:45,554 WARNING  * Debugger is active!
+2025-04-16 10:43:45,559 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:43:45,559 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:43:45,601 WARNING  * Debugger is active!
+2025-04-16 10:43:45,607 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:44:07,892 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 10:44:07,895 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 10:44:07,895 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 10:44:07,897 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 10:44:07,899 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 10:44:07,899 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 10:44:07,899 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 10:44:07,899 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 10:44:07,899 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 10:44:07,902 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 10:44:07,902 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 10:44:07,902 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 10:44:07,903 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 10:44:07,904 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 10:44:07,904 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 10:44:07,904 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 10:44:07,904 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 10:44:07,905 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 10:44:07,905 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 10:44:07,906 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 10:44:07,907 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 10:44:07,909 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 10:44:07,909 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 10:44:07,910 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 10:44:07,910 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 10:44:07,910 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 10:44:07,910 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 10:44:07,910 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 10:44:07,911 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 10:44:07,911 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 10:44:07,911 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 10:44:08,073 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:44:08,077 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:44:08,077 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:44:08,093 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:44:08,098 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:44:08,106 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:44:08,117 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:44:08,150 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\flask\\templating.py', reloading
+2025-04-16 10:44:08,150 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\flask\\templating.py', reloading
+2025-04-16 10:44:08,150 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\flask\\templating.py', reloading
+2025-04-16 10:44:08,150 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\flask\\templating.py', reloading
+2025-04-16 10:44:08,150 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\flask\\templating.py', reloading
+2025-04-16 10:44:08,152 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\flask\\templating.py', reloading
+2025-04-16 10:44:08,152 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\flask\\templating.py', reloading
+2025-04-16 10:44:08,152 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\flask\\templating.py', reloading
+2025-04-16 10:44:08,174 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\jinja2\\__init__.py', reloading
+2025-04-16 10:44:08,174 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\jinja2\\__init__.py', reloading
+2025-04-16 10:44:08,174 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\jinja2\\__init__.py', reloading
+2025-04-16 10:44:08,174 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\jinja2\\__init__.py', reloading
+2025-04-16 10:44:08,174 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\jinja2\\__init__.py', reloading
+2025-04-16 10:44:08,174 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\jinja2\\__init__.py', reloading
+2025-04-16 10:44:08,174 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\jinja2\\__init__.py', reloading
+2025-04-16 10:44:08,176 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\jinja2\\__init__.py', reloading
+2025-04-16 10:44:08,182 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\jinja2\\environment.py', reloading
+2025-04-16 10:44:08,184 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\jinja2\\environment.py', reloading
+2025-04-16 10:44:08,184 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\jinja2\\environment.py', reloading
+2025-04-16 10:44:08,184 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\jinja2\\environment.py', reloading
+2025-04-16 10:44:08,184 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\jinja2\\environment.py', reloading
+2025-04-16 10:44:08,184 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\jinja2\\environment.py', reloading
+2025-04-16 10:44:08,184 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\jinja2\\environment.py', reloading
+2025-04-16 10:44:08,186 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\jinja2\\environment.py', reloading
+2025-04-16 10:44:08,186 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\jinja2\\environment.py', reloading
+2025-04-16 10:44:08,294 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:44:08,316 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\flask\\helpers.py', reloading
+2025-04-16 10:44:08,316 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\flask\\helpers.py', reloading
+2025-04-16 10:44:08,316 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\flask\\helpers.py', reloading
+2025-04-16 10:44:08,316 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\flask\\helpers.py', reloading
+2025-04-16 10:44:08,318 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\flask\\helpers.py', reloading
+2025-04-16 10:44:08,414 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:44:08,422 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\flask\\config.py', reloading
+2025-04-16 10:44:08,422 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\flask\\config.py', reloading
+2025-04-16 10:44:08,422 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\flask\\config.py', reloading
+2025-04-16 10:44:08,422 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\flask\\config.py', reloading
+2025-04-16 10:44:08,422 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:44:08,465 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:44:08,481 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:44:08,482 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:44:08,555 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\werkzeug\\datastructures\\__init__.py', reloading
+2025-04-16 10:44:08,555 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\werkzeug\\datastructures\\__init__.py', reloading
+2025-04-16 10:44:08,555 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\werkzeug\\datastructures\\__init__.py', reloading
+2025-04-16 10:44:08,555 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\werkzeug\\datastructures\\__init__.py', reloading
+2025-04-16 10:44:08,563 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\werkzeug\\datastructures\\headers.py', reloading
+2025-04-16 10:44:08,609 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\werkzeug\\utils.py', reloading
+2025-04-16 10:44:08,676 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:44:08,699 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\werkzeug\\datastructures\\structures.py', reloading
+2025-04-16 10:44:08,699 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\werkzeug\\datastructures\\structures.py', reloading
+2025-04-16 10:44:08,761 INFO  * Detected change in 'C:\\Users\\prave\\AppData\\Roaming\\Python\\Python311\\site-packages\\werkzeug\\datastructures\\mixins.py', reloading
+2025-04-16 10:44:08,793 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:44:08,932 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:44:08,975 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:44:09,144 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:52:30,778 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.240.19.207:5000
+2025-04-16 10:52:30,778 INFO [33mPress CTRL+C to quit[0m
+2025-04-16 10:52:30,830 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:52:32,110 WARNING  * Debugger is active!
+2025-04-16 10:52:32,116 INFO  * Debugger PIN: 555-876-948
+2025-04-16 10:53:11,335 INFO 127.0.0.1 - - [16/Apr/2025 10:53:11] "GET / HTTP/1.1" 200 -
+2025-04-16 10:53:11,743 INFO 127.0.0.1 - - [16/Apr/2025 10:53:11] "GET /dashboard HTTP/1.1" 200 -
+2025-04-16 10:53:12,482 INFO 127.0.0.1 - - [16/Apr/2025 10:53:12] "[36mGET /static/js/auth.js HTTP/1.1[0m" 304 -
+2025-04-16 10:53:12,490 INFO 127.0.0.1 - - [16/Apr/2025 10:53:12] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-16 10:53:12,491 INFO 127.0.0.1 - - [16/Apr/2025 10:53:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-16 10:53:12,978 INFO 127.0.0.1 - - [16/Apr/2025 10:53:12] "GET /portfolio/members?session_token=ffaf491b-cc71-4e93-a039-3caceced748d HTTP/1.1" 200 -
+2025-04-16 10:53:13,271 INFO 127.0.0.1 - - [16/Apr/2025 10:53:13] "GET /api/dashboard/products/by-category?session_token=ffaf491b-cc71-4e93-a039-3caceced748d HTTP/1.1" 200 -
+2025-04-16 10:53:13,364 INFO 127.0.0.1 - - [16/Apr/2025 10:53:13] "GET /api/dashboard/shops/count?session_token=ffaf491b-cc71-4e93-a039-3caceced748d HTTP/1.1" 200 -
+2025-04-16 10:53:13,889 INFO 127.0.0.1 - - [16/Apr/2025 10:53:13] "GET /api/dashboard/products/count?session_token=ffaf491b-cc71-4e93-a039-3caceced748d HTTP/1.1" 200 -
+2025-04-16 10:53:14,149 INFO 127.0.0.1 - - [16/Apr/2025 10:53:14] "GET /api/dashboard/customers/count?session_token=ffaf491b-cc71-4e93-a039-3caceced748d HTTP/1.1" 200 -
+2025-04-16 10:53:14,263 INFO 127.0.0.1 - - [16/Apr/2025 10:53:14] "GET /api/dashboard/orders/recent?session_token=ffaf491b-cc71-4e93-a039-3caceced748d HTTP/1.1" 200 -
+2025-04-16 10:53:14,511 INFO 127.0.0.1 - - [16/Apr/2025 10:53:14] "GET /api/dashboard/loyalty/recent?session_token=ffaf491b-cc71-4e93-a039-3caceced748d HTTP/1.1" 200 -
+2025-04-16 10:53:14,642 INFO 127.0.0.1 - - [16/Apr/2025 10:53:14] "GET /api/dashboard/sales/by-shop?session_token=ffaf491b-cc71-4e93-a039-3caceced748d HTTP/1.1" 200 -
+2025-04-16 10:53:20,558 INFO 127.0.0.1 - - [16/Apr/2025 10:53:20] "GET /customers HTTP/1.1" 200 -
+2025-04-16 10:53:21,101 INFO 127.0.0.1 - - [16/Apr/2025 10:53:21] "[36mGET /static/js/auth.js HTTP/1.1[0m" 304 -
+2025-04-16 10:53:21,101 INFO 127.0.0.1 - - [16/Apr/2025 10:53:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-16 10:53:21,101 INFO 127.0.0.1 - - [16/Apr/2025 10:53:21] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-16 10:53:35,461 INFO 127.0.0.1 - - [16/Apr/2025 10:53:35] "GET /customers HTTP/1.1" 200 -
+2025-04-16 10:53:36,076 INFO 127.0.0.1 - - [16/Apr/2025 10:53:36] "[36mGET /static/js/auth.js HTTP/1.1[0m" 304 -
+2025-04-16 10:53:36,081 INFO 127.0.0.1 - - [16/Apr/2025 10:53:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-16 10:53:36,086 INFO 127.0.0.1 - - [16/Apr/2025 10:53:36] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-16 10:53:42,142 INFO 127.0.0.1 - - [16/Apr/2025 10:53:42] "GET /portfolio HTTP/1.1" 200 -
+2025-04-16 10:53:42,764 INFO 127.0.0.1 - - [16/Apr/2025 10:53:42] "[36mGET /static/js/auth.js HTTP/1.1[0m" 304 -
+2025-04-16 10:53:42,770 INFO 127.0.0.1 - - [16/Apr/2025 10:53:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-16 10:53:42,770 INFO 127.0.0.1 - - [16/Apr/2025 10:53:42] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-16 10:53:42,770 INFO 127.0.0.1 - - [16/Apr/2025 10:53:42] "[36mGET /static/images/members/placeholder.jpg HTTP/1.1[0m" 304 -
+2025-04-16 10:53:43,017 INFO 127.0.0.1 - - [16/Apr/2025 10:53:43] "GET /members HTTP/1.1" 200 -
+2025-04-16 10:53:43,420 INFO 127.0.0.1 - - [16/Apr/2025 10:53:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-16 10:53:43,739 INFO 127.0.0.1 - - [16/Apr/2025 10:53:43] "[36mGET /static/js/auth.js HTTP/1.1[0m" 304 -
+2025-04-16 10:53:43,739 INFO 127.0.0.1 - - [16/Apr/2025 10:53:43] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-16 10:53:44,029 INFO 127.0.0.1 - - [16/Apr/2025 10:53:44] "GET /portfolio/members?session_token=ffaf491b-cc71-4e93-a039-3caceced748d HTTP/1.1" 200 -
+2025-04-16 10:53:47,912 INFO 127.0.0.1 - - [16/Apr/2025 10:53:47] "GET /shops HTTP/1.1" 200 -
+2025-04-16 10:53:48,551 INFO 127.0.0.1 - - [16/Apr/2025 10:53:48] "[36mGET /static/js/auth.js HTTP/1.1[0m" 304 -
+2025-04-16 10:53:48,557 INFO 127.0.0.1 - - [16/Apr/2025 10:53:48] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-16 10:53:48,558 INFO 127.0.0.1 - - [16/Apr/2025 10:53:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-16 10:53:48,567 INFO 127.0.0.1 - - [16/Apr/2025 10:53:48] "[36mGET /static/images/members/placeholder.jpg HTTP/1.1[0m" 304 -
+2025-04-16 10:53:48,821 INFO 127.0.0.1 - - [16/Apr/2025 10:53:48] "GET /api/shops HTTP/1.1" 200 -
+2025-04-16 10:53:49,019 INFO 127.0.0.1 - - [16/Apr/2025 10:53:49] "[36mGET /static/images/members/placeholder.jpg HTTP/1.1[0m" 304 -
+2025-04-16 10:53:49,044 INFO 127.0.0.1 - - [16/Apr/2025 10:53:49] "GET /portfolio/members HTTP/1.1" 200 -
+2025-04-16 10:53:54,100 INFO 127.0.0.1 - - [16/Apr/2025 10:53:54] "GET /members HTTP/1.1" 200 -
+2025-04-16 10:53:54,695 INFO 127.0.0.1 - - [16/Apr/2025 10:53:54] "[36mGET /static/js/auth.js HTTP/1.1[0m" 304 -
+2025-04-16 10:53:54,695 INFO 127.0.0.1 - - [16/Apr/2025 10:53:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-16 10:53:54,695 INFO 127.0.0.1 - - [16/Apr/2025 10:53:54] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-16 10:53:54,992 INFO 127.0.0.1 - - [16/Apr/2025 10:53:54] "GET /portfolio/members?session_token=ffaf491b-cc71-4e93-a039-3caceced748d HTTP/1.1" 200 -
+2025-04-16 10:54:02,025 WARNING {'timestamp': '2025-04-16T10:54:02.025554', 'endpoint': 'delete_member', 'method': 'POST', 'ip': '127.0.0.1', 'user_agent': 'Unknown', 'message': 'Unauthenticated user attempted admin action'}
+2025-04-16 10:54:02,027 INFO 127.0.0.1 - - [16/Apr/2025 10:54:02] "[31m[1mPOST /shopstop/members/delete HTTP/1.1[0m" 401 -
+2025-04-16 10:54:02,461 INFO 127.0.0.1 - - [16/Apr/2025 10:54:02] "GET /login HTTP/1.1" 200 -
+2025-04-16 10:54:02,862 INFO 127.0.0.1 - - [16/Apr/2025 10:54:02] "[36mGET /static/js/auth.js HTTP/1.1[0m" 304 -
+2025-04-16 10:54:08,221 INFO {'timestamp': '2025-04-16T10:54:08.221554', 'action': 'LOGIN', 'table': 'Login', 'data': {'member_id': 24210245, 'username': 'Praveen Rathod'}, 'user_id': 24210245}
+2025-04-16 10:54:08,231 INFO 127.0.0.1 - - [16/Apr/2025 10:54:08] "POST /shopstop/authUser HTTP/1.1" 200 -
+2025-04-16 10:54:09,312 INFO 127.0.0.1 - - [16/Apr/2025 10:54:09] "GET /dashboard?session_token=79c5995b-9475-46c5-b554-2ff7c5f70002 HTTP/1.1" 200 -
+2025-04-16 10:54:09,924 INFO 127.0.0.1 - - [16/Apr/2025 10:54:09] "[36mGET /static/js/auth.js HTTP/1.1[0m" 304 -
+2025-04-16 10:54:09,924 INFO 127.0.0.1 - - [16/Apr/2025 10:54:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-16 10:54:09,924 INFO 127.0.0.1 - - [16/Apr/2025 10:54:09] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-16 10:54:10,206 INFO 127.0.0.1 - - [16/Apr/2025 10:54:10] "GET /portfolio/members?session_token=79c5995b-9475-46c5-b554-2ff7c5f70002 HTTP/1.1" 200 -
+2025-04-16 10:54:10,469 INFO 127.0.0.1 - - [16/Apr/2025 10:54:10] "GET /api/dashboard/products/by-category?session_token=79c5995b-9475-46c5-b554-2ff7c5f70002 HTTP/1.1" 200 -
+2025-04-16 10:54:10,469 INFO 127.0.0.1 - - [16/Apr/2025 10:54:10] "GET /api/dashboard/shops/count?session_token=79c5995b-9475-46c5-b554-2ff7c5f70002 HTTP/1.1" 200 -
+2025-04-16 10:54:10,652 INFO 127.0.0.1 - - [16/Apr/2025 10:54:10] "GET /api/dashboard/products/count?session_token=79c5995b-9475-46c5-b554-2ff7c5f70002 HTTP/1.1" 200 -
+2025-04-16 10:54:11,014 INFO 127.0.0.1 - - [16/Apr/2025 10:54:11] "GET /api/dashboard/customers/count?session_token=79c5995b-9475-46c5-b554-2ff7c5f70002 HTTP/1.1" 200 -
+2025-04-16 10:54:11,269 INFO 127.0.0.1 - - [16/Apr/2025 10:54:11] "GET /api/dashboard/orders/recent?session_token=79c5995b-9475-46c5-b554-2ff7c5f70002 HTTP/1.1" 200 -
+2025-04-16 10:54:11,492 INFO 127.0.0.1 - - [16/Apr/2025 10:54:11] "GET /api/dashboard/loyalty/recent?session_token=79c5995b-9475-46c5-b554-2ff7c5f70002 HTTP/1.1" 200 -
+2025-04-16 10:54:11,856 INFO 127.0.0.1 - - [16/Apr/2025 10:54:11] "GET /api/dashboard/sales/by-shop?session_token=79c5995b-9475-46c5-b554-2ff7c5f70002 HTTP/1.1" 200 -
+2025-04-16 10:54:13,578 INFO 127.0.0.1 - - [16/Apr/2025 10:54:13] "GET /products HTTP/1.1" 200 -
+2025-04-16 10:54:14,252 INFO 127.0.0.1 - - [16/Apr/2025 10:54:14] "[36mGET /static/js/auth.js HTTP/1.1[0m" 304 -
+2025-04-16 10:54:14,252 INFO 127.0.0.1 - - [16/Apr/2025 10:54:14] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-16 10:54:14,252 INFO 127.0.0.1 - - [16/Apr/2025 10:54:14] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-16 10:54:14,507 INFO 127.0.0.1 - - [16/Apr/2025 10:54:14] "GET /shops HTTP/1.1" 200 -
+2025-04-16 10:54:14,715 INFO 127.0.0.1 - - [16/Apr/2025 10:54:14] "GET /api/products HTTP/1.1" 200 -
+2025-04-16 10:54:19,235 WARNING {'timestamp': '2025-04-16T10:54:19.235337', 'endpoint': 'delete_product', 'method': 'DELETE', 'ip': '127.0.0.1', 'user_agent': 'Unknown', 'message': 'Unauthenticated user attempted admin action'}
+2025-04-16 10:54:19,235 INFO 127.0.0.1 - - [16/Apr/2025 10:54:19] "[31m[1mDELETE /products/13 HTTP/1.1[0m" 401 -
+2025-04-16 10:57:08,699 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 10:57:08,699 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 10:57:08,702 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 10:57:08,704 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 10:57:09,604 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 10:57:10,446 WARNING  * Debugger is active!
+2025-04-16 10:57:10,456 INFO  * Debugger PIN: 555-876-948
+2025-04-16 11:03:36,234 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.240.19.207:5000
+2025-04-16 11:03:36,234 INFO [33mPress CTRL+C to quit[0m
+2025-04-16 11:03:36,281 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 11:03:37,453 WARNING  * Debugger is active!
+2025-04-16 11:03:37,470 INFO  * Debugger PIN: 555-876-948
+2025-04-16 11:04:15,109 INFO 127.0.0.1 - - [16/Apr/2025 11:04:15] "GET / HTTP/1.1" 200 -
+2025-04-16 11:04:15,485 INFO 127.0.0.1 - - [16/Apr/2025 11:04:15] "GET /dashboard HTTP/1.1" 200 -
+2025-04-16 11:04:16,118 INFO 127.0.0.1 - - [16/Apr/2025 11:04:16] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-16 11:04:16,126 INFO 127.0.0.1 - - [16/Apr/2025 11:04:16] "[36mGET /static/js/auth.js HTTP/1.1[0m" 304 -
+2025-04-16 11:04:16,126 INFO 127.0.0.1 - - [16/Apr/2025 11:04:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-16 11:04:16,736 INFO 127.0.0.1 - - [16/Apr/2025 11:04:16] "GET /portfolio/members?session_token=60181987-08f2-43c2-acdc-a21357a1f869 HTTP/1.1" 200 -
+2025-04-16 11:04:17,047 INFO 127.0.0.1 - - [16/Apr/2025 11:04:17] "GET /api/dashboard/products/by-category?session_token=60181987-08f2-43c2-acdc-a21357a1f869 HTTP/1.1" 200 -
+2025-04-16 11:04:17,101 INFO 127.0.0.1 - - [16/Apr/2025 11:04:17] "GET /api/dashboard/shops/count?session_token=60181987-08f2-43c2-acdc-a21357a1f869 HTTP/1.1" 200 -
+2025-04-16 11:04:17,517 INFO 127.0.0.1 - - [16/Apr/2025 11:04:17] "GET /api/dashboard/products/count?session_token=60181987-08f2-43c2-acdc-a21357a1f869 HTTP/1.1" 200 -
+2025-04-16 11:04:17,850 INFO 127.0.0.1 - - [16/Apr/2025 11:04:17] "GET /api/dashboard/customers/count?session_token=60181987-08f2-43c2-acdc-a21357a1f869 HTTP/1.1" 200 -
+2025-04-16 11:04:18,213 INFO 127.0.0.1 - - [16/Apr/2025 11:04:18] "GET /api/dashboard/orders/recent?session_token=60181987-08f2-43c2-acdc-a21357a1f869 HTTP/1.1" 200 -
+2025-04-16 11:04:18,465 INFO 127.0.0.1 - - [16/Apr/2025 11:04:18] "GET /api/dashboard/loyalty/recent?session_token=60181987-08f2-43c2-acdc-a21357a1f869 HTTP/1.1" 200 -
+2025-04-16 11:04:18,586 INFO 127.0.0.1 - - [16/Apr/2025 11:04:18] "GET /api/dashboard/sales/by-shop?session_token=60181987-08f2-43c2-acdc-a21357a1f869 HTTP/1.1" 200 -
+2025-04-16 11:04:24,153 INFO 127.0.0.1 - - [16/Apr/2025 11:04:24] "GET /members HTTP/1.1" 200 -
+2025-04-16 11:04:24,635 INFO 127.0.0.1 - - [16/Apr/2025 11:04:24] "[36mGET /static/js/auth.js HTTP/1.1[0m" 304 -
+2025-04-16 11:04:24,640 INFO 127.0.0.1 - - [16/Apr/2025 11:04:24] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-16 11:04:24,640 INFO 127.0.0.1 - - [16/Apr/2025 11:04:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-16 11:04:24,920 INFO 127.0.0.1 - - [16/Apr/2025 11:04:24] "GET /portfolio/members?session_token=60181987-08f2-43c2-acdc-a21357a1f869 HTTP/1.1" 200 -
+2025-04-16 11:04:29,661 WARNING {'timestamp': '2025-04-16T11:04:29.661854', 'endpoint': 'delete_member', 'method': 'POST', 'ip': '127.0.0.1', 'user_agent': 'Unknown', 'message': 'Unauthenticated user attempted admin action'}
+2025-04-16 11:04:29,661 INFO 127.0.0.1 - - [16/Apr/2025 11:04:29] "[31m[1mPOST /shopstop/members/delete HTTP/1.1[0m" 401 -
+2025-04-16 11:04:30,096 INFO 127.0.0.1 - - [16/Apr/2025 11:04:30] "GET /login HTTP/1.1" 200 -
+2025-04-16 11:04:30,346 INFO 127.0.0.1 - - [16/Apr/2025 11:04:30] "[36mGET /static/js/auth.js HTTP/1.1[0m" 304 -
+2025-04-16 11:04:36,425 INFO {'timestamp': '2025-04-16T11:04:36.425728', 'action': 'LOGIN', 'table': 'Login', 'data': {'member_id': 2080, 'username': 'Rahul Jain'}, 'user_id': 2080}
+2025-04-16 11:04:36,425 INFO 127.0.0.1 - - [16/Apr/2025 11:04:36] "POST /shopstop/authUser HTTP/1.1" 200 -
+2025-04-16 11:04:37,840 INFO 127.0.0.1 - - [16/Apr/2025 11:04:37] "GET /dashboard?session_token=655ce5ea-8e1b-4202-84e9-5041a55167a1 HTTP/1.1" 200 -
+2025-04-16 11:04:38,091 INFO 127.0.0.1 - - [16/Apr/2025 11:04:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-16 11:04:38,279 INFO 127.0.0.1 - - [16/Apr/2025 11:04:38] "[36mGET /static/js/auth.js HTTP/1.1[0m" 304 -
+2025-04-16 11:04:38,280 INFO 127.0.0.1 - - [16/Apr/2025 11:04:38] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-16 11:04:38,381 INFO 127.0.0.1 - - [16/Apr/2025 11:04:38] "GET /portfolio/members?session_token=655ce5ea-8e1b-4202-84e9-5041a55167a1 HTTP/1.1" 200 -
+2025-04-16 11:04:38,685 INFO 127.0.0.1 - - [16/Apr/2025 11:04:38] "GET /api/dashboard/products/by-category?session_token=655ce5ea-8e1b-4202-84e9-5041a55167a1 HTTP/1.1" 200 -
+2025-04-16 11:04:38,719 INFO 127.0.0.1 - - [16/Apr/2025 11:04:38] "GET /api/dashboard/shops/count?session_token=655ce5ea-8e1b-4202-84e9-5041a55167a1 HTTP/1.1" 200 -
+2025-04-16 11:04:39,324 INFO 127.0.0.1 - - [16/Apr/2025 11:04:39] "GET /api/dashboard/products/count?session_token=655ce5ea-8e1b-4202-84e9-5041a55167a1 HTTP/1.1" 200 -
+2025-04-16 11:04:39,580 INFO 127.0.0.1 - - [16/Apr/2025 11:04:39] "GET /api/dashboard/customers/count?session_token=655ce5ea-8e1b-4202-84e9-5041a55167a1 HTTP/1.1" 200 -
+2025-04-16 11:04:39,687 INFO 127.0.0.1 - - [16/Apr/2025 11:04:39] "GET /api/dashboard/orders/recent?session_token=655ce5ea-8e1b-4202-84e9-5041a55167a1 HTTP/1.1" 200 -
+2025-04-16 11:04:40,059 INFO 127.0.0.1 - - [16/Apr/2025 11:04:40] "GET /api/dashboard/loyalty/recent?session_token=655ce5ea-8e1b-4202-84e9-5041a55167a1 HTTP/1.1" 200 -
+2025-04-16 11:04:40,316 INFO 127.0.0.1 - - [16/Apr/2025 11:04:40] "GET /api/dashboard/sales/by-shop?session_token=655ce5ea-8e1b-4202-84e9-5041a55167a1 HTTP/1.1" 200 -
+2025-04-16 11:04:42,074 INFO 127.0.0.1 - - [16/Apr/2025 11:04:42] "GET /members HTTP/1.1" 200 -
+2025-04-16 11:04:42,582 INFO 127.0.0.1 - - [16/Apr/2025 11:04:42] "[36mGET /static/js/auth.js HTTP/1.1[0m" 304 -
+2025-04-16 11:04:42,586 INFO 127.0.0.1 - - [16/Apr/2025 11:04:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-16 11:04:42,588 INFO 127.0.0.1 - - [16/Apr/2025 11:04:42] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-16 11:04:42,885 INFO 127.0.0.1 - - [16/Apr/2025 11:04:42] "GET /portfolio/members?session_token=655ce5ea-8e1b-4202-84e9-5041a55167a1 HTTP/1.1" 200 -
+2025-04-16 11:04:50,373 WARNING {'timestamp': '2025-04-16T11:04:50.373910', 'endpoint': 'delete_member', 'method': 'POST', 'ip': '127.0.0.1', 'user_agent': 'Unknown', 'message': 'Unauthenticated user attempted admin action'}
+2025-04-16 11:04:50,375 INFO 127.0.0.1 - - [16/Apr/2025 11:04:50] "[31m[1mPOST /shopstop/members/delete HTTP/1.1[0m" 401 -
+2025-04-16 11:04:50,854 INFO 127.0.0.1 - - [16/Apr/2025 11:04:50] "GET /login HTTP/1.1" 200 -
+2025-04-16 11:04:51,114 INFO 127.0.0.1 - - [16/Apr/2025 11:04:51] "[36mGET /static/js/auth.js HTTP/1.1[0m" 304 -
+2025-04-16 11:04:56,022 INFO {'timestamp': '2025-04-16T11:04:56.022754', 'action': 'LOGIN', 'table': 'Login', 'data': {'member_id': 2080, 'username': 'Rahul Jain'}, 'user_id': 2080}
+2025-04-16 11:04:56,030 INFO 127.0.0.1 - - [16/Apr/2025 11:04:56] "POST /shopstop/authUser HTTP/1.1" 200 -
+2025-04-16 11:04:57,412 INFO 127.0.0.1 - - [16/Apr/2025 11:04:57] "GET /dashboard?session_token=fca259f1-89cc-4637-9d27-c16f0b256841 HTTP/1.1" 200 -
+2025-04-16 11:04:57,680 INFO 127.0.0.1 - - [16/Apr/2025 11:04:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-16 11:04:57,921 INFO 127.0.0.1 - - [16/Apr/2025 11:04:57] "[36mGET /static/js/auth.js HTTP/1.1[0m" 304 -
+2025-04-16 11:04:57,921 INFO 127.0.0.1 - - [16/Apr/2025 11:04:57] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-16 11:04:58,088 INFO 127.0.0.1 - - [16/Apr/2025 11:04:58] "GET /portfolio/members?session_token=fca259f1-89cc-4637-9d27-c16f0b256841 HTTP/1.1" 200 -
+2025-04-16 11:04:58,398 INFO 127.0.0.1 - - [16/Apr/2025 11:04:58] "GET /api/dashboard/products/by-category?session_token=fca259f1-89cc-4637-9d27-c16f0b256841 HTTP/1.1" 200 -
+2025-04-16 11:04:58,449 INFO 127.0.0.1 - - [16/Apr/2025 11:04:58] "GET /api/dashboard/shops/count?session_token=fca259f1-89cc-4637-9d27-c16f0b256841 HTTP/1.1" 200 -
+2025-04-16 11:04:59,049 INFO 127.0.0.1 - - [16/Apr/2025 11:04:59] "GET /api/dashboard/products/count?session_token=fca259f1-89cc-4637-9d27-c16f0b256841 HTTP/1.1" 200 -
+2025-04-16 11:04:59,320 INFO 127.0.0.1 - - [16/Apr/2025 11:04:59] "GET /api/dashboard/customers/count?session_token=fca259f1-89cc-4637-9d27-c16f0b256841 HTTP/1.1" 200 -
+2025-04-16 11:04:59,472 INFO 127.0.0.1 - - [16/Apr/2025 11:04:59] "GET /api/dashboard/orders/recent?session_token=fca259f1-89cc-4637-9d27-c16f0b256841 HTTP/1.1" 200 -
+2025-04-16 11:04:59,845 INFO 127.0.0.1 - - [16/Apr/2025 11:04:59] "GET /api/dashboard/loyalty/recent?session_token=fca259f1-89cc-4637-9d27-c16f0b256841 HTTP/1.1" 200 -
+2025-04-16 11:05:00,108 INFO 127.0.0.1 - - [16/Apr/2025 11:05:00] "GET /api/dashboard/sales/by-shop?session_token=fca259f1-89cc-4637-9d27-c16f0b256841 HTTP/1.1" 200 -
+2025-04-16 11:05:00,481 INFO 127.0.0.1 - - [16/Apr/2025 11:05:00] "GET /members HTTP/1.1" 200 -
+2025-04-16 11:05:00,935 INFO 127.0.0.1 - - [16/Apr/2025 11:05:00] "[36mGET /static/js/auth.js HTTP/1.1[0m" 304 -
+2025-04-16 11:05:00,935 INFO 127.0.0.1 - - [16/Apr/2025 11:05:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-16 11:05:00,935 INFO 127.0.0.1 - - [16/Apr/2025 11:05:00] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-16 11:05:01,214 INFO 127.0.0.1 - - [16/Apr/2025 11:05:01] "GET /portfolio/members?session_token=fca259f1-89cc-4637-9d27-c16f0b256841 HTTP/1.1" 200 -
+2025-04-16 11:07:46,278 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 11:07:46,278 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 11:07:46,280 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 11:07:46,280 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 11:07:46,282 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 11:07:46,282 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 11:07:47,145 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 11:07:47,210 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 11:07:48,278 WARNING  * Debugger is active!
+2025-04-16 11:07:48,296 INFO  * Debugger PIN: 555-876-948
+2025-04-16 11:07:48,307 WARNING  * Debugger is active!
+2025-04-16 11:07:48,313 INFO  * Debugger PIN: 555-876-948
+2025-04-16 11:08:24,729 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 11:08:24,731 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 11:08:24,731 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 11:08:24,731 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 11:08:24,734 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 11:08:24,734 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 11:08:25,603 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 11:08:25,627 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 11:08:26,687 WARNING  * Debugger is active!
+2025-04-16 11:08:26,691 WARNING  * Debugger is active!
+2025-04-16 11:08:26,702 INFO  * Debugger PIN: 555-876-948
+2025-04-16 11:08:26,708 INFO  * Debugger PIN: 555-876-948
+2025-04-16 11:11:52,362 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.240.19.207:5000
+2025-04-16 11:11:52,364 INFO [33mPress CTRL+C to quit[0m
+2025-04-16 11:11:52,396 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 11:11:53,640 WARNING  * Debugger is active!
+2025-04-16 11:11:53,645 INFO  * Debugger PIN: 555-876-948
+2025-04-16 11:12:36,510 INFO 127.0.0.1 - - [16/Apr/2025 11:12:36] "GET / HTTP/1.1" 200 -
+2025-04-16 11:12:36,906 INFO 127.0.0.1 - - [16/Apr/2025 11:12:36] "GET /dashboard HTTP/1.1" 200 -
+2025-04-16 11:12:37,625 INFO 127.0.0.1 - - [16/Apr/2025 11:12:37] "GET /static/js/auth.js HTTP/1.1" 200 -
+2025-04-16 11:12:37,642 INFO 127.0.0.1 - - [16/Apr/2025 11:12:37] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-16 11:12:37,657 INFO 127.0.0.1 - - [16/Apr/2025 11:12:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-16 11:12:38,261 INFO 127.0.0.1 - - [16/Apr/2025 11:12:38] "GET /portfolio/members?session_token=fca259f1-89cc-4637-9d27-c16f0b256841 HTTP/1.1" 200 -
+2025-04-16 11:12:38,576 INFO 127.0.0.1 - - [16/Apr/2025 11:12:38] "GET /api/dashboard/products/by-category?session_token=fca259f1-89cc-4637-9d27-c16f0b256841 HTTP/1.1" 200 -
+2025-04-16 11:12:38,666 INFO 127.0.0.1 - - [16/Apr/2025 11:12:38] "GET /api/dashboard/shops/count?session_token=fca259f1-89cc-4637-9d27-c16f0b256841 HTTP/1.1" 200 -
+2025-04-16 11:12:39,031 INFO 127.0.0.1 - - [16/Apr/2025 11:12:39] "GET /api/dashboard/products/count?session_token=fca259f1-89cc-4637-9d27-c16f0b256841 HTTP/1.1" 200 -
+2025-04-16 11:12:39,482 INFO 127.0.0.1 - - [16/Apr/2025 11:12:39] "GET /api/dashboard/customers/count?session_token=fca259f1-89cc-4637-9d27-c16f0b256841 HTTP/1.1" 200 -
+2025-04-16 11:12:39,873 INFO 127.0.0.1 - - [16/Apr/2025 11:12:39] "GET /api/dashboard/orders/recent?session_token=fca259f1-89cc-4637-9d27-c16f0b256841 HTTP/1.1" 200 -
+2025-04-16 11:12:40,136 INFO 127.0.0.1 - - [16/Apr/2025 11:12:40] "GET /api/dashboard/loyalty/recent?session_token=fca259f1-89cc-4637-9d27-c16f0b256841 HTTP/1.1" 200 -
+2025-04-16 11:12:40,236 INFO 127.0.0.1 - - [16/Apr/2025 11:12:40] "GET /api/dashboard/sales/by-shop?session_token=fca259f1-89cc-4637-9d27-c16f0b256841 HTTP/1.1" 200 -
+2025-04-16 11:12:46,274 INFO 127.0.0.1 - - [16/Apr/2025 11:12:46] "GET /members HTTP/1.1" 200 -
+2025-04-16 11:12:46,705 INFO 127.0.0.1 - - [16/Apr/2025 11:12:46] "[36mGET /static/js/auth.js HTTP/1.1[0m" 304 -
+2025-04-16 11:12:46,705 INFO 127.0.0.1 - - [16/Apr/2025 11:12:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-16 11:12:46,709 INFO 127.0.0.1 - - [16/Apr/2025 11:12:46] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-16 11:12:46,963 INFO 127.0.0.1 - - [16/Apr/2025 11:12:46] "GET /portfolio/members?session_token=fca259f1-89cc-4637-9d27-c16f0b256841 HTTP/1.1" 200 -
+2025-04-16 11:12:53,329 WARNING {'timestamp': '2025-04-16T11:12:53.329244', 'endpoint': 'delete_member', 'method': 'POST', 'ip': '127.0.0.1', 'user_agent': 'Unknown', 'message': 'Unauthenticated user attempted admin action'}
+2025-04-16 11:12:53,329 INFO 127.0.0.1 - - [16/Apr/2025 11:12:53] "[31m[1mPOST /shopstop/members/delete HTTP/1.1[0m" 401 -
+2025-04-16 11:12:53,811 INFO 127.0.0.1 - - [16/Apr/2025 11:12:53] "GET /login HTTP/1.1" 200 -
+2025-04-16 11:12:54,075 INFO 127.0.0.1 - - [16/Apr/2025 11:12:54] "[36mGET /static/js/auth.js HTTP/1.1[0m" 304 -
+2025-04-16 11:12:59,046 INFO {'timestamp': '2025-04-16T11:12:59.046814', 'action': 'LOGIN', 'table': 'Login', 'data': {'member_id': 2080, 'username': 'Rahul Jain'}, 'user_id': 2080}
+2025-04-16 11:12:59,058 INFO 127.0.0.1 - - [16/Apr/2025 11:12:59] "POST /shopstop/authUser HTTP/1.1" 200 -
+2025-04-16 11:13:00,465 INFO 127.0.0.1 - - [16/Apr/2025 11:13:00] "GET /dashboard?session_token=5cea49df-bcf5-4054-853a-a31be3d4693f HTTP/1.1" 200 -
+2025-04-16 11:13:00,723 INFO 127.0.0.1 - - [16/Apr/2025 11:13:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-16 11:13:00,929 INFO 127.0.0.1 - - [16/Apr/2025 11:13:00] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-16 11:13:00,929 INFO 127.0.0.1 - - [16/Apr/2025 11:13:00] "[36mGET /static/js/auth.js HTTP/1.1[0m" 304 -
+2025-04-16 11:13:01,106 INFO 127.0.0.1 - - [16/Apr/2025 11:13:01] "GET /portfolio/members?session_token=5cea49df-bcf5-4054-853a-a31be3d4693f HTTP/1.1" 200 -
+2025-04-16 11:13:01,415 INFO 127.0.0.1 - - [16/Apr/2025 11:13:01] "GET /api/dashboard/products/by-category?session_token=5cea49df-bcf5-4054-853a-a31be3d4693f HTTP/1.1" 200 -
+2025-04-16 11:13:01,476 INFO 127.0.0.1 - - [16/Apr/2025 11:13:01] "GET /api/dashboard/shops/count?session_token=5cea49df-bcf5-4054-853a-a31be3d4693f HTTP/1.1" 200 -
+2025-04-16 11:13:02,128 INFO 127.0.0.1 - - [16/Apr/2025 11:13:02] "GET /api/dashboard/products/count?session_token=5cea49df-bcf5-4054-853a-a31be3d4693f HTTP/1.1" 200 -
+2025-04-16 11:13:02,375 INFO 127.0.0.1 - - [16/Apr/2025 11:13:02] "GET /api/dashboard/customers/count?session_token=5cea49df-bcf5-4054-853a-a31be3d4693f HTTP/1.1" 200 -
+2025-04-16 11:13:02,630 INFO 127.0.0.1 - - [16/Apr/2025 11:13:02] "GET /api/dashboard/orders/recent?session_token=5cea49df-bcf5-4054-853a-a31be3d4693f HTTP/1.1" 200 -
+2025-04-16 11:13:03,041 INFO 127.0.0.1 - - [16/Apr/2025 11:13:03] "GET /api/dashboard/loyalty/recent?session_token=5cea49df-bcf5-4054-853a-a31be3d4693f HTTP/1.1" 200 -
+2025-04-16 11:13:03,289 INFO 127.0.0.1 - - [16/Apr/2025 11:13:03] "GET /api/dashboard/sales/by-shop?session_token=5cea49df-bcf5-4054-853a-a31be3d4693f HTTP/1.1" 200 -
+2025-04-16 11:13:03,379 INFO 127.0.0.1 - - [16/Apr/2025 11:13:03] "GET /members HTTP/1.1" 200 -
+2025-04-16 11:13:03,594 INFO 127.0.0.1 - - [16/Apr/2025 11:13:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-16 11:13:03,825 INFO 127.0.0.1 - - [16/Apr/2025 11:13:03] "[36mGET /static/js/auth.js HTTP/1.1[0m" 304 -
+2025-04-16 11:13:03,840 INFO 127.0.0.1 - - [16/Apr/2025 11:13:03] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-16 11:13:03,897 INFO 127.0.0.1 - - [16/Apr/2025 11:13:03] "GET /portfolio/members?session_token=5cea49df-bcf5-4054-853a-a31be3d4693f HTTP/1.1" 200 -
+2025-04-16 11:13:11,290 INFO 127.0.0.1 - - [16/Apr/2025 11:13:11] "GET /customers HTTP/1.1" 200 -
+2025-04-16 11:13:11,541 INFO 127.0.0.1 - - [16/Apr/2025 11:13:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-16 11:13:11,732 INFO 127.0.0.1 - - [16/Apr/2025 11:13:11] "[36mGET /static/js/auth.js HTTP/1.1[0m" 304 -
+2025-04-16 11:13:11,732 INFO 127.0.0.1 - - [16/Apr/2025 11:13:11] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-16 11:13:16,301 INFO 127.0.0.1 - - [16/Apr/2025 11:13:16] "GET /products HTTP/1.1" 200 -
+2025-04-16 11:13:16,731 INFO 127.0.0.1 - - [16/Apr/2025 11:13:16] "[36mGET /static/js/auth.js HTTP/1.1[0m" 304 -
+2025-04-16 11:13:16,731 INFO 127.0.0.1 - - [16/Apr/2025 11:13:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-16 11:13:16,731 INFO 127.0.0.1 - - [16/Apr/2025 11:13:16] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-16 11:13:17,018 INFO 127.0.0.1 - - [16/Apr/2025 11:13:17] "GET /shops HTTP/1.1" 200 -
+2025-04-16 11:13:17,190 INFO 127.0.0.1 - - [16/Apr/2025 11:13:17] "GET /api/products HTTP/1.1" 200 -
+2025-04-16 11:13:22,596 WARNING {'timestamp': '2025-04-16T11:13:22.596585', 'endpoint': 'delete_product', 'method': 'DELETE', 'ip': '127.0.0.1', 'user_agent': 'Unknown', 'message': 'Unauthenticated user attempted admin action'}
+2025-04-16 11:13:22,598 INFO 127.0.0.1 - - [16/Apr/2025 11:13:22] "[31m[1mDELETE /products/14 HTTP/1.1[0m" 401 -
+2025-04-16 11:16:27,450 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 11:16:27,453 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 11:16:27,453 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 11:16:27,456 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 11:16:27,456 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 11:16:27,458 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 11:16:27,954 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 11:16:28,569 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 11:16:28,630 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 11:16:29,206 WARNING  * Debugger is active!
+2025-04-16 11:16:29,227 INFO  * Debugger PIN: 555-876-948
+2025-04-16 11:16:29,750 WARNING  * Debugger is active!
+2025-04-16 11:16:29,758 INFO  * Debugger PIN: 555-876-948
+2025-04-16 11:16:29,758 WARNING  * Debugger is active!
+2025-04-16 11:16:29,765 INFO  * Debugger PIN: 555-876-948
+2025-04-16 11:16:47,150 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 11:16:47,153 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 11:16:47,153 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 11:16:47,153 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 11:16:47,153 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 11:16:47,155 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 11:16:47,155 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 11:16:47,155 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 11:16:47,374 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 11:16:47,376 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 11:16:47,828 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 11:16:48,460 WARNING  * Debugger is active!
+2025-04-16 11:16:48,460 WARNING  * Debugger is active!
+2025-04-16 11:16:48,470 INFO  * Debugger PIN: 555-876-948
+2025-04-16 11:16:48,472 INFO  * Debugger PIN: 555-876-948
+2025-04-16 11:16:48,801 WARNING  * Debugger is active!
+2025-04-16 11:16:48,806 INFO  * Debugger PIN: 555-876-948
+2025-04-16 11:19:01,881 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.240.19.207:5000
+2025-04-16 11:19:01,881 INFO [33mPress CTRL+C to quit[0m
+2025-04-16 11:19:01,926 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 11:19:03,060 WARNING  * Debugger is active!
+2025-04-16 11:19:03,060 INFO  * Debugger PIN: 555-876-948
+2025-04-16 11:19:49,801 INFO 127.0.0.1 - - [16/Apr/2025 11:19:49] "GET / HTTP/1.1" 200 -
+2025-04-16 11:19:52,316 INFO 127.0.0.1 - - [16/Apr/2025 11:19:52] "GET /dashboard HTTP/1.1" 200 -
+2025-04-16 11:19:53,236 INFO 127.0.0.1 - - [16/Apr/2025 11:19:53] "GET /static/js/auth.js HTTP/1.1" 200 -
+2025-04-16 11:19:53,246 INFO 127.0.0.1 - - [16/Apr/2025 11:19:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-16 11:19:53,248 INFO 127.0.0.1 - - [16/Apr/2025 11:19:53] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-16 11:19:53,853 INFO 127.0.0.1 - - [16/Apr/2025 11:19:53] "GET /portfolio/members?session_token=79c5995b-9475-46c5-b554-2ff7c5f70002 HTTP/1.1" 200 -
+2025-04-16 11:19:54,133 INFO 127.0.0.1 - - [16/Apr/2025 11:19:54] "GET /api/dashboard/products/by-category?session_token=79c5995b-9475-46c5-b554-2ff7c5f70002 HTTP/1.1" 200 -
+2025-04-16 11:19:54,206 INFO 127.0.0.1 - - [16/Apr/2025 11:19:54] "GET /api/dashboard/shops/count?session_token=79c5995b-9475-46c5-b554-2ff7c5f70002 HTTP/1.1" 200 -
+2025-04-16 11:19:54,597 INFO 127.0.0.1 - - [16/Apr/2025 11:19:54] "GET /api/dashboard/products/count?session_token=79c5995b-9475-46c5-b554-2ff7c5f70002 HTTP/1.1" 200 -
+2025-04-16 11:19:54,862 INFO 127.0.0.1 - - [16/Apr/2025 11:19:54] "GET /api/dashboard/customers/count?session_token=79c5995b-9475-46c5-b554-2ff7c5f70002 HTTP/1.1" 200 -
+2025-04-16 11:19:55,055 INFO 127.0.0.1 - - [16/Apr/2025 11:19:55] "GET /api/dashboard/orders/recent?session_token=79c5995b-9475-46c5-b554-2ff7c5f70002 HTTP/1.1" 200 -
+2025-04-16 11:19:55,228 INFO 127.0.0.1 - - [16/Apr/2025 11:19:55] "GET /api/dashboard/loyalty/recent?session_token=79c5995b-9475-46c5-b554-2ff7c5f70002 HTTP/1.1" 200 -
+2025-04-16 11:19:55,418 INFO 127.0.0.1 - - [16/Apr/2025 11:19:55] "GET /api/dashboard/sales/by-shop?session_token=79c5995b-9475-46c5-b554-2ff7c5f70002 HTTP/1.1" 200 -
+2025-04-16 11:20:00,851 INFO 127.0.0.1 - - [16/Apr/2025 11:20:00] "GET /products HTTP/1.1" 200 -
+2025-04-16 11:20:01,418 INFO 127.0.0.1 - - [16/Apr/2025 11:20:01] "[36mGET /static/js/auth.js HTTP/1.1[0m" 304 -
+2025-04-16 11:20:01,418 INFO 127.0.0.1 - - [16/Apr/2025 11:20:01] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-16 11:20:01,418 INFO 127.0.0.1 - - [16/Apr/2025 11:20:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-16 11:20:01,689 INFO 127.0.0.1 - - [16/Apr/2025 11:20:01] "GET /shops HTTP/1.1" 200 -
+2025-04-16 11:20:01,886 INFO 127.0.0.1 - - [16/Apr/2025 11:20:01] "GET /api/products HTTP/1.1" 200 -
+2025-04-16 11:20:03,582 INFO 127.0.0.1 - - [16/Apr/2025 11:20:03] "GET /members HTTP/1.1" 200 -
+2025-04-16 11:20:04,156 INFO 127.0.0.1 - - [16/Apr/2025 11:20:04] "[36mGET /static/js/auth.js HTTP/1.1[0m" 304 -
+2025-04-16 11:20:04,156 INFO 127.0.0.1 - - [16/Apr/2025 11:20:04] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-16 11:20:04,156 INFO 127.0.0.1 - - [16/Apr/2025 11:20:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-16 11:20:04,434 INFO 127.0.0.1 - - [16/Apr/2025 11:20:04] "GET /portfolio/members?session_token=79c5995b-9475-46c5-b554-2ff7c5f70002 HTTP/1.1" 200 -
+2025-04-16 11:20:09,122 WARNING {'timestamp': '2025-04-16T11:20:09.122714', 'endpoint': 'delete_member', 'method': 'POST', 'ip': '127.0.0.1', 'user_agent': 'Unknown', 'message': 'Unauthenticated user attempted admin action'}
+2025-04-16 11:20:09,122 INFO 127.0.0.1 - - [16/Apr/2025 11:20:09] "[31m[1mPOST /shopstop/members/delete HTTP/1.1[0m" 401 -
+2025-04-16 11:20:09,531 INFO 127.0.0.1 - - [16/Apr/2025 11:20:09] "GET /login HTTP/1.1" 200 -
+2025-04-16 11:20:09,890 INFO 127.0.0.1 - - [16/Apr/2025 11:20:09] "[36mGET /static/js/auth.js HTTP/1.1[0m" 304 -
+2025-04-16 11:20:15,106 INFO {'timestamp': '2025-04-16T11:20:15.106424', 'action': 'LOGIN', 'table': 'Login', 'data': {'member_id': 24210245, 'username': 'Praveen Rathod'}, 'user_id': 24210245}
+2025-04-16 11:20:15,115 INFO 127.0.0.1 - - [16/Apr/2025 11:20:15] "POST /shopstop/authUser HTTP/1.1" 200 -
+2025-04-16 11:20:16,253 INFO 127.0.0.1 - - [16/Apr/2025 11:20:16] "GET /dashboard?session_token=ccbfa9ca-4be4-43db-a20e-420f4544b9c5 HTTP/1.1" 200 -
+2025-04-16 11:20:16,705 INFO 127.0.0.1 - - [16/Apr/2025 11:20:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-16 11:20:16,705 INFO 127.0.0.1 - - [16/Apr/2025 11:20:16] "[36mGET /static/js/auth.js HTTP/1.1[0m" 304 -
+2025-04-16 11:20:16,705 INFO 127.0.0.1 - - [16/Apr/2025 11:20:16] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-16 11:20:16,972 INFO 127.0.0.1 - - [16/Apr/2025 11:20:16] "GET /portfolio/members?session_token=ccbfa9ca-4be4-43db-a20e-420f4544b9c5 HTTP/1.1" 200 -
+2025-04-16 11:20:17,234 INFO 127.0.0.1 - - [16/Apr/2025 11:20:17] "GET /api/dashboard/shops/count?session_token=ccbfa9ca-4be4-43db-a20e-420f4544b9c5 HTTP/1.1" 200 -
+2025-04-16 11:20:17,236 INFO 127.0.0.1 - - [16/Apr/2025 11:20:17] "GET /api/dashboard/products/by-category?session_token=ccbfa9ca-4be4-43db-a20e-420f4544b9c5 HTTP/1.1" 200 -
+2025-04-16 11:20:17,503 INFO 127.0.0.1 - - [16/Apr/2025 11:20:17] "GET /api/dashboard/products/count?session_token=ccbfa9ca-4be4-43db-a20e-420f4544b9c5 HTTP/1.1" 200 -
+2025-04-16 11:20:17,862 INFO 127.0.0.1 - - [16/Apr/2025 11:20:17] "GET /api/dashboard/customers/count?session_token=ccbfa9ca-4be4-43db-a20e-420f4544b9c5 HTTP/1.1" 200 -
+2025-04-16 11:20:18,120 INFO 127.0.0.1 - - [16/Apr/2025 11:20:18] "GET /api/dashboard/orders/recent?session_token=ccbfa9ca-4be4-43db-a20e-420f4544b9c5 HTTP/1.1" 200 -
+2025-04-16 11:20:18,269 INFO 127.0.0.1 - - [16/Apr/2025 11:20:18] "GET /api/dashboard/loyalty/recent?session_token=ccbfa9ca-4be4-43db-a20e-420f4544b9c5 HTTP/1.1" 200 -
+2025-04-16 11:20:18,670 INFO 127.0.0.1 - - [16/Apr/2025 11:20:18] "GET /api/dashboard/sales/by-shop?session_token=ccbfa9ca-4be4-43db-a20e-420f4544b9c5 HTTP/1.1" 200 -
+2025-04-16 11:20:20,631 INFO 127.0.0.1 - - [16/Apr/2025 11:20:20] "GET /products HTTP/1.1" 200 -
+2025-04-16 11:20:21,228 INFO 127.0.0.1 - - [16/Apr/2025 11:20:21] "[36mGET /static/js/auth.js HTTP/1.1[0m" 304 -
+2025-04-16 11:20:21,228 INFO 127.0.0.1 - - [16/Apr/2025 11:20:21] "[36mGET /static/js/common.js HTTP/1.1[0m" 304 -
+2025-04-16 11:20:21,234 INFO 127.0.0.1 - - [16/Apr/2025 11:20:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-04-16 11:20:21,489 INFO 127.0.0.1 - - [16/Apr/2025 11:20:21] "GET /shops HTTP/1.1" 200 -
+2025-04-16 11:20:21,620 INFO 127.0.0.1 - - [16/Apr/2025 11:20:21] "GET /api/products HTTP/1.1" 200 -
+2025-04-16 11:20:25,400 WARNING {'timestamp': '2025-04-16T11:20:25.400740', 'endpoint': 'delete_product', 'method': 'DELETE', 'ip': '127.0.0.1', 'user_agent': 'Unknown', 'message': 'Unauthenticated user attempted admin action'}
+2025-04-16 11:20:25,400 INFO 127.0.0.1 - - [16/Apr/2025 11:20:25] "[31m[1mDELETE /products/13 HTTP/1.1[0m" 401 -
+2025-04-16 11:22:08,511 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.240.19.207:5000
+2025-04-16 11:22:08,511 INFO [33mPress CTRL+C to quit[0m
+2025-04-16 11:22:08,568 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 11:22:09,536 WARNING  * Debugger is active!
+2025-04-16 11:22:09,536 INFO  * Debugger PIN: 555-876-948
+2025-04-16 11:22:47,997 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 11:22:47,997 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 11:22:47,997 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 11:22:47,999 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 11:22:47,999 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 11:22:47,999 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 11:22:47,999 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 11:22:47,999 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 11:22:48,001 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 11:22:48,001 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 11:22:48,416 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 11:22:48,708 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 11:22:48,887 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 11:22:48,887 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 11:22:49,518 WARNING  * Debugger is active!
+2025-04-16 11:22:49,530 INFO  * Debugger PIN: 555-876-948
+2025-04-16 11:22:49,701 WARNING  * Debugger is active!
+2025-04-16 11:22:49,708 INFO  * Debugger PIN: 555-876-948
+2025-04-16 11:22:49,859 WARNING  * Debugger is active!
+2025-04-16 11:22:49,859 WARNING  * Debugger is active!
+2025-04-16 11:22:49,865 INFO  * Debugger PIN: 555-876-948
+2025-04-16 11:22:49,865 INFO  * Debugger PIN: 555-876-948
+2025-04-16 11:23:21,432 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 11:23:21,432 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 11:23:21,432 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 11:23:21,434 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 11:23:21,434 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 11:23:21,434 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 11:23:21,436 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 11:23:21,437 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 11:23:21,437 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 11:23:21,702 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 11:23:21,702 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 11:23:22,331 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 11:23:22,519 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 11:23:22,615 WARNING  * Debugger is active!
+2025-04-16 11:23:22,615 WARNING  * Debugger is active!
+2025-04-16 11:23:22,625 INFO  * Debugger PIN: 555-876-948
+2025-04-16 11:23:22,631 INFO  * Debugger PIN: 555-876-948
+2025-04-16 11:23:23,102 WARNING  * Debugger is active!
+2025-04-16 11:23:23,109 INFO  * Debugger PIN: 555-876-948
+2025-04-16 11:23:23,250 WARNING  * Debugger is active!
+2025-04-16 11:23:23,252 INFO  * Debugger PIN: 555-876-948
+2025-04-16 11:24:17,555 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 11:24:17,555 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 11:24:17,555 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 11:24:17,555 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 11:24:17,557 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 11:24:17,559 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 11:24:17,559 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 11:24:17,559 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 11:24:17,559 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 11:24:17,939 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 11:24:17,957 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 11:24:18,529 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 11:24:18,540 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 11:24:19,105 WARNING  * Debugger is active!
+2025-04-16 11:24:19,105 WARNING  * Debugger is active!
+2025-04-16 11:24:19,121 INFO  * Debugger PIN: 555-876-948
+2025-04-16 11:24:19,125 INFO  * Debugger PIN: 555-876-948
+2025-04-16 11:24:19,574 WARNING  * Debugger is active!
+2025-04-16 11:24:19,580 INFO  * Debugger PIN: 555-876-948
+2025-04-16 11:24:19,590 WARNING  * Debugger is active!
+2025-04-16 11:24:19,600 INFO  * Debugger PIN: 555-876-948
+2025-04-16 11:24:40,840 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 11:24:40,840 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 11:24:40,840 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 11:24:40,842 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 11:24:40,842 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 11:24:40,842 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 11:24:40,842 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 11:24:40,842 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 11:24:40,844 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 11:24:40,844 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 11:24:40,846 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 11:24:40,846 INFO  * Detected change in 'C:\\Users\\prave\\Downloads\\DB_A3\\DB_A3\\main.py', reloading
+2025-04-16 11:24:41,409 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 11:24:41,427 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 11:24:41,907 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 11:24:41,907 INFO  * Restarting with watchdog (windowsapi)
+2025-04-16 11:24:42,475 WARNING  * Debugger is active!
+2025-04-16 11:24:42,487 INFO  * Debugger PIN: 555-876-948
+2025-04-16 11:24:42,490 WARNING  * Debugger is active!
+2025-04-16 11:24:42,503 INFO  * Debugger PIN: 555-876-948
+2025-04-16 11:24:42,853 WARNING  * Debugger is active!
+2025-04-16 11:24:42,859 WARNING  * Debugger is active!
+2025-04-16 11:24:42,869 INFO  * Debugger PIN: 555-876-948
+2025-04-16 11:24:42,872 INFO  * Debugger PIN: 555-876-948

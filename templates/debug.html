@@ -1,0 +1,281 @@
+{% extends "base.html" %}
+
+{% block title %}Debug - ShopStop{% endblock %}
+
+{% block page_title %}Authentication Debug{% endblock %}
+
+{% block content %}
+<div class="row mb-4">
+    <div class="col-md-12">
+        <div class="card shadow">
+            <div class="card-header bg-primary text-white">
+                <h5 class="card-title mb-0"><i class="bi bi-bug me-2"></i>Authentication Debug</h5>
+            </div>
+            <div class="card-body">
+                <h6>LocalStorage Contents:</h6>
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Key</th>
+                                <th>Value</th>
+                            </tr>
+                        </thead>
+                        <tbody id="localStorage-data">
+                            <tr>
+                                <td colspan="2" class="text-center">Loading...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="mt-4">
+                    <h6>Session Token Test:</h6>
+                    <div id="session-test-result" class="alert alert-info">
+                        Click "Test Session" to verify your session token.
+                    </div>
+                    <button id="test-session-btn" class="btn btn-primary">Test Session</button>
+                </div>
+
+                <div class="mt-4">
+                    <h6>Admin Role Test:</h6>
+                    <div id="admin-test-result" class="alert alert-info">
+                        Click "Test Admin" to verify your admin privileges.
+                    </div>
+                    <button id="test-admin-btn" class="btn btn-primary">Test Admin</button>
+                </div>
+
+                <div class="mt-4">
+                    <h6>Server-Side Role Check:</h6>
+                    <div id="server-role-result" class="alert alert-info">
+                        Click "Check Server Role" to verify your role on the server.
+                    </div>
+                    <button id="check-server-role-btn" class="btn btn-primary">Check Server Role</button>
+                </div>
+
+                <div class="mt-4">
+                    <h6>Fix Authentication:</h6>
+                    <div class="mb-3">
+                        <label for="role-select" class="form-label">Set Role:</label>
+                        <select id="role-select" class="form-select">
+                            <option value="admin">Admin</option>
+                            <option value="user">User</option>
+                        </select>
+                    </div>
+                    <button id="fix-auth-btn" class="btn btn-warning">Fix Authentication</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Check authentication
+        if (checkAuth()) {
+            // Display localStorage contents
+            displayLocalStorage();
+
+            // Add event listeners
+            document.getElementById('test-session-btn').addEventListener('click', testSession);
+            document.getElementById('test-admin-btn').addEventListener('click', testAdmin);
+            document.getElementById('check-server-role-btn').addEventListener('click', checkServerRole);
+            document.getElementById('fix-auth-btn').addEventListener('click', fixAuth);
+        }
+    });
+
+    function displayLocalStorage() {
+        const tableBody = document.getElementById('localStorage-data');
+        tableBody.innerHTML = '';
+
+        // Get all localStorage items
+        for (let i = 0; i < localStorage.length; i++) {
+            const key = localStorage.key(i);
+            let value = localStorage.getItem(key);
+
+            // Create table row
+            const row = document.createElement('tr');
+
+            const keyCell = document.createElement('td');
+            keyCell.textContent = key;
+
+            const valueCell = document.createElement('td');
+            valueCell.textContent = value;
+
+            row.appendChild(keyCell);
+            row.appendChild(valueCell);
+            tableBody.appendChild(row);
+        }
+
+        if (localStorage.length === 0) {
+            tableBody.innerHTML = '<tr><td colspan="2" class="text-center">No data in localStorage</td></tr>';
+        }
+    }
+
+    function testSession() {
+        const resultDiv = document.getElementById('session-test-result');
+        const sessionToken = localStorage.getItem('sessionToken');
+
+        if (!sessionToken) {
+            resultDiv.className = 'alert alert-danger';
+            resultDiv.innerHTML = '<i class="bi bi-x-circle me-2"></i>No session token found in localStorage.';
+            return;
+        }
+
+        resultDiv.className = 'alert alert-warning';
+        resultDiv.innerHTML = '<i class="bi bi-hourglass-split me-2"></i>Testing session...';
+
+        fetch('/api/info', {
+            headers: {
+                'Authorization': sessionToken
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            resultDiv.className = 'alert alert-success';
+            resultDiv.innerHTML = `<i class="bi bi-check-circle me-2"></i>Session is valid. API response: ${JSON.stringify(data)}`;
+        })
+        .catch(error => {
+            resultDiv.className = 'alert alert-danger';
+            resultDiv.innerHTML = `<i class="bi bi-x-circle me-2"></i>Session test failed: ${error.message}`;
+        });
+    }
+
+    function testAdmin() {
+        const resultDiv = document.getElementById('admin-test-result');
+        const sessionToken = localStorage.getItem('sessionToken');
+        const userRole = localStorage.getItem('userRole');
+
+        resultDiv.innerHTML = '';
+
+        // Check localStorage role
+        const localStorageCheck = document.createElement('div');
+        localStorageCheck.className = 'mb-2';
+        if (userRole) {
+            if (userRole.toLowerCase() === 'admin') {
+                localStorageCheck.innerHTML = `<i class="bi bi-check-circle text-success me-2"></i>localStorage userRole is set to "${userRole}" (Admin)`;
+            } else {
+                localStorageCheck.innerHTML = `<i class="bi bi-x-circle text-danger me-2"></i>localStorage userRole is set to "${userRole}" (Not Admin)`;
+            }
+        } else {
+            localStorageCheck.innerHTML = `<i class="bi bi-x-circle text-danger me-2"></i>No userRole found in localStorage`;
+        }
+        resultDiv.appendChild(localStorageCheck);
+
+        // Test admin endpoint
+        if (sessionToken) {
+            const serverCheck = document.createElement('div');
+            serverCheck.innerHTML = '<i class="bi bi-hourglass-split text-warning me-2"></i>Testing admin privileges on server...';
+            resultDiv.appendChild(serverCheck);
+
+            // Try to access an admin-only endpoint
+            fetch('/shops', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': sessionToken
+                },
+                body: JSON.stringify({
+                    shop_id: 'TEST' + Math.floor(Math.random() * 1000),
+                    name: 'Test Shop',
+                    address: 'Test Address',
+                    contact: '1234567890',
+                    member_id: localStorage.getItem('memberId') || '1'
+                })
+            })
+            .then(response => {
+                if (response.ok) {
+                    serverCheck.innerHTML = '<i class="bi bi-check-circle text-success me-2"></i>Server recognizes you as Admin';
+                } else if (response.status === 403) {
+                    serverCheck.innerHTML = '<i class="bi bi-x-circle text-danger me-2"></i>Server does NOT recognize you as Admin';
+                } else {
+                    serverCheck.innerHTML = `<i class="bi bi-exclamation-triangle text-warning me-2"></i>Unexpected response: ${response.status}`;
+                }
+                return response.json();
+            })
+            .then(data => {
+                const responseDiv = document.createElement('div');
+                responseDiv.className = 'mt-2';
+                responseDiv.innerHTML = `<small>Server response: ${JSON.stringify(data)}</small>`;
+                resultDiv.appendChild(responseDiv);
+            })
+            .catch(error => {
+                const errorDiv = document.createElement('div');
+                errorDiv.className = 'mt-2 text-danger';
+                errorDiv.innerHTML = `<small>Error: ${error.message}</small>`;
+                resultDiv.appendChild(errorDiv);
+            });
+        }
+    }
+
+    function checkServerRole() {
+        const resultDiv = document.getElementById('server-role-result');
+        const sessionToken = localStorage.getItem('sessionToken');
+
+        if (!sessionToken) {
+            resultDiv.className = 'alert alert-danger';
+            resultDiv.innerHTML = '<i class="bi bi-x-circle me-2"></i>No session token found in localStorage.';
+            return;
+        }
+
+        resultDiv.className = 'alert alert-warning';
+        resultDiv.innerHTML = '<i class="bi bi-hourglass-split me-2"></i>Checking server role...';
+
+        fetch('/api/check-role', {
+            headers: {
+                'Authorization': sessionToken
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.status === 'success') {
+                const role = data.user_data.role;
+                const isAdmin = data.user_data.is_admin;
+
+                if (isAdmin) {
+                    resultDiv.className = 'alert alert-success';
+                    resultDiv.innerHTML = `<i class="bi bi-check-circle me-2"></i>Server recognizes you as an Admin. Role: ${role}`;
+                } else {
+                    resultDiv.className = 'alert alert-danger';
+                    resultDiv.innerHTML = `<i class="bi bi-x-circle me-2"></i>Server does NOT recognize you as an Admin. Role: ${role}`;
+                }
+
+                // Add a fix button if there's a mismatch
+                const localRole = localStorage.getItem('userRole');
+                if (localRole && localRole.toLowerCase() === 'admin' && !isAdmin) {
+                    const fixButton = document.createElement('button');
+                    fixButton.className = 'btn btn-warning btn-sm mt-2';
+                    fixButton.textContent = 'Fix Server Role';
+                    fixButton.addEventListener('click', function() {
+                        // This would require server-side implementation
+                        alert('This would require server-side implementation to fix the role in the database.');
+                    });
+                    resultDiv.appendChild(fixButton);
+                }
+            } else {
+                resultDiv.className = 'alert alert-danger';
+                resultDiv.innerHTML = `<i class="bi bi-x-circle me-2"></i>Error: ${data.message || 'Unknown error'}`;
+            }
+        })
+        .catch(error => {
+            resultDiv.className = 'alert alert-danger';
+            resultDiv.innerHTML = `<i class="bi bi-x-circle me-2"></i>Error checking server role: ${error.message}`;
+        });
+    }
+
+    function fixAuth() {
+        const role = document.getElementById('role-select').value;
+
+        // Update localStorage
+        localStorage.setItem('userRole', role);
+
+        // Display updated localStorage
+        displayLocalStorage();
+
+        // Show success message
+        alert(`Role updated to "${role}" in localStorage. You may need to refresh the page for changes to take effect.`);
+    }
+</script>
+{% endblock %}

@@ -1,0 +1,383 @@
+{% extends "base.html" %}
+
+{% block title %}Shop Display - ShopStop{% endblock %}
+
+{% block page_title %}Shop Information{% endblock %}
+
+{% block content %}
+<div class="row mb-4">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="card-title mb-0">Shops</h5>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover" id="shops-table">
+                        <thead>
+                            <tr>
+                                <th>Shop ID</th>
+                                <th>Name</th>
+                                <th>Address</th>
+                                <th>Contact</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="shops-table-body">
+                            <tr>
+                                <td colspan="5" class="text-center">Loading shops...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mb-4">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="card-title mb-0">Products</h5>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover" id="products-table">
+                        <thead>
+                            <tr>
+                                <th>Product ID</th>
+                                <th>Name</th>
+                                <th>Category</th>
+                                <th>Shop</th>
+                                <th>Price</th>
+                                <th>Stock</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="products-table-body">
+                            <tr>
+                                <td colspan="7" class="text-center">Loading products...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mb-4">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="card-title mb-0">Suppliers</h5>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover" id="suppliers-table">
+                        <thead>
+                            <tr>
+                                <th>Supplier ID</th>
+                                <th>Name</th>
+                                <th>Contact</th>
+                                <th>Email</th>
+                                <th>Address</th>
+                            </tr>
+                        </thead>
+                        <tbody id="suppliers-table-body">
+                            <tr>
+                                <td colspan="5" class="text-center">Loading suppliers...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Shop Details Modal -->
+<div class="modal fade" id="shopDetailsModal" tabindex="-1" aria-labelledby="shopDetailsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="shopDetailsModalLabel">Shop Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="shop-details-content">
+                <div class="text-center">
+                    <div class="spinner-border" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Check authentication
+        if (checkAuth()) {
+            // Load data
+            loadShops();
+            loadProducts();
+            loadSuppliers();
+        }
+    });
+
+    async function loadShops() {
+        try {
+            const response = await apiRequest('/api/shops');
+
+            const shopsTableBody = document.getElementById('shops-table-body');
+            shopsTableBody.innerHTML = '';
+
+            if (response.status === 'success' && response.data.length > 0) {
+                response.data.forEach(shop => {
+                    const row = document.createElement('tr');
+
+                    const shopIdCell = document.createElement('td');
+                    shopIdCell.textContent = shop.shop_id;
+
+                    const nameCell = document.createElement('td');
+                    nameCell.textContent = shop.name;
+
+                    const addressCell = document.createElement('td');
+                    addressCell.textContent = shop.address;
+
+                    const contactCell = document.createElement('td');
+                    contactCell.textContent = shop.contact;
+
+                    const actionsCell = document.createElement('td');
+                    const viewButton = document.createElement('button');
+                    viewButton.className = 'btn btn-sm btn-primary me-2';
+                    viewButton.innerHTML = '<i class="bi bi-eye"></i>';
+                    viewButton.addEventListener('click', () => viewShopDetails(shop.shop_id));
+                    actionsCell.appendChild(viewButton);
+
+                    row.appendChild(shopIdCell);
+                    row.appendChild(nameCell);
+                    row.appendChild(addressCell);
+                    row.appendChild(contactCell);
+                    row.appendChild(actionsCell);
+
+                    shopsTableBody.appendChild(row);
+                });
+            } else {
+                const row = document.createElement('tr');
+                const cell = document.createElement('td');
+                cell.colSpan = 5;
+                cell.textContent = 'No shops found';
+                cell.className = 'text-center';
+                row.appendChild(cell);
+                shopsTableBody.appendChild(row);
+            }
+        } catch (error) {
+            console.error('Error loading shops:', error);
+            const shopsTableBody = document.getElementById('shops-table-body');
+            shopsTableBody.innerHTML = `<tr><td colspan="5" class="text-center text-danger">Error loading shops: ${error.message}</td></tr>`;
+        }
+    }
+
+    async function loadProducts() {
+        try {
+            const response = await apiRequest('/api/products');
+
+            const productsTableBody = document.getElementById('products-table-body');
+            productsTableBody.innerHTML = '';
+
+            if (response.status === 'success' && response.data.length > 0) {
+                response.data.forEach(product => {
+                    const row = document.createElement('tr');
+
+                    const productIdCell = document.createElement('td');
+                    productIdCell.textContent = product.product_id;
+
+                    const nameCell = document.createElement('td');
+                    nameCell.textContent = product.name;
+
+                    const categoryCell = document.createElement('td');
+                    categoryCell.textContent = product.category;
+
+                    const shopCell = document.createElement('td');
+                    shopCell.textContent = product.shop_name || product.shop_id;
+
+                    const priceCell = document.createElement('td');
+                    priceCell.textContent = `$${parseFloat(product.price).toFixed(2)}`;
+
+                    const stockCell = document.createElement('td');
+                    stockCell.textContent = product.stock_quantity;
+
+                    const statusCell = document.createElement('td');
+                    const statusBadge = document.createElement('span');
+                    statusBadge.className = `badge ${product.stock_status === 'Low' ? 'bg-warning' : 'bg-success'}`;
+                    statusBadge.textContent = product.stock_status;
+                    statusCell.appendChild(statusBadge);
+
+                    row.appendChild(productIdCell);
+                    row.appendChild(nameCell);
+                    row.appendChild(categoryCell);
+                    row.appendChild(shopCell);
+                    row.appendChild(priceCell);
+                    row.appendChild(stockCell);
+                    row.appendChild(statusCell);
+
+                    productsTableBody.appendChild(row);
+                });
+            } else {
+                const row = document.createElement('tr');
+                const cell = document.createElement('td');
+                cell.colSpan = 7;
+                cell.textContent = 'No products found';
+                cell.className = 'text-center';
+                row.appendChild(cell);
+                productsTableBody.appendChild(row);
+            }
+        } catch (error) {
+            console.error('Error loading products:', error);
+            const productsTableBody = document.getElementById('products-table-body');
+            productsTableBody.innerHTML = `<tr><td colspan="7" class="text-center text-danger">Error loading products: ${error.message}</td></tr>`;
+        }
+    }
+
+    async function loadSuppliers() {
+        try {
+            const response = await apiRequest('/api/cs432g17/suppliers');
+
+            const suppliersTableBody = document.getElementById('suppliers-table-body');
+            suppliersTableBody.innerHTML = '';
+
+            if (response.status === 'success' && response.data.length > 0) {
+                response.data.forEach(supplier => {
+                    const row = document.createElement('tr');
+
+                    const supplierIdCell = document.createElement('td');
+                    supplierIdCell.textContent = supplier.supplier_id;
+
+                    const nameCell = document.createElement('td');
+                    nameCell.textContent = supplier.name;
+
+                    const contactCell = document.createElement('td');
+                    contactCell.textContent = supplier.contact;
+
+                    const emailCell = document.createElement('td');
+                    emailCell.textContent = supplier.email;
+
+                    const addressCell = document.createElement('td');
+                    addressCell.textContent = supplier.address;
+
+                    row.appendChild(supplierIdCell);
+                    row.appendChild(nameCell);
+                    row.appendChild(contactCell);
+                    row.appendChild(emailCell);
+                    row.appendChild(addressCell);
+
+                    suppliersTableBody.appendChild(row);
+                });
+            } else {
+                const row = document.createElement('tr');
+                const cell = document.createElement('td');
+                cell.colSpan = 5;
+                cell.textContent = 'No suppliers found';
+                cell.className = 'text-center';
+                row.appendChild(cell);
+                suppliersTableBody.appendChild(row);
+            }
+        } catch (error) {
+            console.error('Error loading suppliers:', error);
+            const suppliersTableBody = document.getElementById('suppliers-table-body');
+            suppliersTableBody.innerHTML = `<tr><td colspan="5" class="text-center text-danger">Error loading suppliers: ${error.message}</td></tr>`;
+        }
+    }
+
+    async function viewShopDetails(shopId) {
+        try {
+            const shopDetailsContent = document.getElementById('shop-details-content');
+            shopDetailsContent.innerHTML = `
+                <div class="text-center">
+                    <div class="spinner-border" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+            `;
+
+            const modal = new bootstrap.Modal(document.getElementById('shopDetailsModal'));
+            modal.show();
+
+            const response = await apiRequest(`/api/shops/${shopId}`);
+
+            if (response.status === 'success') {
+                const shop = response.data;
+
+                // Get products for this shop
+                const productsResponse = await apiRequest(`/api/products?shop_id=${shopId}`);
+
+                let productsHtml = '<p>No products found for this shop.</p>';
+
+                if (productsResponse.status === 'success' && productsResponse.data.length > 0) {
+                    productsHtml = `
+                        <div class="table-responsive mt-3">
+                            <table class="table table-sm">
+                                <thead>
+                                    <tr>
+                                        <th>Product</th>
+                                        <th>Category</th>
+                                        <th>Price</th>
+                                        <th>Stock</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                    `;
+
+                    productsResponse.data.forEach(product => {
+                        productsHtml += `
+                            <tr>
+                                <td>${product.name}</td>
+                                <td>${product.category}</td>
+                                <td>$${parseFloat(product.price).toFixed(2)}</td>
+                                <td>${product.stock_quantity}</td>
+                            </tr>
+                        `;
+                    });
+
+                    productsHtml += `
+                                </tbody>
+                            </table>
+                        </div>
+                    `;
+                }
+
+                shopDetailsContent.innerHTML = `
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h6>Shop Information</h6>
+                            <p><strong>ID:</strong> ${shop.shop_id}</p>
+                            <p><strong>Name:</strong> ${shop.name}</p>
+                            <p><strong>Address:</strong> ${shop.address}</p>
+                            <p><strong>Contact:</strong> ${shop.contact}</p>
+                            <p><strong>Owner:</strong> ${shop.owner_name || 'N/A'}</p>
+                        </div>
+                        <div class="col-md-6">
+                            <h6>Products</h6>
+                            ${productsHtml}
+                        </div>
+                    </div>
+                `;
+            } else {
+                shopDetailsContent.innerHTML = `<div class="alert alert-danger">Error loading shop details: ${response.error}</div>`;
+            }
+        } catch (error) {
+            console.error('Error viewing shop details:', error);
+            const shopDetailsContent = document.getElementById('shop-details-content');
+            shopDetailsContent.innerHTML = `<div class="alert alert-danger">Error loading shop details: ${error.message}</div>`;
+        }
+    }
+</script>
+{% endblock %}

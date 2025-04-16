@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - ShopStop</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+        }
+        .form-signin {
+            width: 100%;
+            max-width: 450px;
+            padding: 15px;
+            margin: auto;
+        }
+        .form-signin .form-floating:focus-within {
+            z-index: 2;
+        }
+        .form-signin input[type="text"] {
+            margin-bottom: -1px;
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+        .form-signin input[type="password"] {
+            margin-bottom: 10px;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+        .logo {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: #fff;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            width: 80px;
+            height: 80px;
+            line-height: 80px;
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        .card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+        .card-header {
+            background: linear-gradient(45deg, #3a1c71, #d76d77, #ffaf7b);
+            color: white;
+            padding: 20px;
+            border-bottom: none;
+        }
+        .btn-primary {
+            background: linear-gradient(45deg, #3a1c71, #d76d77);
+            border: none;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .demo-credentials {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 20px;
+            text-align: left;
+            border-left: 4px solid #3a1c71;
+        }
+        .demo-credentials h6 {
+            color: #3a1c71;
+            margin-bottom: 10px;
+        }
+        .demo-credentials code {
+            background-color: #e9ecef;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <main class="form-signin">
+        <div class="card shadow">
+            <div class="card-header text-center">
+                <div class="logo">
+                    <i class="bi bi-shop"></i>
+                </div>
+                <h1 class="h3 mb-0 fw-bold">ShopStop</h1>
+                <p class="mb-0">Retail Management System</p>
+            </div>
+            <div class="card-body p-4">
+                <h2 class="h5 mb-4 fw-normal text-center">Sign in to your account</h2>
+
+                <div class="alert alert-danger d-none" id="login-error">
+                    <i class="bi bi-exclamation-triangle-fill me-2"></i>
+                    <span id="error-message">Invalid username or password</span>
+                </div>
+
+                <form id="login-form">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="username" placeholder="Username" required>
+                        <label for="username"><i class="bi bi-person me-1"></i> Username</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="password" class="form-control" id="password" placeholder="Password" required>
+                        <label for="password"><i class="bi bi-lock me-1"></i> Password</label>
+                    </div>
+
+                    <button class="w-100 btn btn-lg btn-primary" type="submit">
+                        <span id="login-spinner" class="spinner-border spinner-border-sm d-none me-2" role="status" aria-hidden="true"></span>
+                        Sign in
+                    </button>
+                </form>
+<<<<<<< HEAD
+=======
+
+                <div class="demo-credentials">
+                    <h6><i class="bi bi-info-circle me-2"></i>Demo Credentials</h6>
+                    <p class="mb-1"><strong>Admin:</strong> <code>admin</code> / <code>admin123</code></p>
+                    <p class="mb-0"><strong>User:</strong> <code>user</code> / <code>user123</code></p>
+                </div>
+
+                <p class="mt-4 mb-0 text-center text-muted">CS432 Module 3 - Database Integration</p>
+>>>>>>> 7d3483573724e77da9871ee364481b5913d41064
+            </div>
+        </div>
+    </main>
+
+    <script src="/static/js/auth.js"></script>
+<<<<<<< HEAD
+    <script src="/static/js/login.js"></script>
+=======
+>>>>>>> 7d3483573724e77da9871ee364481b5913d41064
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Clear any existing auth data when on login page
+            localStorage.removeItem('sessionToken');
+            localStorage.removeItem('expiry');
+            localStorage.removeItem('username');
+            localStorage.removeItem('userRole');
+            localStorage.removeItem('memberId');
+
+            const loginForm = document.getElementById('login-form');
+            const loginError = document.getElementById('login-error');
+            const errorMessage = document.getElementById('error-message');
+            const loginSpinner = document.getElementById('login-spinner');
+            const submitButton = document.querySelector('button[type="submit"]');
+
+            // Auto-fill demo credentials when clicking on them
+            document.querySelectorAll('.demo-credentials code').forEach(code => {
+                code.style.cursor = 'pointer';
+                code.title = 'Click to use this value';
+                code.addEventListener('click', function() {
+                    const value = this.textContent;
+                    if (this.parentElement.textContent.includes('Admin:') ||
+                        this.parentElement.textContent.includes('User:')) {
+                        if (value === 'admin' || value === 'user') {
+                            document.getElementById('username').value = value;
+                            document.getElementById('username').focus();
+                        } else {
+                            document.getElementById('password').value = value;
+                            document.getElementById('password').focus();
+                        }
+                    }
+                });
+            });
+
+            loginForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                // Hide any previous error
+                loginError.classList.add('d-none');
+
+                // Show spinner and disable button
+                loginSpinner.classList.remove('d-none');
+                submitButton.disabled = true;
+                submitButton.innerHTML = `<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span> Signing in...`;
+
+                const username = document.getElementById('username').value;
+                const password = document.getElementById('password').value;
+
+                // Call the login API (using CIMS database for authentication)
+                fetch('/shopstop/authUser', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        username: username,
+                        password: password
+                    })
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        if (response.status === 401) {
+                            throw new Error('Invalid username or password');
+                        } else if (response.status === 429) {
+                            throw new Error('Too many login attempts. Please try again later.');
+                        } else {
+                            throw new Error(`Server error: ${response.status}`);
+                        }
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    // Reset button
+                    loginSpinner.classList.add('d-none');
+                    submitButton.disabled = false;
+                    submitButton.innerHTML = 'Sign in';
+
+                    if (data.error) {
+                        // Show error message
+                        errorMessage.textContent = data.error;
+                        loginError.classList.remove('d-none');
+                        // Shake the form to indicate error
+                        loginForm.classList.add('animate__animated', 'animate__shakeX');
+                        setTimeout(() => {
+                            loginForm.classList.remove('animate__animated', 'animate__shakeX');
+                        }, 1000);
+                    } else {
+                        try {
+                            // Show success message
+                            loginError.className = 'alert alert-success';
+                            errorMessage.textContent = `Welcome, ${username}! Redirecting to dashboard...`;
+                            loginError.classList.remove('d-none');
+
+                            // Store session token and user info
+                            localStorage.setItem('sessionToken', data.session_token);
+<<<<<<< HEAD
+
+                            // Ensure role is properly capitalized
+                            let role = data.role;
+                            if (role && role.toLowerCase() === 'admin') {
+                                role = 'Admin';
+                            } else if (role && role.toLowerCase() === 'user') {
+                                role = 'User';
+                            }
+                            localStorage.setItem('userRole', role);
+                            console.log('Stored user role:', role);
+
+=======
+                            localStorage.setItem('userRole', data.role);
+>>>>>>> 7d3483573724e77da9871ee364481b5913d41064
+                            localStorage.setItem('username', username);
+                            localStorage.setItem('expiry', data.expiry);
+                            localStorage.setItem('memberId', data.member_id);
+
+                            // Set a cookie with the session token as well (for backend validation)
+                            document.cookie = `session_token=${data.session_token}; path=/; max-age=${60*60*24}`;
+
+                            // Redirect after a short delay to show the success message
+                            setTimeout(() => {
+                                // Create a form to GET to the dashboard (to carry the session token)
+                                const form = document.createElement('form');
+                                form.method = 'GET';
+                                form.action = '/dashboard';
+
+                                // Add session token as a hidden field
+                                const hiddenField = document.createElement('input');
+                                hiddenField.type = 'hidden';
+                                hiddenField.name = 'session_token';
+                                hiddenField.value = data.session_token;
+                                form.appendChild(hiddenField);
+
+                                // Add the form to the document and submit it
+                                document.body.appendChild(form);
+                                form.submit();
+                            }, 1000);
+                        } catch (storageError) {
+                            console.error('Error storing session data:', storageError);
+                            errorMessage.textContent = 'Error storing session data. Please try again.';
+                            loginError.className = 'alert alert-danger';
+                            loginError.classList.remove('d-none');
+                        }
+                    }
+                })
+                .catch(error => {
+                    // Reset button
+                    loginSpinner.classList.add('d-none');
+                    submitButton.disabled = false;
+                    submitButton.innerHTML = 'Sign in';
+
+                    // Show error message
+                    errorMessage.textContent = error.message || 'An error occurred. Please try again.';
+                    loginError.className = 'alert alert-danger';
+                    loginError.classList.remove('d-none');
+                    console.error('Login error:', error);
+
+                    // Shake the form to indicate error
+                    loginForm.classList.add('animate__animated', 'animate__shakeX');
+                    setTimeout(() => {
+                        loginForm.classList.remove('animate__animated', 'animate__shakeX');
+                    }, 1000);
+                });
+            });
+
+            // Add keyboard shortcut for demo login
+            document.addEventListener('keydown', function(e) {
+                // Alt+A for admin login
+                if (e.altKey && e.key === 'a') {
+                    document.getElementById('username').value = 'admin';
+                    document.getElementById('password').value = 'admin123';
+                    submitButton.click();
+                }
+                // Alt+U for user login
+                else if (e.altKey && e.key === 'u') {
+                    document.getElementById('username').value = 'user';
+                    document.getElementById('password').value = 'user123';
+                    submitButton.click();
+                }
+            });
+        });
+    </script>
+    <!-- Add animate.css for animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</body>
+</html>

@@ -1,0 +1,892 @@
+{% extends "base.html" %}
+
+{% block title %}Customers - ShopStop{% endblock %}
+
+{% block page_title %}Customers Management{% endblock %}
+
+{% block content %}
+<div class="row mb-4">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="card-title mb-0">Customers List</h5>
+<<<<<<< HEAD
+                <button id="add-customer-btn" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#customerModal">
+=======
+                <button id="add-customer-btn" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#customerModal" style="display: none;">
+>>>>>>> 7d3483573724e77da9871ee364481b5913d41064
+                    <i class="bi bi-plus-circle me-2"></i>Add Customer
+                </button>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Contact</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="customers-table-body">
+                            <tr>
+                                <td colspan="5" class="text-center">Loading customers...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Customer Modal -->
+<div class="modal fade" id="customerModal" tabindex="-1" aria-labelledby="customerModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="customerModalLabel">Add New Customer</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="customer-form">
+                    <input type="hidden" id="customer-id">
+                    <div class="mb-3">
+                        <label for="customer-name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="customer-name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="customer-email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="customer-email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="customer-contact" class="form-label">Contact</label>
+                        <input type="text" class="form-control" id="customer-contact" required>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" id="save-customer-btn">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Delete Confirmation Modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteModalLabel">Confirm Delete</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to delete this customer? This action cannot be undone.</p>
+                <input type="hidden" id="delete-customer-id">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-danger" id="confirm-delete-btn">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- View Customer Modal -->
+<div class="modal fade" id="viewCustomerModal" tabindex="-1" aria-labelledby="viewCustomerModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="viewCustomerModalLabel">Customer Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <dl class="row">
+                    <dt class="col-sm-3">ID</dt>
+                    <dd class="col-sm-9" id="view-customer-id"></dd>
+
+                    <dt class="col-sm-3">Name</dt>
+                    <dd class="col-sm-9" id="view-customer-name"></dd>
+
+                    <dt class="col-sm-3">Email</dt>
+                    <dd class="col-sm-9" id="view-customer-email"></dd>
+
+                    <dt class="col-sm-3">Contact</dt>
+                    <dd class="col-sm-9" id="view-customer-contact"></dd>
+                </dl>
+
+                <ul class="nav nav-tabs mt-4" id="customerTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="orders-tab" data-bs-toggle="tab" data-bs-target="#orders" type="button" role="tab" aria-controls="orders" aria-selected="true">Orders</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="loyalty-tab" data-bs-toggle="tab" data-bs-target="#loyalty" type="button" role="tab" aria-controls="loyalty" aria-selected="false">Loyalty Points</button>
+                    </li>
+                </ul>
+                <div class="tab-content mt-3" id="customerTabsContent">
+                    <div class="tab-pane fade show active" id="orders" role="tabpanel" aria-labelledby="orders-tab">
+                        <div id="orders-container">
+                            <div class="text-center">
+                                <div class="spinner-border spinner-border-sm text-primary" role="status">
+                                    <span class="visually-hidden">Loading...</span>
+                                </div>
+                                <p class="mt-2">Loading order history...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="loyalty" role="tabpanel" aria-labelledby="loyalty-tab">
+                        <div id="loyalty-container">
+                            <div class="text-center">
+                                <div class="spinner-border spinner-border-sm text-primary" role="status">
+                                    <span class="visually-hidden">Loading...</span>
+                                </div>
+                                <p class="mt-2">Loading loyalty points...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+<<<<<<< HEAD
+=======
+    // Toast message function
+    function showMessage(title, message, type = 'info') {
+        // Create toast container if it doesn't exist
+        let toastContainer = document.querySelector('.toast-container');
+        if (!toastContainer) {
+            toastContainer = document.createElement('div');
+            toastContainer.className = 'toast-container position-fixed bottom-0 end-0 p-3';
+            document.body.appendChild(toastContainer);
+        }
+
+        // Create toast element
+        const toastId = 'toast-' + Date.now();
+        const toast = document.createElement('div');
+        toast.className = 'toast';
+        toast.id = toastId;
+        toast.setAttribute('role', 'alert');
+        toast.setAttribute('aria-live', 'assertive');
+        toast.setAttribute('aria-atomic', 'true');
+
+        // Set toast color based on type
+        let bgClass = 'bg-info';
+        let icon = '<i class="bi bi-info-circle me-2"></i>';
+
+        if (type === 'success') {
+            bgClass = 'bg-success';
+            icon = '<i class="bi bi-check-circle me-2"></i>';
+        } else if (type === 'error') {
+            bgClass = 'bg-danger';
+            icon = '<i class="bi bi-exclamation-triangle me-2"></i>';
+        } else if (type === 'warning') {
+            bgClass = 'bg-warning';
+            icon = '<i class="bi bi-exclamation-circle me-2"></i>';
+        }
+
+        // Create toast content
+        toast.innerHTML = `
+            <div class="toast-header ${bgClass} text-white">
+                ${icon}
+                <strong class="me-auto">${title}</strong>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                ${message}
+            </div>
+        `;
+
+        // Add toast to container
+        toastContainer.appendChild(toast);
+
+        // Initialize and show toast
+        const bsToast = new bootstrap.Toast(toast, { delay: 5000 });
+        bsToast.show();
+
+        // Remove toast after it's hidden
+        toast.addEventListener('hidden.bs.toast', function() {
+            toast.remove();
+        });
+    }
+>>>>>>> 7d3483573724e77da9871ee364481b5913d41064
+    document.addEventListener('DOMContentLoaded', function() {
+        // Check authentication
+        checkAuth();
+
+<<<<<<< HEAD
+=======
+        // Check if user is admin
+        checkAdminRole();
+
+>>>>>>> 7d3483573724e77da9871ee364481b5913d41064
+        // Load customers
+        loadCustomers();
+
+        // Event listeners
+        document.getElementById('save-customer-btn').addEventListener('click', saveCustomer);
+        document.getElementById('confirm-delete-btn').addEventListener('click', deleteCustomer);
+
+        // Reset form when modal is closed
+        const customerModal = document.getElementById('customerModal');
+        customerModal.addEventListener('hidden.bs.modal', function() {
+            document.getElementById('customer-form').reset();
+            document.getElementById('customer-id').value = '';
+            document.getElementById('customerModalLabel').textContent = 'Add New Customer';
+        });
+    });
+
+    function loadCustomers() {
+        const sessionToken = localStorage.getItem('sessionToken');
+
+<<<<<<< HEAD
+        // In a real app, you would have an endpoint to get all customers
+        // For this demo, we'll simulate it
+        const tableBody = document.getElementById('customers-table-body');
+        tableBody.innerHTML = '<tr><td colspan="5" class="text-center">Loading customers...</td></tr>';
+
+        // Simulate API call delay
+        setTimeout(() => {
+            // Simulate customers data
+            const customers = [
+                { customer_id: 'CS0001', name: 'John Doe', email: 'john@example.com', contact: '555-1234' },
+                { customer_id: 'CS0002', name: 'Jane Smith', email: 'jane@example.com', contact: '555-5678' },
+                { customer_id: 'CS0003', name: 'Bob Johnson', email: 'bob@example.com', contact: '555-9012' },
+                { customer_id: 'CS0004', name: 'Alice Brown', email: 'alice@example.com', contact: '555-3456' },
+                { customer_id: 'CS0005', name: 'Charlie Wilson', email: 'charlie@example.com', contact: '555-7890' }
+            ];
+
+            tableBody.innerHTML = '';
+
+            if (customers.length === 0) {
+                const row = document.createElement('tr');
+                const cell = document.createElement('td');
+                cell.colSpan = 5;
+                cell.textContent = 'No customers found';
+                cell.className = 'text-center';
+                row.appendChild(cell);
+                tableBody.appendChild(row);
+                return;
+            }
+=======
+        // Get customers from the API
+        const tableBody = document.getElementById('customers-table-body');
+        tableBody.innerHTML = '<tr><td colspan="5" class="text-center"><div class="spinner-border spinner-border-sm text-primary me-2" role="status"></div>Loading customers...</td></tr>';
+
+        // The session token will be added automatically by the fetch interceptor
+        fetch('/api/customers')
+        .then(response => {
+            console.log('Customer API response status:', response.status);
+            if (!response.ok) {
+                if (response.status === 401) {
+                    throw new Error('Authentication required. Please log in again.');
+                } else {
+                    throw new Error(`Server error: ${response.status}`);
+                }
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log('Customer API response data:', data);
+            tableBody.innerHTML = '';
+
+            if (data.status === 'success') {
+                const customers = data.data;
+
+                if (customers.length === 0) {
+                    const row = document.createElement('tr');
+                    const cell = document.createElement('td');
+                    cell.colSpan = 5;
+                    cell.textContent = 'No customers found';
+                    cell.className = 'text-center';
+                    row.appendChild(cell);
+                    tableBody.appendChild(row);
+                    return;
+                }
+>>>>>>> 7d3483573724e77da9871ee364481b5913d41064
+
+            customers.forEach(customer => {
+                const row = document.createElement('tr');
+
+                const idCell = document.createElement('td');
+                idCell.textContent = customer.customer_id;
+
+                const nameCell = document.createElement('td');
+                nameCell.textContent = customer.name;
+
+                const emailCell = document.createElement('td');
+                emailCell.textContent = customer.email;
+
+                const contactCell = document.createElement('td');
+<<<<<<< HEAD
+                contactCell.textContent = customer.contact;
+=======
+                contactCell.textContent = customer.phone || customer.contact || 'N/A';
+>>>>>>> 7d3483573724e77da9871ee364481b5913d41064
+
+                const actionsCell = document.createElement('td');
+
+                // View button
+                const viewBtn = document.createElement('button');
+                viewBtn.className = 'btn btn-sm btn-info me-2';
+                viewBtn.innerHTML = '<i class="bi bi-eye"></i>';
+                viewBtn.title = 'View Customer';
+                viewBtn.addEventListener('click', () => viewCustomer(customer));
+
+                // Edit button
+                const editBtn = document.createElement('button');
+                editBtn.className = 'btn btn-sm btn-warning me-2';
+                editBtn.innerHTML = '<i class="bi bi-pencil"></i>';
+                editBtn.title = 'Edit Customer';
+                editBtn.addEventListener('click', () => editCustomer(customer));
+
+                // Delete button
+                const deleteBtn = document.createElement('button');
+                deleteBtn.className = 'btn btn-sm btn-danger';
+                deleteBtn.innerHTML = '<i class="bi bi-trash"></i>';
+                deleteBtn.title = 'Delete Customer';
+                deleteBtn.addEventListener('click', () => showDeleteModal(customer.customer_id));
+
+                actionsCell.appendChild(viewBtn);
+                actionsCell.appendChild(editBtn);
+
+                // Only show delete button for admins
+                const userRole = localStorage.getItem('userRole');
+                if (userRole && userRole.toLowerCase() === 'admin') {
+                    actionsCell.appendChild(deleteBtn);
+                }
+
+                row.appendChild(idCell);
+                row.appendChild(nameCell);
+                row.appendChild(emailCell);
+                row.appendChild(contactCell);
+                row.appendChild(actionsCell);
+
+                tableBody.appendChild(row);
+            });
+<<<<<<< HEAD
+        }, 500);
+=======
+            }
+        })
+        .catch(error => {
+            console.error('Error loading customers:', error);
+            tableBody.innerHTML = `
+                <tr>
+                    <td colspan="5" class="text-center text-danger">
+                        <i class="bi bi-exclamation-triangle me-2"></i>
+                        ${error.message || 'Failed to load customers. Please try again.'}
+                    </td>
+                </tr>
+            `;
+
+            // If authentication error, redirect to login after a delay
+            if (error.message && error.message.includes('Authentication required')) {
+                setTimeout(() => {
+                    window.location.href = '/login';
+                }, 2000);
+            }
+        });
+>>>>>>> 7d3483573724e77da9871ee364481b5913d41064
+    }
+
+    function viewCustomer(customer) {
+        // Update customer details in the modal
+        document.getElementById('view-customer-id').textContent = customer.customer_id;
+        document.getElementById('view-customer-name').textContent = customer.name;
+        document.getElementById('view-customer-email').textContent = customer.email;
+<<<<<<< HEAD
+        document.getElementById('view-customer-contact').textContent = customer.contact;
+=======
+        document.getElementById('view-customer-contact').textContent = customer.phone || 'N/A';
+>>>>>>> 7d3483573724e77da9871ee364481b5913d41064
+
+        // Show the modal
+        const modal = new bootstrap.Modal(document.getElementById('viewCustomerModal'));
+        modal.show();
+
+<<<<<<< HEAD
+        // Fetch customer loyalty and order information
+        const sessionToken = localStorage.getItem('sessionToken');
+
+        fetch(`/customers/loyalty/${customer.customer_id}`, {
+            headers: {
+                'Authorization': sessionToken
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.status === 'success') {
+                // Display orders
+                displayOrders(data.data.orders);
+
+                // Display loyalty points
+                displayLoyalty(data.data.loyalty_points, data.data.total_points);
+=======
+        // Fetch customer details from API
+        const sessionToken = localStorage.getItem('sessionToken');
+
+        fetch(`/api/customers/${customer.customer_id}`)
+        .then(response => response.json())
+        .then(data => {
+            if (data.status === 'success') {
+                // Update customer details with the latest data
+                const customerData = data.data;
+                document.getElementById('view-customer-id').textContent = customerData.customer_id;
+                document.getElementById('view-customer-name').textContent = customerData.name;
+                document.getElementById('view-customer-email').textContent = customerData.email;
+                document.getElementById('view-customer-contact').textContent = customerData.phone || 'N/A';
+
+                // Display loyalty points if available
+                const loyaltyPoints = customerData.loyalty_points || 0;
+                displayLoyalty([], loyaltyPoints);
+
+                // For now, display empty orders (future enhancement)
+                displayOrders([]);
+>>>>>>> 7d3483573724e77da9871ee364481b5913d41064
+            } else {
+                // Show error message
+                document.getElementById('orders-container').innerHTML = `
+                    <div class="alert alert-warning">
+                        <i class="bi bi-exclamation-triangle me-2"></i>
+                        ${data.error || 'Failed to load customer data'}
+                    </div>
+                `;
+
+                document.getElementById('loyalty-container').innerHTML = `
+                    <div class="alert alert-warning">
+                        <i class="bi bi-exclamation-triangle me-2"></i>
+                        ${data.error || 'Failed to load customer data'}
+                    </div>
+                `;
+            }
+        })
+        .catch(error => {
+            console.error('Error loading customer data:', error);
+
+            // Show error message
+            document.getElementById('orders-container').innerHTML = `
+                <div class="alert alert-danger">
+                    <i class="bi bi-exclamation-triangle me-2"></i>
+                    Error loading customer data: ${error.message}
+                </div>
+            `;
+
+            document.getElementById('loyalty-container').innerHTML = `
+                <div class="alert alert-danger">
+                    <i class="bi bi-exclamation-triangle me-2"></i>
+                    Error loading customer data: ${error.message}
+                </div>
+            `;
+        });
+    }
+
+    function displayOrders(orders) {
+        const ordersContainer = document.getElementById('orders-container');
+
+        if (!orders || orders.length === 0) {
+            ordersContainer.innerHTML = '<p class="text-muted">No order history available.</p>';
+            return;
+        }
+
+        const table = document.createElement('table');
+        table.className = 'table table-sm table-striped';
+
+        const thead = document.createElement('thead');
+        thead.innerHTML = `
+            <tr>
+                <th>Order ID</th>
+                <th>Date</th>
+                <th>Shop</th>
+                <th>Total</th>
+                <th>Status</th>
+            </tr>
+        `;
+
+        const tbody = document.createElement('tbody');
+
+        orders.forEach(order => {
+            const row = document.createElement('tr');
+
+            const idCell = document.createElement('td');
+            idCell.textContent = order.order_id;
+
+            const dateCell = document.createElement('td');
+            dateCell.textContent = order.order_date || 'N/A';
+
+            const shopCell = document.createElement('td');
+            shopCell.textContent = order.shop_name || order.shop_id;
+
+            const totalCell = document.createElement('td');
+            totalCell.textContent = `₹${order.total_amount.toFixed(2)}`;
+
+            const statusCell = document.createElement('td');
+            const statusBadge = document.createElement('span');
+
+            if (order.status === 'Completed') {
+                statusBadge.className = 'badge bg-success';
+            } else if (order.status === 'Cancelled') {
+                statusBadge.className = 'badge bg-danger';
+            } else {
+                statusBadge.className = 'badge bg-warning';
+            }
+
+            statusBadge.textContent = order.status;
+            statusCell.appendChild(statusBadge);
+
+            row.appendChild(idCell);
+            row.appendChild(dateCell);
+            row.appendChild(shopCell);
+            row.appendChild(totalCell);
+            row.appendChild(statusCell);
+
+            tbody.appendChild(row);
+        });
+
+        table.appendChild(thead);
+        table.appendChild(tbody);
+
+        ordersContainer.innerHTML = '';
+        ordersContainer.appendChild(table);
+    }
+
+    function displayLoyalty(loyaltyPoints, totalPoints) {
+        const loyaltyContainer = document.getElementById('loyalty-container');
+
+<<<<<<< HEAD
+        if (!loyaltyPoints || loyaltyPoints.length === 0) {
+            loyaltyContainer.innerHTML = '<p class="text-muted">No loyalty points available.</p>';
+            return;
+        }
+
+        // Create summary card
+=======
+        // Create summary card even if no loyalty points history
+>>>>>>> 7d3483573724e77da9871ee364481b5913d41064
+        const summaryCard = document.createElement('div');
+        summaryCard.className = 'card mb-3';
+        summaryCard.innerHTML = `
+            <div class="card-body">
+                <h5 class="card-title">Total Loyalty Points</h5>
+<<<<<<< HEAD
+                <h2 class="display-4 text-primary">${totalPoints}</h2>
+            </div>
+        `;
+
+=======
+                <h2 class="display-4 text-primary">${totalPoints || 0}</h2>
+            </div>
+        `;
+
+        loyaltyContainer.innerHTML = '';
+        loyaltyContainer.appendChild(summaryCard);
+
+        if (!loyaltyPoints || loyaltyPoints.length === 0) {
+            loyaltyContainer.appendChild(document.createElement('p')).innerHTML =
+                '<p class="text-muted">No loyalty points history available.</p>';
+            return;
+        }
+
+        // We already created the summary card above
+
+>>>>>>> 7d3483573724e77da9871ee364481b5913d41064
+        // Create table for loyalty points history
+        const table = document.createElement('table');
+        table.className = 'table table-sm table-striped';
+
+        const thead = document.createElement('thead');
+        thead.innerHTML = `
+            <tr>
+                <th>Date</th>
+                <th>Shop</th>
+                <th>Amount</th>
+                <th>Points</th>
+                <th>Valid Till</th>
+            </tr>
+        `;
+
+        const tbody = document.createElement('tbody');
+
+        loyaltyPoints.forEach(point => {
+            const row = document.createElement('tr');
+
+            const dateCell = document.createElement('td');
+            dateCell.textContent = point.purchase_date || 'N/A';
+
+            const shopCell = document.createElement('td');
+            shopCell.textContent = point.shop_name || point.shop_id;
+
+            const amountCell = document.createElement('td');
+            amountCell.textContent = `₹${point.purchase_amount.toFixed(2)}`;
+
+            const pointsCell = document.createElement('td');
+            pointsCell.textContent = point.loyalty_points;
+            pointsCell.className = 'fw-bold text-primary';
+
+            const validTillCell = document.createElement('td');
+            validTillCell.textContent = point.points_valid_till || 'No expiry';
+
+            row.appendChild(dateCell);
+            row.appendChild(shopCell);
+            row.appendChild(amountCell);
+            row.appendChild(pointsCell);
+            row.appendChild(validTillCell);
+
+            tbody.appendChild(row);
+        });
+
+        table.appendChild(thead);
+        table.appendChild(tbody);
+
+<<<<<<< HEAD
+        loyaltyContainer.innerHTML = '';
+        loyaltyContainer.appendChild(summaryCard);
+=======
+        // We already cleared the container and added the summary card above
+>>>>>>> 7d3483573724e77da9871ee364481b5913d41064
+        loyaltyContainer.appendChild(table);
+    }
+
+    function saveCustomer() {
+        const sessionToken = localStorage.getItem('sessionToken');
+        const customerId = document.getElementById('customer-id').value;
+
+<<<<<<< HEAD
+        // Generate a unique customer ID if not editing
+        const uniqueCustomerId = customerId || 'CS' + Math.floor(Math.random() * 10000).toString().padStart(4, '0');
+
+        const customerData = {
+            customer_id: uniqueCustomerId,
+            name: document.getElementById('customer-name').value,
+            email: document.getElementById('customer-email').value,
+            contact: document.getElementById('customer-contact').value
+        };
+
+        let url = '/customers/create';
+=======
+        const customerData = {
+            name: document.getElementById('customer-name').value,
+            email: document.getElementById('customer-email').value,
+            phone: document.getElementById('customer-contact').value,
+            address: '',  // Optional field
+            loyalty_points: 0  // Default value for new customers
+        };
+
+        let url = '/api/customers';
+>>>>>>> 7d3483573724e77da9871ee364481b5913d41064
+        let method = 'POST';
+
+        if (customerId) {
+            // This would be an update
+            method = 'PUT';
+<<<<<<< HEAD
+            url = `/customers/update/${customerId}`;
+=======
+            url = `/api/customers/${customerId}`;
+        }
+
+        // Add session token to URL as a query parameter
+        if (!url.includes('?')) {
+            url = `${url}?session_token=${sessionToken}`;
+        } else {
+            url = `${url}&session_token=${sessionToken}`;
+>>>>>>> 7d3483573724e77da9871ee364481b5913d41064
+        }
+
+        fetch(url, {
+            method: method,
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': sessionToken
+            },
+            body: JSON.stringify(customerData)
+        })
+<<<<<<< HEAD
+        .then(response => response.json())
+=======
+        .then(response => {
+            if (response.status === 403) {
+                throw new Error('Admin access required');
+            }
+            return response.json();
+        })
+>>>>>>> 7d3483573724e77da9871ee364481b5913d41064
+        .then(data => {
+            if (data.error) {
+                showMessage('Error', data.error);
+            } else {
+                // Close modal
+                const modal = bootstrap.Modal.getInstance(document.getElementById('customerModal'));
+                modal.hide();
+
+                // Reload customers
+                loadCustomers();
+
+                showMessage('Success', 'Customer saved successfully');
+            }
+        })
+        .catch(error => {
+            console.error('Error saving customer:', error);
+<<<<<<< HEAD
+            showMessage('Error', 'Failed to save customer. Please try again.');
+=======
+            showMessage('Error', error.message || 'Failed to save customer. Please try again.');
+>>>>>>> 7d3483573724e77da9871ee364481b5913d41064
+        });
+    }
+
+    function editCustomer(customer) {
+<<<<<<< HEAD
+=======
+        // Check if user is admin
+        const userRole = localStorage.getItem('userRole');
+        if (userRole && userRole.toLowerCase() !== 'admin') {
+            showMessage('Error', 'Admin access required to edit customers');
+            return;
+        }
+
+>>>>>>> 7d3483573724e77da9871ee364481b5913d41064
+        // Set form values
+        document.getElementById('customer-id').value = customer.customer_id;
+        document.getElementById('customer-name').value = customer.name;
+        document.getElementById('customer-email').value = customer.email;
+<<<<<<< HEAD
+        document.getElementById('customer-contact').value = customer.contact;
+=======
+        document.getElementById('customer-contact').value = customer.contact || customer.phone || '';
+>>>>>>> 7d3483573724e77da9871ee364481b5913d41064
+
+        // Update modal title
+        document.getElementById('customerModalLabel').textContent = 'Edit Customer';
+
+        // Show modal
+        const modal = new bootstrap.Modal(document.getElementById('customerModal'));
+        modal.show();
+    }
+
+    function showDeleteModal(customerId) {
+<<<<<<< HEAD
+=======
+        // Check if user is admin
+        const userRole = localStorage.getItem('userRole');
+        if (userRole && userRole.toLowerCase() !== 'admin') {
+            showMessage('Error', 'Admin access required to delete customers');
+            return;
+        }
+
+>>>>>>> 7d3483573724e77da9871ee364481b5913d41064
+        document.getElementById('delete-customer-id').value = customerId;
+        const modal = new bootstrap.Modal(document.getElementById('deleteModal'));
+        modal.show();
+    }
+
+    function deleteCustomer() {
+        const sessionToken = localStorage.getItem('sessionToken');
+        const customerId = document.getElementById('delete-customer-id').value;
+
+<<<<<<< HEAD
+        fetch(`/customers/delete/${customerId}`, {
+=======
+        // Add session token to URL as a query parameter
+        let url = `/api/customers/${customerId}?session_token=${sessionToken}`;
+
+        fetch(url, {
+>>>>>>> 7d3483573724e77da9871ee364481b5913d41064
+            method: 'DELETE',
+            headers: {
+                'Authorization': sessionToken
+            }
+        })
+<<<<<<< HEAD
+        .then(response => response.json())
+=======
+        .then(response => {
+            if (response.status === 403) {
+                throw new Error('Admin access required');
+            }
+            return response.json();
+        })
+>>>>>>> 7d3483573724e77da9871ee364481b5913d41064
+        .then(data => {
+            // Close modal
+            const modal = bootstrap.Modal.getInstance(document.getElementById('deleteModal'));
+            modal.hide();
+
+            if (data.error) {
+                showMessage('Error', data.error);
+            } else {
+                // Reload customers
+                loadCustomers();
+
+                showMessage('Success', data.message || 'Customer deleted successfully');
+            }
+        })
+        .catch(error => {
+            console.error('Error deleting customer:', error);
+<<<<<<< HEAD
+            showMessage('Error', 'Failed to delete customer. Please try again.');
+=======
+            showMessage('Error', error.message || 'Failed to delete customer. Please try again.');
+        });
+    }
+
+    function checkAdminRole() {
+        const sessionToken = localStorage.getItem('sessionToken');
+        console.log('Checking admin role with session token:', sessionToken);
+
+        fetch('/check-role')
+        .then(response => {
+            console.log('Check-role response status:', response.status);
+            if (!response.ok) {
+                if (response.status === 401) {
+                    throw new Error('Authentication required. Please log in again.');
+                } else {
+                    throw new Error(`Server error: ${response.status}`);
+                }
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log('Check-role response data:', data);
+            if (data.status === 'success') {
+                // Store role in localStorage for future use
+                localStorage.setItem('userRole', data.role);
+
+                // Show/hide admin-only elements based on role
+                const isAdmin = data.is_admin;
+                const addCustomerBtn = document.getElementById('add-customer-btn');
+
+                if (isAdmin) {
+                    // Show admin-only elements
+                    addCustomerBtn.style.display = 'block';
+                } else {
+                    // Hide admin-only elements
+                    addCustomerBtn.style.display = 'none';
+                }
+            }
+        })
+        .catch(error => {
+            console.error('Error checking role:', error);
+
+            // If authentication error, redirect to login after a delay
+            if (error.message && error.message.includes('Authentication required')) {
+                showMessage('Error', 'Your session has expired. Redirecting to login...');
+                setTimeout(() => {
+                    window.location.href = '/login';
+                }, 2000);
+            }
+>>>>>>> 7d3483573724e77da9871ee364481b5913d41064
+        });
+    }
+</script>
+{% endblock %}

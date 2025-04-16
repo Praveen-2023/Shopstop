@@ -1,0 +1,566 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard - ShopStop{% endblock %}
+
+{% block page_title %}Dashboard{% endblock %}
+
+{% block content %}
+<div class="row mb-4">
+    <div class="col-md-3">
+        <div class="card text-white bg-primary mb-3">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <h5 class="card-title">Members</h5>
+                        <h2 id="members-count">0</h2>
+                    </div>
+                    <i class="bi bi-people-fill fs-1"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card text-white bg-success mb-3">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <h5 class="card-title">Shops</h5>
+                        <h2 id="shops-count">0</h2>
+                    </div>
+                    <i class="bi bi-shop fs-1"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card text-white bg-info mb-3">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <h5 class="card-title">Products</h5>
+                        <h2 id="products-count">0</h2>
+                    </div>
+                    <i class="bi bi-box-seam fs-1"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card text-white bg-warning mb-3">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <h5 class="card-title">Customers</h5>
+                        <h2 id="customers-count">0</h2>
+                    </div>
+                    <i class="bi bi-person-badge fs-1"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card mb-4">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="card-title mb-0">Recent Orders</h5>
+                <span class="badge bg-primary" id="orders-count">0</span>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-striped table-sm">
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Shop</th>
+                                <th>Date</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="orders-table-body">
+                            <tr>
+                                <td colspan="5" class="text-center">
+                                    <div class="spinner-border spinner-border-sm text-primary" role="status">
+                                        <span class="visually-hidden">Loading...</span>
+                                    </div>
+                                    Loading orders...
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card mb-4">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="card-title mb-0">Products by Category</h5>
+                <button class="btn btn-sm btn-outline-primary" id="refresh-chart-btn">
+                    <i class="bi bi-arrow-clockwise"></i> Refresh
+                </button>
+            </div>
+            <div class="card-body">
+                <canvas id="productChart"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card mb-4">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="card-title mb-0">Recent Loyalty Points</h5>
+                <span class="badge bg-success" id="loyalty-count">0</span>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-striped table-sm">
+                        <thead>
+                            <tr>
+                                <th>Customer</th>
+                                <th>Shop</th>
+                                <th>Date</th>
+                                <th>Amount</th>
+                                <th>Points</th>
+                            </tr>
+                        </thead>
+                        <tbody id="loyalty-table-body">
+                            <tr>
+                                <td colspan="5" class="text-center">
+                                    <div class="spinner-border spinner-border-sm text-primary" role="status">
+                                        <span class="visually-hidden">Loading...</span>
+                                    </div>
+                                    Loading loyalty points...
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card mb-4">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="card-title mb-0">Sales by Shop</h5>
+                <button class="btn btn-sm btn-outline-primary" id="refresh-sales-btn">
+                    <i class="bi bi-arrow-clockwise"></i> Refresh
+                </button>
+            </div>
+            <div class="card-body">
+                <canvas id="salesChart"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Check for session token in URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const sessionToken = urlParams.get('session_token');
+
+        if (sessionToken) {
+            console.log('Found session token in URL parameters');
+            // Store the session token in localStorage if not already there
+            if (!localStorage.getItem('sessionToken')) {
+                localStorage.setItem('sessionToken', sessionToken);
+                console.log('Stored session token from URL in localStorage');
+            }
+
+            // Remove the session token from the URL to avoid sharing it
+            const newUrl = window.location.pathname;
+            window.history.replaceState({}, document.title, newUrl);
+            console.log('Removed session token from URL');
+        }
+
+        // Check authentication
+        if (checkAuth()) {
+            // Load dashboard data
+            loadDashboardData();
+
+            // Create chart
+            createProductChart();
+
+            // Add event listeners for refresh buttons
+            document.getElementById('refresh-chart-btn').addEventListener('click', function() {
+                // Clear the existing chart
+                document.getElementById('productChart').parentNode.innerHTML = `
+                    <div class="text-center mb-3">
+                        <div class="spinner-border text-primary" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <p class="mt-2">Refreshing chart...</p>
+                    </div>
+                    <canvas id="productChart"></canvas>
+                `;
+
+                // Recreate the chart
+                setTimeout(() => createProductChart(), 500);
+            });
+
+            document.getElementById('refresh-sales-btn').addEventListener('click', function() {
+                // Clear the existing chart
+                document.getElementById('salesChart').parentNode.innerHTML = `
+                    <div class="text-center mb-3">
+                        <div class="spinner-border text-primary" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <p class="mt-2">Refreshing chart...</p>
+                    </div>
+                    <canvas id="salesChart"></canvas>
+                `;
+
+                // Recreate the chart
+                setTimeout(() => createSalesChart(), 500);
+            });
+        }
+    });
+
+    async function loadDashboardData() {
+        try {
+            // Load members count
+            const membersData = await apiRequest('/portfolio/members');
+            if (membersData.status === 'success') {
+                document.getElementById('members-count').textContent = membersData.count;
+            }
+
+            // Load shops count
+            const shopsData = await apiRequest('/api/dashboard/shops/count');
+            if (shopsData.status === 'success') {
+                document.getElementById('shops-count').textContent = shopsData.count;
+            }
+
+            // Load products count
+            const productsData = await apiRequest('/api/dashboard/products/count');
+            if (productsData.status === 'success') {
+                document.getElementById('products-count').textContent = productsData.count;
+            }
+
+            // Load customers count
+            const customersData = await apiRequest('/api/dashboard/customers/count');
+            if (customersData.status === 'success') {
+                document.getElementById('customers-count').textContent = customersData.count;
+            }
+
+            // Load recent orders
+            await loadRecentOrders();
+
+            // Load recent loyalty points
+            await loadRecentLoyalty();
+
+            // Create sales chart
+            await createSalesChart();
+        } catch (error) {
+            console.error('Error loading dashboard data:', error);
+        }
+    }
+
+    async function loadRecentOrders() {
+        try {
+            const ordersData = await apiRequest('/api/dashboard/orders/recent');
+            const ordersTableBody = document.getElementById('orders-table-body');
+
+            if (ordersData.status === 'success' && ordersData.data && ordersData.data.length > 0) {
+                const orders = ordersData.data;
+                document.getElementById('orders-count').textContent = orders.length;
+
+                ordersTableBody.innerHTML = '';
+
+                orders.forEach(order => {
+                    const row = document.createElement('tr');
+
+                    const idCell = document.createElement('td');
+                    idCell.textContent = order.order_id;
+
+                    const shopCell = document.createElement('td');
+                    shopCell.textContent = order.shop_name || order.shop_id;
+
+                    const dateCell = document.createElement('td');
+                    dateCell.textContent = order.order_date || 'N/A';
+
+                    const amountCell = document.createElement('td');
+                    amountCell.textContent = `₹${order.total_amount.toFixed(2)}`;
+
+                    const statusCell = document.createElement('td');
+                    const statusBadge = document.createElement('span');
+
+                    if (order.status === 'Completed') {
+                        statusBadge.className = 'badge bg-success';
+                    } else if (order.status === 'Cancelled') {
+                        statusBadge.className = 'badge bg-danger';
+                    } else {
+                        statusBadge.className = 'badge bg-warning';
+                    }
+
+                    statusBadge.textContent = order.status;
+                    statusCell.appendChild(statusBadge);
+
+                    row.appendChild(idCell);
+                    row.appendChild(shopCell);
+                    row.appendChild(dateCell);
+                    row.appendChild(amountCell);
+                    row.appendChild(statusCell);
+
+                    ordersTableBody.appendChild(row);
+                });
+            } else {
+                ordersTableBody.innerHTML = '<tr><td colspan="5" class="text-center">No recent orders found</td></tr>';
+            }
+        } catch (error) {
+            console.error('Error loading recent orders:', error);
+            document.getElementById('orders-table-body').innerHTML =
+                `<tr><td colspan="5" class="text-center text-danger">
+                    <i class="bi bi-exclamation-triangle me-2"></i>
+                    Error loading orders: ${error.message}
+                </td></tr>`;
+        }
+    }
+
+    async function loadRecentLoyalty() {
+        try {
+            const loyaltyData = await apiRequest('/api/dashboard/loyalty/recent');
+            const loyaltyTableBody = document.getElementById('loyalty-table-body');
+
+            if (loyaltyData.status === 'success' && loyaltyData.data && loyaltyData.data.length > 0) {
+                const loyalty = loyaltyData.data;
+                document.getElementById('loyalty-count').textContent = loyalty.length;
+
+                loyaltyTableBody.innerHTML = '';
+
+                loyalty.forEach(point => {
+                    const row = document.createElement('tr');
+
+                    const customerCell = document.createElement('td');
+                    customerCell.textContent = point.customer_id;
+
+                    const shopCell = document.createElement('td');
+                    shopCell.textContent = point.shop_name || point.shop_id;
+
+                    const dateCell = document.createElement('td');
+                    dateCell.textContent = point.purchase_date || 'N/A';
+
+                    const amountCell = document.createElement('td');
+                    amountCell.textContent = `₹${point.purchase_amount.toFixed(2)}`;
+
+                    const pointsCell = document.createElement('td');
+                    pointsCell.textContent = point.loyalty_points;
+                    pointsCell.className = 'fw-bold text-success';
+
+                    row.appendChild(customerCell);
+                    row.appendChild(shopCell);
+                    row.appendChild(dateCell);
+                    row.appendChild(amountCell);
+                    row.appendChild(pointsCell);
+
+                    loyaltyTableBody.appendChild(row);
+                });
+            } else {
+                loyaltyTableBody.innerHTML = '<tr><td colspan="5" class="text-center">No recent loyalty points found</td></tr>';
+            }
+        } catch (error) {
+            console.error('Error loading recent loyalty points:', error);
+            document.getElementById('loyalty-table-body').innerHTML =
+                `<tr><td colspan="5" class="text-center text-danger">
+                    <i class="bi bi-exclamation-triangle me-2"></i>
+                    Error loading loyalty points: ${error.message}
+                </td></tr>`;
+        }
+    }
+
+    async function createProductChart() {
+        try {
+            // Get real product category data from API
+            const response = await apiRequest('/api/dashboard/products/by-category');
+
+            if (response.status !== 'success' || !response.data || response.data.length === 0) {
+                // If no data, show a message
+                document.getElementById('productChart').parentNode.innerHTML =
+                    '<div class="alert alert-info">No product category data available</div>';
+                return;
+            }
+
+            // Prepare data for chart
+            const labels = [];
+            const counts = [];
+            const backgroundColors = [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)',
+                'rgba(201, 203, 207, 0.2)'
+            ];
+            const borderColors = [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)',
+                'rgba(201, 203, 207, 1)'
+            ];
+
+            // Process the data
+            response.data.forEach((category, index) => {
+                labels.push(category.category || 'Uncategorized');
+                counts.push(category.count);
+            });
+
+            // Create the chart data
+            const data = {
+                labels: labels,
+                datasets: [{
+                    label: 'Products by Category',
+                    data: counts,
+                    backgroundColor: backgroundColors.slice(0, labels.length),
+                    borderColor: borderColors.slice(0, labels.length),
+                    borderWidth: 1
+                }]
+            };
+
+            const config = {
+                type: 'pie',
+                data: data,
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                        },
+                        title: {
+                            display: true,
+                            text: 'Product Distribution by Category'
+                        }
+                    }
+                }
+            };
+
+            const ctx = document.getElementById('productChart').getContext('2d');
+            new Chart(ctx, config);
+
+        } catch (error) {
+            console.error('Error creating product chart:', error);
+            document.getElementById('productChart').parentNode.innerHTML =
+                '<div class="alert alert-danger">Error loading product category data</div>';
+        }
+    }
+
+    async function createSalesChart() {
+        try {
+            // Get sales by shop data from API
+            const response = await apiRequest('/api/dashboard/sales/by-shop');
+
+            if (response.status !== 'success' || !response.data || response.data.length === 0) {
+                // If no data, show a message
+                document.getElementById('salesChart').parentNode.innerHTML =
+                    '<div class="alert alert-info">No sales data available</div>';
+                return;
+            }
+
+            // Prepare data for chart
+            const labels = [];
+            const sales = [];
+            const orders = [];
+            const backgroundColors = [
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ];
+            const borderColors = [
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 99, 132, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ];
+
+            // Process the data
+            response.data.forEach((shop) => {
+                labels.push(shop.name || `Shop ${shop.shop_id}`);
+                sales.push(shop.total_sales);
+                orders.push(shop.order_count);
+            });
+
+            // Create the chart data
+            const data = {
+                labels: labels,
+                datasets: [
+                    {
+                        label: 'Total Sales (₹)',
+                        data: sales,
+                        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        borderWidth: 1,
+                        yAxisID: 'y'
+                    },
+                    {
+                        label: 'Order Count',
+                        data: orders,
+                        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                        borderColor: 'rgba(255, 99, 132, 1)',
+                        borderWidth: 1,
+                        yAxisID: 'y1'
+                    }
+                ]
+            };
+
+            const config = {
+                type: 'bar',
+                data: data,
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            type: 'linear',
+                            display: true,
+                            position: 'left',
+                            title: {
+                                display: true,
+                                text: 'Total Sales (₹)'
+                            }
+                        },
+                        y1: {
+                            type: 'linear',
+                            display: true,
+                            position: 'right',
+                            grid: {
+                                drawOnChartArea: false
+                            },
+                            title: {
+                                display: true,
+                                text: 'Order Count'
+                            }
+                        }
+                    },
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Sales and Orders by Shop'
+                        }
+                    }
+                }
+            };
+
+            const ctx = document.getElementById('salesChart').getContext('2d');
+            new Chart(ctx, config);
+
+        } catch (error) {
+            console.error('Error creating sales chart:', error);
+            document.getElementById('salesChart').parentNode.innerHTML =
+                '<div class="alert alert-danger">Error loading sales data</div>';
+        }
+    }
+</script>
+{% endblock %}

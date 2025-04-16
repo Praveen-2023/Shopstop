@@ -1,0 +1,75 @@
+<<<<<<< HEAD
+# Python bytecode
+=======
+# Python virtual environment
+venv/
+>>>>>>> 7d3483573724e77da9871ee364481b5913d41064
+__pycache__/
+*.py[cod]
+*$py.class
+
+<<<<<<< HEAD
+# Virtual environments
+venv/
+env/
+ENV/
+=======
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+>>>>>>> 7d3483573724e77da9871ee364481b5913d41064
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs
+<<<<<<< HEAD
+logs/
+*.log
+=======
+*.log
+logs/
+
+# Environment variables
+.env
+>>>>>>> 7d3483573724e77da9871ee364481b5913d41064
+
+# Database
+*.db
+*.sqlite3
+
+<<<<<<< HEAD
+# Environment variables
+.env
+
+# OS specific files
+.DS_Store
+Thumbs.db
+=======
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# Flask session files
+flask_session/
+
+# Compiled files
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Package files
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+>>>>>>> 7d3483573724e77da9871ee364481b5913d41064
